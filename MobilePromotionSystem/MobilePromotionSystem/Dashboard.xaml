@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MobilePromotionSystem.Dashboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600" Background="#2d2d2d">
+   
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="20,20,0,0">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <ListView HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="auto" FontSize="14">
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="true">
+                            <GridViewColumn DisplayMemberBinding=
+                          "{Binding Comport}" 
+                					Header="COMPORT" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding=
+                          "{Binding Mobile}" 
+                					Header="Mobile Number" Width="130"/>
+                            <GridViewColumn DisplayMemberBinding=
+                          "{Binding Load}" 
+                					Header="Load" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding=
+                          "{Binding Action}" 
+                					Header="" Width="100"/>
+                        </GridView>
+                    </ListView.View>
+                    <ScrollViewer Height="300" Width="100"/>
+                </ListView>
+
+            </StackPanel>
+        </Grid>
+    
+</UserControl>
