@@ -27,18 +27,21 @@ namespace MobilePromotionSystem
 
         private void btnContact_Click(object sender, RoutedEventArgs e)
         {
+            pageShow.Children.Clear();
             Contacts contactPage = new Contacts();
             pageShow.Children.Add(contactPage);
         }
 
         private void btnDash_Click(object sender, RoutedEventArgs e)
         {
+            pageShow.Children.Clear();
             Dashboard DashboardPage = new Dashboard();
             pageShow.Children.Add(DashboardPage);
         }
 
         private void btnProduct_Click(object sender, RoutedEventArgs e)
         {
+            pageShow.Children.Clear();
             Productpromotion ProductPage = new Productpromotion();
             pageShow.Children.Add(ProductPage);
         }
