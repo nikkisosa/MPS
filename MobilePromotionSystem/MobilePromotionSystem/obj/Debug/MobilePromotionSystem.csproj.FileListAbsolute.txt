@@ -36,3 +36,22 @@ C:\Users\pztech\Desktop\Share Folder\MPS\MobilePromotionSystem\MobilePromotionSy
 C:\Users\pztech\Desktop\Share Folder\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.g.resources
 C:\Users\pztech\Desktop\Share Folder\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.Properties.Resources.resources
 C:\Users\pztech\Desktop\Share Folder\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.csproj.GenerateResource.Cache
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\bin\Debug\MobilePromotionSystem.exe.config
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.exe
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.pdb
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\bin\Debug\MobilePromotionSystem.exe
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\bin\Debug\MobilePromotionSystem.pdb
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.csprojResolveAssemblyReference.cache
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\Contacts.baml
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\Dashboard.baml
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MainWindow.baml
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\Productpromotion.baml
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\Contacts.g.cs
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\Dashboard.g.cs
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MainWindow.g.cs
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\Productpromotion.g.cs
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\App.g.cs
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem_MarkupCompile.cache
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.g.resources
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.Properties.Resources.resources
+Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\MobilePromotionSystem.csproj.GenerateResource.Cache

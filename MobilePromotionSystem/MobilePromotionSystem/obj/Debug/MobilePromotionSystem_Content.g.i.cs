@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("deletebtn-11.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mps_db.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mps_db_log.ldf")]
 
 
