@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\
+D:\MPS\MobilePromotionSystem\MobilePromotionSystem\obj\Debug\
 MobilePromotionSystem
 none
 false
 DEBUG;TRACE
-Z:\Project\MPS\MobilePromotionSystem\MobilePromotionSystem\App.xaml
-457899313
-
-81958764399
+D:\MPS\MobilePromotionSystem\MobilePromotionSystem\App.xaml
+51474980135
+2-137445467
+12753265733
 12-1401562060
-Contacts.xaml;Dashboard.xaml;MainWindow.xaml;Productpromotion.xaml;
+Contacts.xaml;Dashboard.xaml;MainWindow.xaml;Productpromotion.xaml;Splash.xaml;
 
 False
 

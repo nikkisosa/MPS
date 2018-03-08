@@ -1,34 +1,41 @@
-﻿<UserControl x:Class="MobilePromotionSystem.Contacts"
+﻿<UserControl x:Name="frmContact" x:Class="MobilePromotionSystem.Contacts"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="700" Background="#2d2d2d">
-    <Grid HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="20,20,0,0">
+             d:DesignHeight="500" d:DesignWidth="700" Background="#2d2d2d" Loaded="frmContact_Loaded">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="20,20,0,0" Width="343">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <Label Foreground="#FFFFFF" Content="Network" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="auto" FontSize="14"/>
             <ComboBox Background="#4d4d4d" Foreground="#000000" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="140" >
-            <ComboBoxItem>Globe</ComboBoxItem>
-            <ComboBoxItem>Touch Mobile</ComboBoxItem>
-        </ComboBox>
+                <ComboBoxItem>Globe</ComboBoxItem>
+                <ComboBoxItem>Touch Mobile</ComboBoxItem>
+            </ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,40,0,0">
-            <ListView HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="auto" FontSize="14">
+            <ListView x:Name="listContact" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="343" FontSize="14">
                 <ListView.View>
-                    <GridView AllowsColumnReorder="true"
+                    <GridView AllowsColumnReorder="false"
         				ColumnHeaderToolTip="Contact Number">
                         <GridViewColumn DisplayMemberBinding=
-                          "{Binding Contact}" 
+                          "{Binding Path=mobile_no}" 
         					Header="Contact Number" Width="130"/>
-                        <GridViewColumn DisplayMemberBinding=
-                          "{Binding Group}" 
-        					Header="Group Name" Width="130"/>
                     </GridView>
                 </ListView.View>
                 <ScrollViewer Height="300" Width="100"/>
             </ListView>
 
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Margin="348,0,-269,20" Width="264" Height="420" VerticalAlignment="Bottom">
+            <Button x:Name="btnAdd" Content="ADD" Margin="10,0,193,0" Height="24" RenderTransformOrigin="-0.115,0.593" Click="btnAdd_Click"/>
+            <Button x:Name="btnDelete" Content="DELETE" Margin="10,0,193,0" Height="24" RenderTransformOrigin="-0.115,0.593"/>
+            <Button x:Name="btnUpdate" Content="UPDATE" Margin="10,0,193,0" Height="24" RenderTransformOrigin="-0.115,0.593"/>
+            <TextBox x:Name="txtContact" Height="23" TextWrapping="Wrap" Margin="10,0" SelectionOpacity="-2"/>
+            <ComboBox x:Name="cboNetwork" Margin="10,0">
+                <ComboBoxItem Content="Globe" HorizontalAlignment="Left" Width="242"/>
+                <ComboBoxItem Content="Touch Mobile" HorizontalAlignment="Left" Width="242"/>
+            </ComboBox>
         </StackPanel>
     </Grid>
 </UserControl>

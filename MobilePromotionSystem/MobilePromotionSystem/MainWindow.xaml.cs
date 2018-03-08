@@ -25,6 +25,16 @@ namespace MobilePromotionSystem
             InitializeComponent();
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
         private void btnContact_Click(object sender, RoutedEventArgs e)
         {
             pageShow.Children.Clear();
@@ -44,6 +54,9 @@ namespace MobilePromotionSystem
             pageShow.Children.Clear();
             Productpromotion ProductPage = new Productpromotion();
             pageShow.Children.Add(ProductPage);
+            
         }
+
+        
     }
 }
