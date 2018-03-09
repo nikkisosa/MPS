@@ -31,8 +31,7 @@ namespace MPSystem
             var tasks = new List<Task>();
             string[] ports = SerialPort.GetPortNames();
             for (int i = 0; i < ports.Length;i++ )
-                foreach (string port in ports)
-                {
+            {
                     try
                     {
 
@@ -98,27 +97,9 @@ namespace MPSystem
                     catch(Exception exs){
 
                     }
-                    finally
-                    {
+            }
+                
 
-                    }
-                }
-
-
-           
-
-            
-           
-            //Task entireTask = Task.WhenAll(tasks.ToArray());
-            //Task progressTask = Task.Run(async () =>
-            //{
-            //    while (!entireTask.IsCompleted)
-            //    {
-            //        await Task.Delay(1000);
-            //    }
-
-            //});
-            //entireTask.Wait();
         }
 
 
