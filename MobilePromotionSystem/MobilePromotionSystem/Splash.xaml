@@ -1,8 +1,0 @@
-﻿<Window x:Class="MobilePromotionSystem.Splash"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Splash" Height="250" Width="400" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <Image Source="splashultura.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>   
-    </Grid>
-</Window>
