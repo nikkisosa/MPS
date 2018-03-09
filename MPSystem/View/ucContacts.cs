@@ -54,8 +54,7 @@ namespace MPSystem
             }
             else
             {
-                Fields();
-                Buttons();
+                
                 loadContact();
             }
         }
@@ -174,6 +173,8 @@ namespace MPSystem
 
         private void ucContacts_Load(object sender, EventArgs e)
         {
+            Fields();
+            Buttons();
             backgroundworker.RunWorkerAsync();
             
         }
