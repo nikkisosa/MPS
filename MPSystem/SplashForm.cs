@@ -27,9 +27,11 @@ namespace MPSystem
 
         private void bgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
+            
             int portCounter = SerialPort.GetPortNames().Length;
             var tasks = new List<Task>();
             string[] ports = SerialPort.GetPortNames();
+            Model.splashModel.deleteAvailablePorts();
             for (int i = 0; i < ports.Length;i++ )
             {
                     try
@@ -74,12 +76,23 @@ namespace MPSystem
                                      );
                                      string[] strCNUM = lineResult[2].Split(',');
 
+                                     Entity.variables entity = new Entity.variables();
+                                     entity.port = sp.PortName;
+                                     entity.mobile_no = strCNUM[1];
+                                     entity.network = "ON-Development";
+                                     entity.balance = 0;
 
-                                     activePorts = new string[,] { { sp.PortName, strCNUM[1] } };
-
-                                 }
-
-
+                                         string addAvailablePortsResult = Model.splashModel.addAvailablePorts(entity);
+                                         if (addAvailablePortsResult == "success")
+                                         {
+                                             //Insertion success
+                                         }
+                                         else
+                                         {
+                                            // Log the errors
+                                         }
+                                    }
+                                   
                              }
 
 
@@ -95,7 +108,7 @@ namespace MPSystem
 
                     }
                     catch(Exception exs){
-
+                        //Log the Error
                     }
             }
                 
@@ -118,10 +131,7 @@ namespace MPSystem
             }
         }
 
-        public void HeavyJob()
-        {
-
-        }
+       
 
 
 

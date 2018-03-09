@@ -58,5 +58,11 @@ namespace MPSystem.Entity
             get;
             set;
         }
+
+        public int balance
+        {
+            get;
+            set;
+        }
     }
 }
