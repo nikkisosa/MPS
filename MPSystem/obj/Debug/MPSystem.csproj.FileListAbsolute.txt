@@ -105,3 +105,17 @@ Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.View.Autoreply.resources
 Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
 Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
 Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.SplashForm.resources
+C:\Users\niks\Desktop\MPS\Production\MPSystem\bin\Debug\MPSystem.exe.config
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.exe
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.pdb
+C:\Users\niks\Desktop\MPS\Production\MPSystem\bin\Debug\Data\MPS_DB.mdf
+C:\Users\niks\Desktop\MPS\Production\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
+C:\Users\niks\Desktop\MPS\Production\MPSystem\bin\Debug\MPSystem.exe
+C:\Users\niks\Desktop\MPS\Production\MPSystem\bin\Debug\MPSystem.pdb
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.MMS.resources
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.SplashForm.resources
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.View.Autoreply.resources
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+C:\Users\niks\Desktop\MPS\Production\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache

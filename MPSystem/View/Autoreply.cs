@@ -29,7 +29,11 @@ namespace MPSystem.View
         private static string buttons = "default";
         private static string str;
         private static int id;
-
+        private static int pageNumber = 1;
+        private static int item_new_id = 0;
+        private static int item_old_id = 0;
+        private static int totalCount = 0;
+        private static int totalPage = 0;
 
         public Autoreply()
         {
@@ -55,7 +59,7 @@ namespace MPSystem.View
             else
             {
                 
-                loadContact();
+                loadData();
             }
         }
 
@@ -87,22 +91,43 @@ namespace MPSystem.View
         /**
          * Load data from database
          */
-        public void loadContact()
+        public void loadData()
         {
-            str = Model.autoreplyModel.getAutoReply();
+            str = Model.autoreplyModel.getAutoReply(pageNumber);
             if (str == "success")
             {
-                lvList.Items.Clear();
 
-                for (int count = 0; count < config.records.Count; count++)
+                totalCount = config.records.Count;
+                if (totalCount > 0)
                 {
-                    ListViewItem item = new ListViewItem(config.records[count].id.ToString());
-                    item.SubItems.Add(count.ToString());
-                    item.SubItems.Add(config.records[count].command.ToString());
-                    item.SubItems.Add(config.records[count].reply.ToString());
-                    lvList.Items.Add(item);
+                    lvList.Items.Clear();
+                    for (int count = 0; count < config.records.Count; count++)
+                    {
+                        ListViewItem item = new ListViewItem(config.records[count].id.ToString());
+                        item.SubItems.Add(count.ToString());
+                        item.SubItems.Add(config.records[count].command.ToString());
+                        item.SubItems.Add(config.records[count].reply.ToString());
+                        lvList.Items.Add(item);
+                        item_new_id = config.records[count].id;
 
+                    }
+
+                    Model.autoreplyModel.getTotalPage();
+                    Entity.variables variables = new Entity.variables();
+
+
+                    if (item_new_id == item_old_id)
+                    {
+
+                    }
+                    else
+                    {
+                        item_old_id = item_new_id;
+                        totalPage = (config.records[0].totalpage / Entity.variables.pageSize);
+                        lblPages.Text = "Page " + pageNumber + " out of " + (config.records[0].totalpage / Entity.variables.pageSize).ToString();
+                    }
                 }
+
             }
             else
             {
@@ -202,8 +227,9 @@ namespace MPSystem.View
                         string str = Model.autoreplyModel.addAutoReply(ent);
                         if (str == "success")
                         {
+                            loadData();
                             MessageBox.Show("successfully added", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            loadContact();
+                            
                             field = false;
                             Fields();
                             buttons = "default";
@@ -299,8 +325,9 @@ namespace MPSystem.View
                             string str = Model.autoreplyModel.editAutoReply(ent);
                             if (str == "success")
                             {
+                                loadData();
                                 MessageBox.Show("successfully update", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                loadContact();
+                                
                                 field = false;
                                 Fields();
                                 buttons = "default";
@@ -319,6 +346,61 @@ namespace MPSystem.View
             catch (Exception)
             {
                 MessageBox.Show("Please select the command you want to edit", "Select", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+            if (totalCount > 0)
+            {
+                if (totalPage == pageNumber)
+                {
+
+                }
+                else
+                {
+                    pageNumber = pageNumber + 1;
+
+                    loadData();
+                }
+
+            }
+            else
+            {
+                //leave empty
+            }
+
+
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+
+            if (totalCount != 0)
+            {
+                if (pageNumber == 1)
+                {
+
+                }
+                else
+                {
+                    pageNumber = pageNumber - 1;
+                    loadData();
+                }
+
+            }
+            else
+            {
+                if (pageNumber == 1)
+                {
+
+                }
+                else
+                {
+                    pageNumber = pageNumber - 1;
+                    loadData();
+                }
             }
         }
     }
