@@ -49,6 +49,9 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.backgroundworker = new System.ComponentModel.BackgroundWorker();
+            this.lblPages = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrev = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,10 +118,8 @@
             this.lvContact.FullRowSelect = true;
             this.lvContact.GridLines = true;
             this.lvContact.Location = new System.Drawing.Point(26, 152);
-            this.lvContact.MaximumSize = new System.Drawing.Size(659, 376);
-            this.lvContact.MinimumSize = new System.Drawing.Size(659, 376);
             this.lvContact.Name = "lvContact";
-            this.lvContact.Size = new System.Drawing.Size(659, 376);
+            this.lvContact.Size = new System.Drawing.Size(659, 344);
             this.lvContact.TabIndex = 4;
             this.lvContact.UseCompatibleStateImageBehavior = false;
             this.lvContact.View = System.Windows.Forms.View.Details;
@@ -277,10 +278,42 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // lblPages
+            // 
+            this.lblPages.AutoSize = true;
+            this.lblPages.Location = new System.Drawing.Point(23, 507);
+            this.lblPages.Name = "lblPages";
+            this.lblPages.Size = new System.Drawing.Size(83, 13);
+            this.lblPages.TabIndex = 15;
+            this.lblPages.Text = "Page: 0 out of 0";
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(631, 502);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(54, 23);
+            this.btnNext.TabIndex = 14;
+            this.btnNext.Text = "next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.Location = new System.Drawing.Point(571, 502);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(54, 23);
+            this.btnPrev.TabIndex = 13;
+            this.btnPrev.Text = "prev";
+            this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            // 
             // ucContacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblPages);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvContact);
             this.Controls.Add(this.button1);
@@ -322,5 +355,8 @@
         private System.Windows.Forms.ComboBox cboNetwork;
         private System.Windows.Forms.ColumnHeader dbID;
         private System.ComponentModel.BackgroundWorker backgroundworker;
+        private System.Windows.Forms.Label lblPages;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrev;
     }
 }

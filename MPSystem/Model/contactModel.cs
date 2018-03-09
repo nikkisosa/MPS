@@ -67,8 +67,9 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string getContacts(){
-            string query = "SELECT * FROM contact";
+        public static string getContacts(int page){
+            int pages = (Entity.variables.pageSize * (page - 1));
+            string query = "SELECT * FROM contact ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
@@ -88,6 +89,33 @@ namespace MPSystem.Model
                     ent.group = reader["group"].ToString();
                     config.records.Add(ent);
                 }
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
+        public static string getTotalPage()
+        {
+            string query = "SELECT COUNT(id) FROM contact";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                config.records = new List<Entity.variables>();
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                Entity.variables ent = new Entity.variables();
+                ent.totalpage = (Int32)cmd.ExecuteScalar();
+                config.records.Add(ent);
                 str = "success";
             }
             catch (SqlException err)
