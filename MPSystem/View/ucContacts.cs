@@ -27,6 +27,8 @@ namespace MPSystem
         private static Boolean field = false;
         private static Boolean cancel = false;
         private static string buttons = "default";
+        private static string str;
+        private static int id;
 
         public ucContacts()
         {
@@ -38,14 +40,15 @@ namespace MPSystem
          */
         public void loadContact()
         {
-            string str = Model.contactModel.getContacts();
+            str = Model.contactModel.getContacts();
             if (str == "success")
             {
                 lvContact.Items.Clear();
 
                 for (int count = 0; count < config.records.Count; count++)
                 {
-                    ListViewItem item = new ListViewItem(count.ToString());
+                    ListViewItem item = new ListViewItem(config.records[count].id.ToString());
+                    item.SubItems.Add(count.ToString());
                     item.SubItems.Add(config.records[count].mobile_no.ToString());
                     item.SubItems.Add(config.records[count].network.ToString());
                     item.SubItems.Add(config.records[count].group.ToString());
@@ -90,7 +93,7 @@ namespace MPSystem
                 btnEdit.Enabled = true;
                 btnAdd.Text = "Add a Contact";
                 btnEdit.Text = "Edit Contact";
-                btnDelete.Text = "Edit Contact";
+                btnDelete.Text = "Delete Contact";
             }
             else if(buttons == "add")
             {
@@ -186,7 +189,96 @@ namespace MPSystem
             }
             else // delete selected record from listview
             {
+                try
+                {
+                    int id = Convert.ToInt32(lvContact.SelectedItems[0].Text);
+                    DialogResult dr = MessageBox.Show("Are you sure want to delete this number?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
+                        
+                        str = Model.contactModel.deleteContact(id);
+                        if (str == "success")
+                        {
+                            lvContact.Items.Remove(lvContact.SelectedItems[0]);
+                            MessageBox.Show("Successfully delete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show(str, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
 
+                    }
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Please select the number you want to delete", "Select", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                id = Convert.ToInt32(lvContact.SelectedItems[0].Text);
+                if (field == false)
+                {
+                    field = true;
+                    cancel = true;
+                    buttons = "edit";
+                    Fields(); // enable fields
+                    Buttons();
+
+                    txtContact.Text = lvContact.SelectedItems[0].SubItems[2].Text;
+                    cboNetwork.Text = lvContact.SelectedItems[0].SubItems[3].Text;
+                    cboGroup.Text = lvContact.SelectedItems[0].SubItems[4].Text;
+                }
+                else
+                {
+                    if (field == true)
+                    {
+                        string mobile_no = txtContact.Text.Trim();
+                        string network = cboNetwork.Text;
+                        string group = cboGroup.Text;
+                        if (mobile_no == "" || network == "")
+                        {
+                            MessageBox.Show("Please enter the number and network", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        }
+                        else
+                        {
+                            Entity.Contacts ent = new Entity.Contacts();
+                            ent.mobile_no = mobile_no;
+                            ent.network = network;
+                            ent.group = group;
+                            ent.id = id;
+                            string str = Model.contactModel.editContact(ent);
+                            if (str == "success")
+                            {
+                                MessageBox.Show("successfully update", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                loadContact();
+                                field = false;
+                                Fields();
+                                buttons = "default";
+                                Buttons();
+                                cancel = false;
+                                clearFields();
+                            }
+                            else
+                            {
+                                MessageBox.Show(str);
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Please select the number you want to edit", "Select", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

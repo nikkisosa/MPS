@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMS));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_dash = new System.Windows.Forms.Button();
             this.btn_messages = new System.Windows.Forms.Button();
             this.btn_contacts = new System.Windows.Forms.Button();
@@ -38,33 +36,13 @@
             this.btn_autoreply = new System.Windows.Forms.Button();
             this.btn_settings = new System.Windows.Forms.Button();
             this.Mainpanel = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(210, 600);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(210, 600);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 600);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 12);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(150, 150);
-            this.pictureBox2.MinimumSize = new System.Drawing.Size(150, 150);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // btn_dash
             // 
@@ -202,12 +180,48 @@
             this.Mainpanel.Size = new System.Drawing.Size(711, 536);
             this.Mainpanel.TabIndex = 0;
             // 
+            // pbClose
+            // 
+            this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbClose.Image = global::MPSystem.Properties.Resources.Delete_20px;
+            this.pbClose.Location = new System.Drawing.Point(901, 3);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(25, 25);
+            this.pbClose.TabIndex = 7;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(27, 12);
+            this.pictureBox2.MaximumSize = new System.Drawing.Size(150, 150);
+            this.pictureBox2.MinimumSize = new System.Drawing.Size(150, 150);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(210, 600);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(210, 600);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 600);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // MMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(950, 600);
+            this.Controls.Add(this.pbClose);
             this.Controls.Add(this.Mainpanel);
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_autoreply);
@@ -223,8 +237,12 @@
             this.Name = "MMS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Monitoring System";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MMS_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MMS_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MMS_MouseUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,6 +258,7 @@
         private System.Windows.Forms.Button btn_autoreply;
         private System.Windows.Forms.Button btn_settings;
         private System.Windows.Forms.Panel Mainpanel;
+        private System.Windows.Forms.PictureBox pbClose;
     }
 }
 

@@ -17,6 +17,9 @@ namespace MPSystem
             InitializeComponent();
         }
 
+        private bool mouseDown;
+        private Point lastLocation;
+
         private void btn_contacts_Click(object sender, EventArgs e)
         {
             if (!Mainpanel.Controls.Contains(ucContacts.Instance))
@@ -29,6 +32,42 @@ namespace MPSystem
             {
                 ucContacts.Instance.BringToFront();
             }
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure want to exit", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+
+            }
+            
+        }
+
+        private void MMS_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void MMS_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void MMS_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }

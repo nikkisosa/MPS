@@ -37,6 +37,36 @@ namespace MPSystem.Model
             return str;
         }
 
+        public static string editContact(Entity.Contacts ent)
+        {
+
+            string query = "UPDATE contact SET [mobile_no] = @mobile_no,[network] = @network,[group] = @group WHERE id = @id;";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+
+            try
+            {
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@mobile_no", ent.mobile_no);
+                cmd.Parameters.AddWithValue("@network", ent.network);
+                cmd.Parameters.AddWithValue("@group", ent.group);
+                cmd.Parameters.AddWithValue("@id", ent.id);
+                cmd.ExecuteNonQuery();
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
         public static string getContacts(){
             string query = "SELECT * FROM contact";
             SqlConnection conn = config.sqlconnection;
@@ -58,6 +88,31 @@ namespace MPSystem.Model
                     ent.group = reader["group"].ToString();
                     config.records.Add(ent);
                 }
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
+        public static string deleteContact(int id)
+        {
+            string query = "DELETE FROM contact WHERE id = @id";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteReader();
                 str = "success";
             }
             catch (SqlException err)

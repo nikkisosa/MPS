@@ -40,3 +40,15 @@ D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\Data\MPS_DB.mdf
 D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
 D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe
 D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.pdb
+D:\Share data\MMSystem\MPS\MPSystem\bin\Debug\MPSystem.exe.config
+D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.exe
+D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.pdb
+D:\Share data\MMSystem\MPS\MPSystem\bin\Debug\Data\MPS_DB.mdf
+D:\Share data\MMSystem\MPS\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
+D:\Share data\MMSystem\MPS\MPSystem\bin\Debug\MPSystem.exe
+D:\Share data\MMSystem\MPS\MPSystem\bin\Debug\MPSystem.pdb
+D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.MMS.resources
+D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache

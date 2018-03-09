@@ -47,6 +47,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.dbID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +104,7 @@
             // lvContact
             // 
             this.lvContact.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dbID,
             this.ID,
             this.Mobile,
             this.Network,
@@ -248,6 +250,7 @@
             this.btnEdit.TabIndex = 0;
             this.btnEdit.Text = "Edit Contact";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -265,6 +268,12 @@
             this.btnAdd.Text = "Add a Contact";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // dbID
+            // 
+            this.dbID.DisplayIndex = 0;
+            this.dbID.Text = "ID";
+            this.dbID.Width = 0;
             // 
             // ucContacts
             // 
@@ -309,5 +318,6 @@
         private System.Windows.Forms.ColumnHeader Group;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ComboBox cboNetwork;
+        private System.Windows.Forms.ColumnHeader dbID;
     }
 }
