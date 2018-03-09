@@ -1,0 +1,42 @@
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe.config
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\bin\Debug\MPSystem.pdb
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\obj\Debug\MPSystem.exe
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\obj\Debug\MPSystem.pdb
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+C:\Users\miste\Desktop\MPSystem\MPSystem\MPSystem\obj\Debug\MPSystem.MMS.resources
+D:\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe.config
+D:\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.exe
+D:\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.pdb
+D:\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe
+D:\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.pdb
+D:\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+D:\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.MMS.resources
+D:\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+D:\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+D:\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe.config
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.exe
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.pdb
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.pdb
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.MMS.resources
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+\\PZTECHPC\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe.config
+D:\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.exe
+D:\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.pdb
+D:\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+D:\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.MMS.resources
+D:\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+D:\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+D:\Share data\MMSystem\MPSystem\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\Data\MPS_DB.mdf
+D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
+D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.exe
+D:\Share data\MMSystem\MPSystem\MPSystem\bin\Debug\MPSystem.pdb
