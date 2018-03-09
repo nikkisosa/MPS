@@ -91,3 +91,17 @@ S:\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
 S:\MPSystem\obj\Debug\MPSystem.View.Autoreply.resources
 S:\MPSystem\obj\Debug\MPSystem.ucContacts.resources
 S:\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+Z:\Project\MPS\MPSystem\bin\Debug\MPSystem.exe.config
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.exe
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.pdb
+Z:\Project\MPS\MPSystem\bin\Debug\Data\MPS_DB.mdf
+Z:\Project\MPS\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
+Z:\Project\MPS\MPSystem\bin\Debug\MPSystem.exe
+Z:\Project\MPS\MPSystem\bin\Debug\MPSystem.pdb
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.MMS.resources
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.View.Autoreply.resources
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+Z:\Project\MPS\MPSystem\obj\Debug\MPSystem.SplashForm.resources

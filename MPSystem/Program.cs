@@ -16,7 +16,7 @@ namespace MPSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MMS());
+            Application.Run(new SplashForm());
         }
     }
 }
