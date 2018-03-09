@@ -28,37 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvList = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Command = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Reply = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtReply = new System.Windows.Forms.TextBox();
+            this.txtCommand = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.backgroundworker = new System.ComponentModel.BackgroundWorker();
+            this.autoid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // lvList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.autoid,
             this.ID,
             this.Command,
             this.Reply});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(15, 112);
-            this.listView1.MaximumSize = new System.Drawing.Size(681, 376);
-            this.listView1.MinimumSize = new System.Drawing.Size(681, 376);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(681, 376);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvList.FullRowSelect = true;
+            this.lvList.GridLines = true;
+            this.lvList.Location = new System.Drawing.Point(15, 112);
+            this.lvList.MaximumSize = new System.Drawing.Size(681, 376);
+            this.lvList.MinimumSize = new System.Drawing.Size(681, 376);
+            this.lvList.Name = "lvList";
+            this.lvList.Size = new System.Drawing.Size(681, 376);
+            this.lvList.TabIndex = 0;
+            this.lvList.UseCompatibleStateImageBehavior = false;
+            this.lvList.View = System.Windows.Forms.View.Details;
             // 
             // ID
             // 
@@ -82,8 +85,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.txtContact);
+            this.panel1.Controls.Add(this.txtReply);
+            this.panel1.Controls.Add(this.txtCommand);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAdd);
@@ -112,12 +115,19 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Command";
             // 
-            // txtContact
+            // txtReply
             // 
-            this.txtContact.Location = new System.Drawing.Point(202, 22);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(459, 20);
-            this.txtContact.TabIndex = 4;
+            this.txtReply.Location = new System.Drawing.Point(202, 49);
+            this.txtReply.Name = "txtReply";
+            this.txtReply.Size = new System.Drawing.Size(459, 20);
+            this.txtReply.TabIndex = 5;
+            // 
+            // txtCommand
+            // 
+            this.txtCommand.Location = new System.Drawing.Point(202, 22);
+            this.txtCommand.Name = "txtCommand";
+            this.txtCommand.Size = new System.Drawing.Size(459, 20);
+            this.txtCommand.TabIndex = 4;
             // 
             // btnDelete
             // 
@@ -134,6 +144,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete Command";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -150,6 +161,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit Command";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -166,20 +178,19 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add a Command";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox1
+            // autoid
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(459, 20);
-            this.textBox1.TabIndex = 5;
+            this.autoid.Text = "id";
+            this.autoid.Width = 0;
             // 
             // Autoreply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvList);
             this.MaximumSize = new System.Drawing.Size(711, 536);
             this.MinimumSize = new System.Drawing.Size(711, 536);
             this.Name = "Autoreply";
@@ -193,17 +204,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvList;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Command;
         private System.Windows.Forms.ColumnHeader Reply;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.TextBox txtCommand;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtReply;
+        private System.ComponentModel.BackgroundWorker backgroundworker;
+        private System.Windows.Forms.ColumnHeader autoid;
     }
 }

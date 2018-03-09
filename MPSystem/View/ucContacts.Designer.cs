@@ -48,6 +48,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.backgroundworker = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             this.textBox1.MaximumSize = new System.Drawing.Size(288, 21);
             this.textBox1.MinimumSize = new System.Drawing.Size(288, 21);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 21);
+            this.textBox1.Size = new System.Drawing.Size(288, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button1
@@ -320,5 +321,6 @@
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ComboBox cboNetwork;
         private System.Windows.Forms.ColumnHeader dbID;
+        private System.ComponentModel.BackgroundWorker backgroundworker;
     }
 }

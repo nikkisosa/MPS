@@ -4,29 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+
 namespace MPSystem.Model
 {
-    class contactModel
+    class autoreplyModel
     {
         private static string str = string.Empty;
-        public static string addContact(Entity.variables ent){
-            
-            string query = "INSERT INTO contact([mobile_no],[network],[group]) VALUES (@mobile_no,@network,@group);";
+
+        public static string addAutoReply(Entity.variables ent)
+        {
+
+            string query = "INSERT INTO autoreply([command],[reply]) VALUES (@command,@reply);";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
-            
+
             try
             {
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@mobile_no",ent.mobile_no);
-                cmd.Parameters.AddWithValue("@network", ent.network);
-                cmd.Parameters.AddWithValue("@group", ent.group);
+                cmd.Parameters.AddWithValue("@command", ent.command);
+                cmd.Parameters.AddWithValue("@reply", ent.reply);
                 cmd.ExecuteNonQuery();
                 str = "success";
             }
-            catch(SqlException err)
+            catch (SqlException err)
             {
                 str = err.Message;
             }
@@ -37,10 +39,10 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string editContact(Entity.variables ent)
+        public static string editAutoReply(Entity.variables ent)
         {
 
-            string query = "UPDATE contact SET [mobile_no] = @mobile_no,[network] = @network,[group] = @group WHERE id = @id;";
+            string query = "UPDATE autoreply SET [command] = @command,[reply] = @reply WHERE id = @id;";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
 
@@ -49,9 +51,8 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@mobile_no", ent.mobile_no);
-                cmd.Parameters.AddWithValue("@network", ent.network);
-                cmd.Parameters.AddWithValue("@group", ent.group);
+                cmd.Parameters.AddWithValue("@command", ent.command);
+                cmd.Parameters.AddWithValue("@reply", ent.reply);
                 cmd.Parameters.AddWithValue("@id", ent.id);
                 cmd.ExecuteNonQuery();
                 str = "success";
@@ -67,8 +68,9 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string getContacts(){
-            string query = "SELECT * FROM contact";
+        public static string getAutoReply()
+        {
+            string query = "SELECT * FROM autoreply";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
@@ -83,9 +85,8 @@ namespace MPSystem.Model
                 {
                     Entity.variables ent = new Entity.variables();
                     ent.id = Convert.ToInt32(reader["id"].ToString());
-                    ent.mobile_no = reader["mobile_no"].ToString();
-                    ent.network = reader["network"].ToString();
-                    ent.group = reader["group"].ToString();
+                    ent.command = reader["command"].ToString();
+                    ent.reply = reader["reply"].ToString();
                     config.records.Add(ent);
                 }
                 str = "success";
@@ -101,9 +102,9 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string deleteContact(int id)
+        public static string deleteAutoReply(int id)
         {
-            string query = "DELETE FROM contact WHERE id = @id";
+            string query = "DELETE FROM autoreply WHERE id = @id";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             try
@@ -126,5 +127,4 @@ namespace MPSystem.Model
             return str;
         }
     }
-
 }

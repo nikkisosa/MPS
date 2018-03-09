@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace MPSystem
 {
@@ -33,6 +34,55 @@ namespace MPSystem
         public ucContacts()
         {
             InitializeComponent();
+
+            backgroundworker.DoWork += backgroundworker_DoWork;
+            backgroundworker.ProgressChanged += backgroundworker_ProgressChanged;
+            backgroundworker.RunWorkerCompleted += backgroundworker_RunWorkerCompleted;
+            backgroundworker.WorkerReportsProgress = true;
+            backgroundworker.WorkerSupportsCancellation = true;
+        }
+
+        void backgroundworker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                 MessageBox.Show("Process was cancelled");
+            }
+            else if (e.Error != null)
+            {
+                MessageBox.Show("There was an error running the process. The thread aborted");
+            }
+            else
+            {
+                Fields();
+                Buttons();
+                loadContact();
+            }
+        }
+
+        void backgroundworker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            //progressBar1.Value = e.ProgressPercentage;
+        }
+
+        void backgroundworker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Thread.Sleep(10);
+                backgroundworker.ReportProgress(i);
+
+                //Check if there is a request to cancel the process
+                if (backgroundworker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    backgroundworker.ReportProgress(0);
+                    return;
+                }
+            }
+            //If the process exits the loop, ensure that progress is set to 100%
+            //Remember in the loop we set i < 100 so in theory the process will complete at 99%
+            backgroundworker.ReportProgress(100);
         }
 
         /**
@@ -124,9 +174,8 @@ namespace MPSystem
 
         private void ucContacts_Load(object sender, EventArgs e)
         {
-            Fields();
-            Buttons();
-            loadContact();
+            backgroundworker.RunWorkerAsync();
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -152,7 +201,7 @@ namespace MPSystem
                     }
                     else
                     {
-                        Entity.Contacts ent = new Entity.Contacts();
+                        Entity.variables ent = new Entity.variables();
                         ent.mobile_no = mobile_no;
                         ent.network = network;
                         ent.group = group;
@@ -251,7 +300,7 @@ namespace MPSystem
                         }
                         else
                         {
-                            Entity.Contacts ent = new Entity.Contacts();
+                            Entity.variables ent = new Entity.variables();
                             ent.mobile_no = mobile_no;
                             ent.network = network;
                             ent.group = group;

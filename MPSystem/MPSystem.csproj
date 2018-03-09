@@ -60,13 +60,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="config.cs" />
-    <Compile Include="Entity\Contacts.cs" />
+    <Compile Include="Entity\variables.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\autoreplyModel.cs" />
     <Compile Include="Model\contactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

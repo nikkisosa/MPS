@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MPSystem.Entity
 {
-    class Contacts
+    class variables
     {
         public int id {
             get;
@@ -42,6 +42,18 @@ namespace MPSystem.Entity
         }
 
         public string promotion
+        {
+            get;
+            set;
+        }
+
+        public string command
+        {
+            get;
+            set;
+        }
+
+        public string reply
         {
             get;
             set;
