@@ -33,6 +33,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lvContact = new System.Windows.Forms.ListView();
+            this.dbID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mobile = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Network = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,7 +48,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dbID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 22);
+            this.label1.Location = new System.Drawing.Point(23, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 15);
             this.label1.TabIndex = 0;
@@ -69,19 +69,19 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Network",
             "Group"});
-            this.comboBox1.Location = new System.Drawing.Point(64, 18);
+            this.comboBox1.Location = new System.Drawing.Point(64, 10);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(122, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(193, 18);
+            this.textBox1.Location = new System.Drawing.Point(196, 10);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
-            this.textBox1.MaximumSize = new System.Drawing.Size(288, 25);
-            this.textBox1.MinimumSize = new System.Drawing.Size(288, 25);
+            this.textBox1.MaximumSize = new System.Drawing.Size(288, 21);
+            this.textBox1.MinimumSize = new System.Drawing.Size(288, 21);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 20);
+            this.textBox1.Size = new System.Drawing.Size(288, 21);
             this.textBox1.TabIndex = 2;
             // 
             // button1
@@ -93,10 +93,12 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(490, 18);
+            this.button1.Location = new System.Drawing.Point(491, 10);
             this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.button1.MaximumSize = new System.Drawing.Size(56, 21);
+            this.button1.MinimumSize = new System.Drawing.Size(56, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 20);
+            this.button1.Size = new System.Drawing.Size(56, 21);
             this.button1.TabIndex = 3;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
@@ -111,7 +113,7 @@
             this.Group});
             this.lvContact.FullRowSelect = true;
             this.lvContact.GridLines = true;
-            this.lvContact.Location = new System.Drawing.Point(26, 131);
+            this.lvContact.Location = new System.Drawing.Point(26, 152);
             this.lvContact.MaximumSize = new System.Drawing.Size(659, 376);
             this.lvContact.MinimumSize = new System.Drawing.Size(659, 376);
             this.lvContact.Name = "lvContact";
@@ -119,6 +121,11 @@
             this.lvContact.TabIndex = 4;
             this.lvContact.UseCompatibleStateImageBehavior = false;
             this.lvContact.View = System.Windows.Forms.View.Details;
+            // 
+            // dbID
+            // 
+            this.dbID.Text = "ID";
+            this.dbID.Width = 0;
             // 
             // ID
             // 
@@ -155,9 +162,9 @@
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Location = new System.Drawing.Point(26, 46);
+            this.panel1.Location = new System.Drawing.Point(26, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(658, 79);
+            this.panel1.Size = new System.Drawing.Size(658, 97);
             this.panel1.TabIndex = 5;
             // 
             // cboNetwork
@@ -167,25 +174,25 @@
             this.cboNetwork.Items.AddRange(new object[] {
             "Globe",
             "touch Mobile"});
-            this.cboNetwork.Location = new System.Drawing.Point(257, 29);
+            this.cboNetwork.Location = new System.Drawing.Point(272, 36);
             this.cboNetwork.Name = "cboNetwork";
             this.cboNetwork.Size = new System.Drawing.Size(263, 21);
-            this.cboNetwork.TabIndex = 2;
+            this.cboNetwork.TabIndex = 8;
             // 
             // cboGroup
             // 
             this.cboGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGroup.FormattingEnabled = true;
-            this.cboGroup.Location = new System.Drawing.Point(257, 54);
+            this.cboGroup.Location = new System.Drawing.Point(272, 63);
             this.cboGroup.Name = "cboGroup";
             this.cboGroup.Size = new System.Drawing.Size(263, 21);
-            this.cboGroup.TabIndex = 3;
+            this.cboGroup.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(167, 59);
+            this.label4.Location = new System.Drawing.Point(182, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 2;
@@ -195,7 +202,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(167, 35);
+            this.label3.Location = new System.Drawing.Point(182, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 2;
@@ -205,7 +212,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(167, 11);
+            this.label2.Location = new System.Drawing.Point(182, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 2;
@@ -213,10 +220,10 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(257, 5);
+            this.txtContact.Location = new System.Drawing.Point(272, 12);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(263, 20);
-            this.txtContact.TabIndex = 1;
+            this.txtContact.TabIndex = 7;
             // 
             // btnDelete
             // 
@@ -224,13 +231,13 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(2, 51);
+            this.btnDelete.Location = new System.Drawing.Point(17, 62);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
             this.btnDelete.MaximumSize = new System.Drawing.Size(97, 23);
             this.btnDelete.MinimumSize = new System.Drawing.Size(97, 23);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(97, 23);
-            this.btnDelete.TabIndex = 0;
+            this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete Contact";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -241,13 +248,13 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(2, 27);
+            this.btnEdit.Location = new System.Drawing.Point(17, 37);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnEdit.MaximumSize = new System.Drawing.Size(97, 23);
             this.btnEdit.MinimumSize = new System.Drawing.Size(97, 23);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(97, 23);
-            this.btnEdit.TabIndex = 0;
+            this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Edit Contact";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -258,22 +265,16 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(2, 3);
+            this.btnAdd.Location = new System.Drawing.Point(17, 12);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.btnAdd.MaximumSize = new System.Drawing.Size(97, 23);
             this.btnAdd.MinimumSize = new System.Drawing.Size(97, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(97, 23);
-            this.btnAdd.TabIndex = 0;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add a Contact";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // dbID
-            // 
-            this.dbID.DisplayIndex = 0;
-            this.dbID.Text = "ID";
-            this.dbID.Width = 0;
             // 
             // ucContacts
             // 

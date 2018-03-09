@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MPSystem.View;
 
 namespace MPSystem
 {
@@ -22,6 +23,7 @@ namespace MPSystem
 
         private void btn_contacts_Click(object sender, EventArgs e)
         {
+            Mainpanel.Controls.Clear();
             if (!Mainpanel.Controls.Contains(ucContacts.Instance))
             {
                 Mainpanel.Controls.Add(ucContacts.Instance);
@@ -68,6 +70,22 @@ namespace MPSystem
         private void MMS_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void btn_autoreply_Click(object sender, EventArgs e)
+        {
+            Mainpanel.Controls.Clear();
+
+            if (!Mainpanel.Controls.Contains(Autoreply.Instance))
+            {
+                Mainpanel.Controls.Add(Autoreply.Instance);
+                Autoreply.Instance.Dock = DockStyle.Fill;
+                Autoreply.Instance.BringToFront();
+            }
+            else
+            {
+                Autoreply.Instance.BringToFront();
+            }
         }
     }
 }

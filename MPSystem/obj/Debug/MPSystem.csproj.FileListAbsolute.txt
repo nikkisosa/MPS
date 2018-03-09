@@ -52,3 +52,16 @@ D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.MMS.resources
 D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
 D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
 D:\Share data\MMSystem\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+C:\Users\miste\Desktop\MPS\MPSystem\bin\Debug\MPSystem.exe.config
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.exe
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.pdb
+C:\Users\miste\Desktop\MPS\MPSystem\bin\Debug\Data\MPS_DB.mdf
+C:\Users\miste\Desktop\MPS\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
+C:\Users\miste\Desktop\MPS\MPSystem\bin\Debug\MPSystem.exe
+C:\Users\miste\Desktop\MPS\MPSystem\bin\Debug\MPSystem.pdb
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.MMS.resources
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.Autoreply.resources

@@ -149,6 +149,7 @@
             this.btn_autoreply.TabIndex = 5;
             this.btn_autoreply.Text = "Auto-reply";
             this.btn_autoreply.UseVisualStyleBackColor = false;
+            this.btn_autoreply.Click += new System.EventHandler(this.btn_autoreply_Click);
             // 
             // btn_settings
             // 
@@ -184,7 +185,7 @@
             // 
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.Image = global::MPSystem.Properties.Resources.Delete_20px;
-            this.pbClose.Location = new System.Drawing.Point(901, 3);
+            this.pbClose.Location = new System.Drawing.Point(913, 3);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(25, 25);
             this.pbClose.TabIndex = 7;

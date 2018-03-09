@@ -70,6 +70,12 @@
     <Compile Include="Model\contactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Autoreply.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Autoreply.Designer.cs">
+      <DependentUpon>Autoreply.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucContacts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Autoreply.resx">
+      <DependentUpon>Autoreply.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucContacts.resx">
       <DependentUpon>ucContacts.cs</DependentUpon>
     </EmbeddedResource>
