@@ -10,7 +10,7 @@ namespace MPSystem.Model
     class autoreplyModel
     {
         private static string str = string.Empty;
-
+        
         public static string addAutoReply(Entity.variables ent)
         {
 
@@ -68,9 +68,10 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string getAutoReply()
+        public static string getAutoReply(int page)
         {
-            string query = "SELECT * FROM autoreply";
+            int pages = (Entity.variables.pageSize * (page - 1));
+            string query = "SELECT * FROM autoreply ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
@@ -89,6 +90,33 @@ namespace MPSystem.Model
                     ent.reply = reader["reply"].ToString();
                     config.records.Add(ent);
                 }
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
+        public static string getTotalPage()
+        {
+            string query = "SELECT COUNT(id) FROM autoreply";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                config.records = new List<Entity.variables>();
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                Entity.variables ent = new Entity.variables();
+                ent.totalpage = (Int32)cmd.ExecuteScalar();
+                config.records.Add(ent);
                 str = "success";
             }
             catch (SqlException err)

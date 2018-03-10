@@ -103,5 +103,10 @@ namespace MPSystem
                 ucPromotion.Instance.BringToFront();
             }
         }
+
+        private void MMS_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

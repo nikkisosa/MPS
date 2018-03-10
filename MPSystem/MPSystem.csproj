@@ -61,17 +61,28 @@
   <ItemGroup>
     <Compile Include="config.cs" />
     <Compile Include="Entity\variables.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\autoreplyModel.cs" />
+    <Compile Include="Model\splashModel.cs" />
     <Compile Include="Model\contactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="View\ucAutoreply.cs">
+=======
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Autoreply.cs">
+>>>>>>> b8f494f92cc780e029028626290ce23c2698074a
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucAutoreply.Designer.cs">
@@ -83,6 +94,7 @@
     <Compile Include="View\ucContacts.Designer.cs">
       <DependentUpon>ucContacts.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="View\ucPromotion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +109,10 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+>>>>>>> b8f494f92cc780e029028626290ce23c2698074a
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,8 +124,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="View\ucAutoreply.resx">
       <DependentUpon>ucAutoreply.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Autoreply.resx">
+      <DependentUpon>Autoreply.cs</DependentUpon>
+>>>>>>> b8f494f92cc780e029028626290ce23c2698074a
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucContacts.resx">
       <DependentUpon>ucContacts.cs</DependentUpon>

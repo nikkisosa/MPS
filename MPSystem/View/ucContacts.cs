@@ -30,7 +30,11 @@ namespace MPSystem
         private static string buttons = "default";
         private static string str;
         private static int id;
-
+        private static int pageNumber = 1;
+        private static int item_new_id = 0;
+        private static int item_old_id = 0;
+        private static int totalCount = 0;
+        private static int totalPage = 0;
         public ucContacts()
         {
             InitializeComponent();
@@ -89,20 +93,39 @@ namespace MPSystem
          */
         public void loadContact()
         {
-            str = Model.contactModel.getContacts();
+            str = Model.contactModel.getContacts(pageNumber);
             if (str == "success")
             {
-                lvContact.Items.Clear();
-
-                for (int count = 0; count < config.records.Count; count++)
+                totalCount = config.records.Count;
+                if (totalCount > 0)
                 {
-                    ListViewItem item = new ListViewItem(config.records[count].id.ToString());
-                    item.SubItems.Add(count.ToString());
-                    item.SubItems.Add(config.records[count].mobile_no.ToString());
-                    item.SubItems.Add(config.records[count].network.ToString());
-                    item.SubItems.Add(config.records[count].group.ToString());
-                    lvContact.Items.Add(item);
+                    lvContact.Items.Clear();
 
+                    for (int count = 0; count < config.records.Count; count++)
+                    {
+                        ListViewItem item = new ListViewItem(config.records[count].id.ToString());
+                        item.SubItems.Add(count.ToString());
+                        item.SubItems.Add(config.records[count].mobile_no.ToString());
+                        item.SubItems.Add(config.records[count].network.ToString());
+                        item.SubItems.Add(config.records[count].group.ToString());
+                        lvContact.Items.Add(item);
+                        item_new_id = config.records[count].id;
+                    }
+
+                    Model.contactModel.getTotalPage();
+                    Entity.variables variables = new Entity.variables();
+
+
+                    if (item_new_id == item_old_id)
+                    {
+
+                    }
+                    else
+                    {
+                        item_old_id = item_new_id;
+                        totalPage = (config.records[0].totalpage / Entity.variables.pageSize);
+                        lblPages.Text = "Page " + pageNumber + " out of " + (config.records[0].totalpage / Entity.variables.pageSize).ToString();
+                    }
                 }
             }
             else
@@ -209,8 +232,9 @@ namespace MPSystem
                         string str = Model.contactModel.addContact(ent);
                         if (str == "success")
                         {
-                            MessageBox.Show("successfully added", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             loadContact();
+                            MessageBox.Show("successfully added", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
                             field = false;
                             Fields();
                             buttons = "default";
@@ -309,8 +333,9 @@ namespace MPSystem
                             string str = Model.contactModel.editContact(ent);
                             if (str == "success")
                             {
-                                MessageBox.Show("successfully update", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 loadContact();
+                                MessageBox.Show("successfully update", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                
                                 field = false;
                                 Fields();
                                 buttons = "default";
@@ -329,6 +354,60 @@ namespace MPSystem
             catch(Exception)
             {
                 MessageBox.Show("Please select the number you want to edit", "Select", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+            if (totalCount > 0)
+            {
+                if (totalPage == pageNumber)
+                {
+
+                }
+                else
+                {
+                    pageNumber = pageNumber + 1;
+                    loadContact();
+                }
+
+            }
+            else
+            {
+                //leave empty
+            }
+
+
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+
+            if (totalCount != 0)
+            {
+                if (pageNumber == 1)
+                {
+
+                }
+                else
+                {
+                    pageNumber = pageNumber - 1;
+                    loadContact();
+                }
+
+            }
+            else
+            {
+                if (pageNumber == 1)
+                {
+
+                }
+                else
+                {
+                    pageNumber = pageNumber - 1;
+                    loadContact();
+                }
             }
         }
     }
