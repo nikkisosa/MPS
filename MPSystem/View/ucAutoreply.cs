@@ -11,15 +11,15 @@ using System.Threading;
 
 namespace MPSystem.View
 {
-    public partial class Autoreply : UserControl
+    public partial class ucAutoreply : UserControl
     {
-        private static Autoreply _instance;
-        public static Autoreply Instance
+        private static ucAutoreply _instance;
+        public static ucAutoreply Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Autoreply();
+                    _instance = new ucAutoreply();
                 return _instance;
             }
         }
@@ -35,7 +35,7 @@ namespace MPSystem.View
         private static int totalCount = 0;
         private static int totalPage = 0;
 
-        public Autoreply()
+        public ucAutoreply()
         {
             InitializeComponent();
 
