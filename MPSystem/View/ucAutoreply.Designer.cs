@@ -1,6 +1,6 @@
 ﻿namespace MPSystem.View
 {
-    partial class Autoreply
+    partial class ucAutoreply
     {
         /// <summary> 
         /// Required designer variable.

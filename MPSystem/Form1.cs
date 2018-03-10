@@ -76,15 +76,31 @@ namespace MPSystem
         {
             Mainpanel.Controls.Clear();
 
-            if (!Mainpanel.Controls.Contains(Autoreply.Instance))
+            if (!Mainpanel.Controls.Contains(ucAutoreply.Instance))
             {
-                Mainpanel.Controls.Add(Autoreply.Instance);
-                Autoreply.Instance.Dock = DockStyle.Fill;
-                Autoreply.Instance.BringToFront();
+                Mainpanel.Controls.Add(ucAutoreply.Instance);
+                ucAutoreply.Instance.Dock = DockStyle.Fill;
+                ucAutoreply.Instance.BringToFront();
             }
             else
             {
-                Autoreply.Instance.BringToFront();
+                ucAutoreply.Instance.BringToFront();
+            }
+        }
+
+        private void btn_promos_Click(object sender, EventArgs e)
+        {
+            Mainpanel.Controls.Clear();
+
+            if (!Mainpanel.Controls.Contains(ucPromotion.Instance))
+            {
+                Mainpanel.Controls.Add(ucPromotion.Instance);
+                ucPromotion.Instance.Dock = DockStyle.Fill;
+                ucPromotion.Instance.BringToFront();
+            }
+            else
+            {
+                ucPromotion.Instance.BringToFront();
             }
         }
     }

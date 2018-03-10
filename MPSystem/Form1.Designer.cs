@@ -128,6 +128,7 @@
             this.btn_promos.TabIndex = 4;
             this.btn_promos.Text = "Promos";
             this.btn_promos.UseVisualStyleBackColor = false;
+            this.btn_promos.Click += new System.EventHandler(this.btn_promos_Click);
             // 
             // btn_autoreply
             // 
@@ -183,11 +184,14 @@
             // 
             // pbClose
             // 
+            this.pbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.pbClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbClose.BackgroundImage")));
+            this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbClose.Image = global::MPSystem.Properties.Resources.Delete_20px;
-            this.pbClose.Location = new System.Drawing.Point(913, 3);
+            this.pbClose.InitialImage = null;
+            this.pbClose.Location = new System.Drawing.Point(900, 4);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(25, 25);
+            this.pbClose.Size = new System.Drawing.Size(44, 24);
             this.pbClose.TabIndex = 7;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);

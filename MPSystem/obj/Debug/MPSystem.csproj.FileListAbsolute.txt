@@ -64,7 +64,6 @@ C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.MMS.resources
 C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
 C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
 C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
-C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.Autoreply.resources
 D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.exe.config
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.exe
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.pdb
@@ -91,3 +90,5 @@ S:\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
 S:\MPSystem\obj\Debug\MPSystem.View.Autoreply.resources
 S:\MPSystem\obj\Debug\MPSystem.ucContacts.resources
 S:\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucAutoreply.resources
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucPromotion.resources

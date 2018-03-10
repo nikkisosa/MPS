@@ -71,17 +71,29 @@
     <Compile Include="Model\contactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Autoreply.cs">
+    <Compile Include="View\ucAutoreply.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Autoreply.Designer.cs">
-      <DependentUpon>Autoreply.cs</DependentUpon>
+    <Compile Include="View\ucAutoreply.Designer.cs">
+      <DependentUpon>ucAutoreply.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucContacts.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucContacts.Designer.cs">
       <DependentUpon>ucContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucPromotion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucPromotion.Designer.cs">
+      <DependentUpon>ucPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSplash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSplash.Designer.cs">
+      <DependentUpon>ucSplash.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -96,11 +108,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\Autoreply.resx">
-      <DependentUpon>Autoreply.cs</DependentUpon>
+    <EmbeddedResource Include="View\ucAutoreply.resx">
+      <DependentUpon>ucAutoreply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucContacts.resx">
       <DependentUpon>ucContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucPromotion.resx">
+      <DependentUpon>ucPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSplash.resx">
+      <DependentUpon>ucSplash.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
