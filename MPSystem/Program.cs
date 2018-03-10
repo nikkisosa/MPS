@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MPSystem.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MPSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashForm());
+            Application.Run(new ucSplash());
         }
     }
 }

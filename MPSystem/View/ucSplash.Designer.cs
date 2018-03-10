@@ -30,27 +30,40 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSplash));
             this.SplashProgBar = new System.Windows.Forms.ProgressBar();
+            this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // SplashProgBar
             // 
             this.SplashProgBar.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.SplashProgBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(154)))));
-            this.SplashProgBar.Location = new System.Drawing.Point(4, 221);
+            this.SplashProgBar.Location = new System.Drawing.Point(13, 269);
+            this.SplashProgBar.Margin = new System.Windows.Forms.Padding(4);
             this.SplashProgBar.Name = "SplashProgBar";
-            this.SplashProgBar.Size = new System.Drawing.Size(444, 13);
+            this.SplashProgBar.Size = new System.Drawing.Size(557, 16);
             this.SplashProgBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.SplashProgBar.TabIndex = 0;
             // 
+            // bgWorker
+            // 
+            this.bgWorker.WorkerReportsProgress = true;
+            this.bgWorker.WorkerSupportsCancellation = true;
+            this.bgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorker_DoWork);
+            this.bgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker_RunWorkerCompleted);
+            // 
             // ucSplash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(583, 292);
             this.Controls.Add(this.SplashProgBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucSplash";
-            this.Size = new System.Drawing.Size(451, 237);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.ucSplash_Load);
             this.ResumeLayout(false);
 
         }
@@ -58,6 +71,7 @@
         #endregion
 
         private System.Windows.Forms.ProgressBar SplashProgBar;
+        public System.ComponentModel.BackgroundWorker bgWorker;
 
     }
 }

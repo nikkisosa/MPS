@@ -189,18 +189,17 @@
             this.pbClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbClose.BackgroundImage")));
             this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-<<<<<<< HEAD:MPSystem/Form1.Designer.cs
+
             this.pbClose.InitialImage = null;
             this.pbClose.Location = new System.Drawing.Point(900, 4);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(44, 24);
-=======
+
             this.pbClose.Image = global::MPSystem.Properties.Resources.Delete_20px;
             this.pbClose.Location = new System.Drawing.Point(1217, 4);
             this.pbClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(33, 31);
->>>>>>> b8f494f92cc780e029028626290ce23c2698074a:MPSystem/MainForm.Designer.cs
             this.pbClose.TabIndex = 7;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
