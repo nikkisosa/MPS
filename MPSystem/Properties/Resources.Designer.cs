@@ -63,6 +63,26 @@ namespace MPSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnpromopencil {
+            get {
+                object obj = ResourceManager.GetObject("btnpromopencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnspromodelete {
+            get {
+                object obj = ResourceManager.GetObject("btnspromodelete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cancel_24px {
             get {
                 object obj = ResourceManager.GetObject("Cancel_24px", resourceCulture);

@@ -175,7 +175,7 @@
             this.cboNetwork.FormattingEnabled = true;
             this.cboNetwork.Items.AddRange(new object[] {
             "Globe",
-            "touch Mobile"});
+            "Touch Mobile"});
             this.cboNetwork.Location = new System.Drawing.Point(272, 36);
             this.cboNetwork.Name = "cboNetwork";
             this.cboNetwork.Size = new System.Drawing.Size(263, 21);
@@ -223,9 +223,11 @@
             // txtContact
             // 
             this.txtContact.Location = new System.Drawing.Point(272, 12);
+            this.txtContact.MaxLength = 11;
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(263, 20);
             this.txtContact.TabIndex = 7;
+            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_KeyPress);
             // 
             // btnDelete
             // 

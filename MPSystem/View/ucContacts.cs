@@ -123,8 +123,8 @@ namespace MPSystem
                     else
                     {
                         item_old_id = item_new_id;
-                        totalPage = (config.records[0].totalpage / Entity.variables.pageSize);
-                        lblPages.Text = "Page " + pageNumber + " out of " + (config.records[0].totalpage / Entity.variables.pageSize).ToString();
+                        totalPage = ((config.records[0].totalpage / Entity.variables.pageSize) + 1);
+                        lblPages.Text = "Page " + pageNumber + " out of " + ((config.records[0].totalpage / Entity.variables.pageSize)+1).ToString();
                     }
                 }
             }
@@ -359,7 +359,6 @@ namespace MPSystem
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-
             if (totalCount > 0)
             {
                 if (totalPage == pageNumber)
@@ -408,6 +407,18 @@ namespace MPSystem
                     pageNumber = pageNumber - 1;
                     loadContact();
                 }
+            }
+        }
+
+        private void txtContact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8) //The  character represents a backspace
+            {
+                e.Handled = false; //Do not reject the input
+            }
+            else
+            {
+                e.Handled = true; //Reject the input
             }
         }
     }

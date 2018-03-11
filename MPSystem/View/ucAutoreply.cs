@@ -30,8 +30,8 @@ namespace MPSystem.View
         private static string str;
         private static int id;
         private static int pageNumber = 1;
-        private static int item_new_id = 0;
-        private static int item_old_id = 0;
+        private static int itemNewId = 0;
+        private static int itemOldId = 0;
         private static int totalCount = 0;
         private static int totalPage = 0;
 
@@ -108,7 +108,7 @@ namespace MPSystem.View
                         item.SubItems.Add(config.records[count].command.ToString());
                         item.SubItems.Add(config.records[count].reply.ToString());
                         lvList.Items.Add(item);
-                        item_new_id = config.records[count].id;
+                        itemNewId = config.records[count].id;
 
                     }
 
@@ -116,15 +116,15 @@ namespace MPSystem.View
                     Entity.variables variables = new Entity.variables();
 
 
-                    if (item_new_id == item_old_id)
+                    if (itemNewId == itemOldId)
                     {
 
                     }
                     else
                     {
-                        item_old_id = item_new_id;
-                        totalPage = (config.records[0].totalpage / Entity.variables.pageSize);
-                        lblPages.Text = "Page " + pageNumber + " out of " + (config.records[0].totalpage / Entity.variables.pageSize).ToString();
+                        itemOldId = itemNewId;
+                        totalPage = ((config.records[0].totalpage / Entity.variables.pageSize) + 1);
+                        lblPages.Text = "Page " + pageNumber + " out of " + ((config.records[0].totalpage / Entity.variables.pageSize) + 1).ToString();
                     }
                 }
 

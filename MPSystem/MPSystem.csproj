@@ -68,6 +68,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\autoreplyModel.cs" />
+    <Compile Include="Model\promotionModel.cs" />
     <Compile Include="Model\splashModel.cs" />
     <Compile Include="Model\contactModel.cs" />
     <Compile Include="Program.cs" />
@@ -97,7 +98,7 @@
       <DependentUpon>ucPromotion.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucSplash.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\ucSplash.Designer.cs">
       <DependentUpon>ucSplash.cs</DependentUpon>
@@ -169,6 +170,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MPS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\btnspromodelete.png" />
+    <None Include="Resources\btnpromopencil.png" />
     <None Include="Resources\Delete_20px.png" />
     <None Include="Resources\Cancel_24px.png" />
   </ItemGroup>

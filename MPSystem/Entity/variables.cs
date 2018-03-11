@@ -8,7 +8,7 @@ namespace MPSystem.Entity
 {
     class variables
     {
-        public static int pageSize = 7;
+        public static int pageSize = 20;
         public int id {
             get;
             set;
@@ -42,7 +42,19 @@ namespace MPSystem.Entity
             set;
         }
 
-        public string promotion
+        public string promotionTitle
+        {
+            get;
+            set;
+        }
+
+        public string promotionDetails
+        {
+            get;
+            set;
+        }
+
+        public string sendTo
         {
             get;
             set;
