@@ -64,6 +64,7 @@
             this.btn_dash.TabIndex = 1;
             this.btn_dash.Text = "Dashboard";
             this.btn_dash.UseVisualStyleBackColor = false;
+            this.btn_dash.Click += new System.EventHandler(this.btn_dash_Click);
             // 
             // btn_messages
             // 
@@ -189,9 +190,11 @@
             this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.InitialImage = null;
-            this.pbClose.Location = new System.Drawing.Point(913, 3);
+            this.pbClose.Location = new System.Drawing.Point(899, 3);
+            this.pbClose.MaximumSize = new System.Drawing.Size(48, 25);
+            this.pbClose.MinimumSize = new System.Drawing.Size(48, 25);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(25, 25);
+            this.pbClose.Size = new System.Drawing.Size(48, 25);
             this.pbClose.TabIndex = 7;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);

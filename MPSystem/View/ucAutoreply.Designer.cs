@@ -140,6 +140,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
@@ -157,6 +158,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
@@ -174,6 +176,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
@@ -191,6 +194,7 @@
             // lblPages
             // 
             this.lblPages.AutoSize = true;
+            this.lblPages.ForeColor = System.Drawing.Color.White;
             this.lblPages.Location = new System.Drawing.Point(12, 499);
             this.lblPages.Name = "lblPages";
             this.lblPages.Size = new System.Drawing.Size(83, 13);
@@ -199,25 +203,35 @@
             // 
             // btnNext
             // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(642, 494);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(54, 23);
             this.btnNext.TabIndex = 11;
             this.btnNext.Text = "next";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrev
             // 
+            this.btnPrev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrev.FlatAppearance.BorderSize = 0;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.ForeColor = System.Drawing.Color.White;
             this.btnPrev.Location = new System.Drawing.Point(582, 494);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(54, 23);
             this.btnPrev.TabIndex = 10;
             this.btnPrev.Text = "prev";
-            this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.UseVisualStyleBackColor = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
-            // Autoreply
+            // ucAutoreply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +242,7 @@
             this.Controls.Add(this.lvList);
             this.MaximumSize = new System.Drawing.Size(711, 536);
             this.MinimumSize = new System.Drawing.Size(711, 536);
-            this.Name = "Autoreply";
+            this.Name = "ucAutoreply";
             this.Size = new System.Drawing.Size(711, 536);
             this.Load += new System.EventHandler(this.Autoreply_Load);
             this.panel1.ResumeLayout(false);

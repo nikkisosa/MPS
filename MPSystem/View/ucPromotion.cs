@@ -121,8 +121,9 @@ namespace MPSystem.View
                     btnEdit.BackColor = Color.FromArgb(41, 41, 41);
                     btnEdit.Size = new Size(34, 34);
                     btnEdit.FlatStyle = FlatStyle.Flat;
+                    btnEdit.FlatAppearance.BorderColor = Color.FromArgb(41, 41, 41);
                     btnEdit.Location = new Point(122, 0);
-                    btnEdit.Margin = new Padding(0, 3, 3, 0);
+                    btnEdit.Margin = new Padding(0, 0, 0, 0);
                     btnEdit.Padding = new Padding(20, 20, 20, 20);
                     btnEdit.Text = config.records[count].id.ToString() + "@" + config.records[count].promotionTitle.ToString() + "@" + config.records[count].promotionDetails.ToString() + "@" + config.records[count].sendTo.ToString();
                     btnEdit.TextAlign = ContentAlignment.MiddleCenter;
@@ -135,8 +136,9 @@ namespace MPSystem.View
                     btnDelete.BackColor = Color.FromArgb(41, 41, 41);
                     btnDelete.Size = new Size(34, 34);
                     btnDelete.FlatStyle = FlatStyle.Flat;
+                    btnDelete.FlatAppearance.BorderColor = Color.FromArgb(41, 41, 41);
                     btnDelete.Location = new Point(162, 0);
-                    btnDelete.Margin = new Padding(0, 3, 3, 0);
+                    btnDelete.Margin = new Padding(0, 0, 0, 0);
                     btnDelete.Padding = new Padding(20, 20, 20, 20);
                     btnDelete.Text = config.records[count].id.ToString();
                     btnDelete.TextAlign = ContentAlignment.MiddleCenter;

@@ -91,6 +91,12 @@
     <Compile Include="View\ucContacts.Designer.cs">
       <DependentUpon>ucContacts.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucPromotion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucContacts.resx">
       <DependentUpon>ucContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucPromotion.resx">
       <DependentUpon>ucPromotion.cs</DependentUpon>

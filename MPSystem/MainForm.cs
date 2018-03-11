@@ -108,5 +108,21 @@ namespace MPSystem
         {
             
         }
+
+        private void btn_dash_Click(object sender, EventArgs e)
+        {
+            Mainpanel.Controls.Clear();
+
+            if (!Mainpanel.Controls.Contains(ucDashboard.Instance))
+            {
+                Mainpanel.Controls.Add(ucDashboard.Instance);
+                ucDashboard.Instance.Dock = DockStyle.Fill;
+                ucDashboard.Instance.BringToFront();
+            }
+            else
+            {
+                ucDashboard.Instance.BringToFront();
+            }
+        }
     }
 }
