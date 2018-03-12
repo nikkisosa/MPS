@@ -67,3 +67,22 @@ D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.pdb
 D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.exe.config
 D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.exe
 D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.pdb
+\\VBOXSVR\Transfer\MPS\MPSystem\bin\Debug\MPSystem.exe.config
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.exe
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.pdb
+\\VBOXSVR\Transfer\MPS\MPSystem\bin\Debug\Data\MPS_DB.mdf
+\\VBOXSVR\Transfer\MPS\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
+\\VBOXSVR\Transfer\MPS\MPSystem\bin\Debug\MPSystem.exe
+\\VBOXSVR\Transfer\MPS\MPSystem\bin\Debug\MPSystem.pdb
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.MMS.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucAutoreply.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.SplashForm.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucCreateGroup.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucDashboard.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucMessages.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucPromotion.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucSplash.resources
+\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
