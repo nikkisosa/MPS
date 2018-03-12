@@ -86,6 +86,7 @@
             this.btn_messages.TabIndex = 2;
             this.btn_messages.Text = "Messages";
             this.btn_messages.UseVisualStyleBackColor = false;
+            this.btn_messages.Click += new System.EventHandler(this.btn_messages_Click);
             // 
             // btn_contacts
             // 

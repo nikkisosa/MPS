@@ -63,6 +63,16 @@ namespace MPSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addbtn {
+            get {
+                object obj = ResourceManager.GetObject("addbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnpromopencil {
             get {
                 object obj = ResourceManager.GetObject("btnpromopencil", resourceCulture);
@@ -96,6 +106,16 @@ namespace MPSystem.Properties {
         internal static System.Drawing.Bitmap Delete_20px {
             get {
                 object obj = ResourceManager.GetObject("Delete_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opaqueBg_01 {
+            get {
+                object obj = ResourceManager.GetObject("opaqueBg_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

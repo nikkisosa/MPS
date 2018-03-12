@@ -91,11 +91,23 @@
     <Compile Include="View\ucContacts.Designer.cs">
       <DependentUpon>ucContacts.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucCreateGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCreateGroup.Designer.cs">
+      <DependentUpon>ucCreateGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucMessages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucMessages.Designer.cs">
+      <DependentUpon>ucMessages.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucPromotion.cs">
       <SubType>UserControl</SubType>
@@ -132,8 +144,14 @@
     <EmbeddedResource Include="View\ucContacts.resx">
       <DependentUpon>ucContacts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCreateGroup.resx">
+      <DependentUpon>ucCreateGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucMessages.resx">
+      <DependentUpon>ucMessages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucPromotion.resx">
       <DependentUpon>ucPromotion.cs</DependentUpon>
@@ -179,6 +197,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MPS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\opaqueBg-01.png" />
+    <None Include="Resources\addbtn.png" />
     <None Include="Resources\btnspromodelete.png" />
     <None Include="Resources\btnpromopencil.png" />
     <None Include="Resources\Delete_20px.png" />

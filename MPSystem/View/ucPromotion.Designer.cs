@@ -41,7 +41,6 @@
             this.txtDetails = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboSendTo = new System.Windows.Forms.ComboBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -198,20 +197,11 @@
             this.cboSendTo.Size = new System.Drawing.Size(353, 23);
             this.cboSendTo.TabIndex = 5;
             // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Location = new System.Drawing.Point(331, 277);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(353, 96);
-            this.richTextBox2.TabIndex = 6;
-            this.richTextBox2.Text = "";
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnSave);
             this.flowLayoutPanel2.Controls.Add(this.btnCancel);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(331, 395);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(331, 289);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(353, 52);
             this.flowLayoutPanel2.TabIndex = 7;
@@ -256,7 +246,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.cboSendTo);
             this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.txtTitle);
@@ -289,7 +278,6 @@
         private System.Windows.Forms.RichTextBox txtDetails;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboSendTo;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;

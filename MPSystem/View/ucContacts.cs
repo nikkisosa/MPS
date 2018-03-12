@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
+using MPSystem.View;
 namespace MPSystem
 {
     public partial class ucContacts : UserControl
@@ -420,6 +420,20 @@ namespace MPSystem
             {
                 e.Handled = true; //Reject the input
             }
+        }
+
+        private void btnGroup_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = true;
+            pictureBox1.Show();
+            pictureBox1.BringToFront();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            pictureBox1.Hide();
+            pictureBox1.SendToBack();
         }
     }
 }

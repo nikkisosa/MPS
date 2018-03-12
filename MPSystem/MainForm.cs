@@ -124,5 +124,21 @@ namespace MPSystem
                 ucDashboard.Instance.BringToFront();
             }
         }
+
+        private void btn_messages_Click(object sender, EventArgs e)
+        {
+            Mainpanel.Controls.Clear();
+
+            if (!Mainpanel.Controls.Contains(ucMessages.Instance))
+            {
+                Mainpanel.Controls.Add(ucMessages.Instance);
+                ucMessages.Instance.Dock = DockStyle.Fill;
+                ucMessages.Instance.BringToFront();
+            }
+            else
+            {
+                ucMessages.Instance.BringToFront();
+            }
+        }
     }
 }

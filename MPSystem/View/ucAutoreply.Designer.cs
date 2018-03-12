@@ -194,10 +194,11 @@
             // lblPages
             // 
             this.lblPages.AutoSize = true;
+            this.lblPages.Font = new System.Drawing.Font("Helvetica-Normal", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPages.ForeColor = System.Drawing.Color.White;
             this.lblPages.Location = new System.Drawing.Point(12, 499);
             this.lblPages.Name = "lblPages";
-            this.lblPages.Size = new System.Drawing.Size(83, 13);
+            this.lblPages.Size = new System.Drawing.Size(84, 16);
             this.lblPages.TabIndex = 12;
             this.lblPages.Text = "Page: 0 out of 0";
             // 
@@ -207,6 +208,7 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Helvetica-Normal", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(642, 494);
             this.btnNext.Name = "btnNext";
@@ -222,6 +224,7 @@
             this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.Font = new System.Drawing.Font("Helvetica-Normal", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.ForeColor = System.Drawing.Color.White;
             this.btnPrev.Location = new System.Drawing.Point(582, 494);
             this.btnPrev.Name = "btnPrev";
