@@ -188,10 +188,6 @@
             this.cboSendTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSendTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSendTo.FormattingEnabled = true;
-            this.cboSendTo.Items.AddRange(new object[] {
-            "All",
-            "Group1",
-            "Group2"});
             this.cboSendTo.Location = new System.Drawing.Point(331, 236);
             this.cboSendTo.Name = "cboSendTo";
             this.cboSendTo.Size = new System.Drawing.Size(353, 23);

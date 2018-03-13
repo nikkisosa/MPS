@@ -124,7 +124,7 @@ namespace MPSystem.View
                     {
                         itemOldId = itemNewId;
                         totalPage = ((config.records[0].totalpage / Entity.variables.pageSize) + 1);
-                        lblPages.Text = "Page " + pageNumber + " out of " + ((config.records[0].totalpage / Entity.variables.pageSize) + 1).ToString();
+                        lblPages.Text = "Page " + pageNumber + " of " + ((config.records[0].totalpage / Entity.variables.pageSize) + 1).ToString();
                     }
                 }
 

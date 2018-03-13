@@ -68,6 +68,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\autoreplyModel.cs" />
+    <Compile Include="Model\groupModel.cs" />
     <Compile Include="Model\promotionModel.cs" />
     <Compile Include="Model\splashModel.cs" />
     <Compile Include="Model\contactModel.cs" />
@@ -90,12 +91,6 @@
     </Compile>
     <Compile Include="View\ucContacts.Designer.cs">
       <DependentUpon>ucContacts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ucCreateGroup.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\ucCreateGroup.Designer.cs">
-      <DependentUpon>ucCreateGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucDashboard.cs">
       <SubType>UserControl</SubType>
@@ -143,9 +138,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucContacts.resx">
       <DependentUpon>ucContacts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ucCreateGroup.resx">
-      <DependentUpon>ucCreateGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>

@@ -55,8 +55,8 @@ namespace MPSystem.View
             }
             else
             {
-
                 loadPromotion();
+                loadGroup();
             }
         }
 
@@ -105,6 +105,29 @@ namespace MPSystem.View
                 txtDetails.Enabled = false;
                 cboSendTo.Enabled = false;
             }
+        }
+
+        private void Buttons()
+        {
+            if(buttons == "default")
+            {
+                btnAdd.Enabled = true;
+                btnSave.Enabled = false;
+                btnCancel.Enabled = false;
+            }
+            else if(buttons == "edit")
+            {
+                btnAdd.Enabled = false;
+                btnSave.Enabled = true;
+                btnCancel.Enabled = true;
+            }
+            else if (buttons == "add")
+            {
+                btnAdd.Enabled = false;
+                btnSave.Enabled = true;
+                btnCancel.Enabled = true;
+            }
+            
         }
 
        
@@ -179,6 +202,23 @@ namespace MPSystem.View
            
         }
 
+        public void loadGroup()
+        {
+            str = Model.groupModel.getGroups();
+            if (str == "success")
+            {
+                cboSendTo.Items.Clear();
+                for (int count = 0; count < config.records.Count; count++)
+                {
+                    cboSendTo.Items.Add(config.records[count].group.ToString()); // add item in combobox
+                }
+            }
+            else
+            {
+
+            }
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             btnDelete = (Button)sender;
@@ -195,7 +235,6 @@ namespace MPSystem.View
                     loadPromotion();
                     MessageBox.Show("successfully deleted", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    loadPromotion();
                     buttons = "default";
                 }
                 else
@@ -215,6 +254,7 @@ namespace MPSystem.View
             btnEdit = (Button)sender;
             field = true;
             Fields();
+
             buttons = "edit";
 
             string data = btnEdit.Text;
@@ -223,11 +263,13 @@ namespace MPSystem.View
             txtTitle.Text = splitted[1].ToString();
             txtDetails.Text = splitted[2].ToString();
             cboSendTo.Text = splitted[3].ToString();
+            Buttons();
         }
 
         private void ucPromotion_Load(object sender, EventArgs e)
         {
             Fields();
+            Buttons();
             backgroundworker.RunWorkerAsync();
         }
 
@@ -236,6 +278,7 @@ namespace MPSystem.View
             field = true;
             Fields();
             buttons = "add";
+            Buttons();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -259,6 +302,9 @@ namespace MPSystem.View
             field = false;
             Fields();
             clearFields();
+            buttons = "default";
+            Buttons();
+            loadGroup();
         }
 
         private void action()
@@ -301,6 +347,8 @@ namespace MPSystem.View
                     Fields();
                     clearFields();
                     buttons = "default";
+                    Buttons();
+                    loadGroup();
                 }
                 else
                 {

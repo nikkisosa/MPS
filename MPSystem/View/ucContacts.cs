@@ -25,9 +25,9 @@ namespace MPSystem
         }
 
 
-        private static Boolean field = false;
-        private static Boolean cancel = false;
-        private static string buttons = "default";
+        private static Boolean field,fieldGroup = false;
+        private static Boolean cancel, cancelGroup = false;
+        private static string buttons,buttonsGroup = "default";
         private static string str;
         private static int id;
         private static int pageNumber = 1;
@@ -58,8 +58,8 @@ namespace MPSystem
             }
             else
             {
-                
                 loadContact();
+                loadGroup();
             }
         }
 
@@ -124,7 +124,7 @@ namespace MPSystem
                     {
                         item_old_id = item_new_id;
                         totalPage = ((config.records[0].totalpage / Entity.variables.pageSize) + 1);
-                        lblPages.Text = "Page " + pageNumber + " out of " + ((config.records[0].totalpage / Entity.variables.pageSize)+1).ToString();
+                        lblPages.Text = "Page " + pageNumber + " of " + ((config.records[0].totalpage / Entity.variables.pageSize)+1).ToString();
                     }
                 }
             }
@@ -198,6 +198,8 @@ namespace MPSystem
         {
             Fields();
             Buttons();
+            FieldsGroup();
+            ButtonsGroup();
             backgroundworker.RunWorkerAsync();
             
         }
@@ -233,6 +235,7 @@ namespace MPSystem
                         if (str == "success")
                         {
                             loadContact();
+                            
                             MessageBox.Show("successfully added", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             
                             field = false;
@@ -241,6 +244,7 @@ namespace MPSystem
                             Buttons();
                             cancel = false;
                             clearFields();
+                            loadGroup();
                         }
                         else
                         {
@@ -260,6 +264,8 @@ namespace MPSystem
                 buttons = "default";
                 Buttons();
                 clearFields();
+                id = 0;
+                loadGroup();
             }
             else // delete selected record from listview
             {
@@ -334,6 +340,7 @@ namespace MPSystem
                             if (str == "success")
                             {
                                 loadContact();
+                                
                                 MessageBox.Show("successfully update", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 
                                 field = false;
@@ -342,6 +349,7 @@ namespace MPSystem
                                 Buttons();
                                 cancel = false;
                                 clearFields();
+                                loadGroup();
                             }
                             else
                             {
@@ -424,16 +432,244 @@ namespace MPSystem
 
         private void btnGroup_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
-            pictureBox1.Show();
-            pictureBox1.BringToFront();
+            panel2.Visible = true;
+            panel2.BringToFront();
+            lvContact.Enabled = false;
         }
 
+        //Group
+
+        /**
+         * Enable or disable input/text fields
+         */
+        private void FieldsGroup()
+        {
+            if (fieldGroup == true)
+            {
+                txtGroup.Enabled = true;
+            }
+            else
+            {
+                txtGroup.Enabled = false;
+            }
+        }
+
+        /**
+         * Enable and Disable Specific button
+         */
+        private void ButtonsGroup()
+        {
+            if (buttonsGroup == "default")
+            {
+                btnGroupAdd.Enabled = true;
+                btnGroupDelete.Enabled = true;
+                btnGroupEdit.Enabled = true;
+                btnGroupAdd.Text = "Add a Group";
+                btnGroupEdit.Text = "Edit Group";
+                btnGroupDelete.Text = "Delete Group";
+            }
+            else if (buttonsGroup == "add")
+            {
+                btnGroupAdd.Enabled = true;
+                btnGroupDelete.Enabled = true;
+                btnGroupEdit.Enabled = false;
+                btnGroupAdd.Text = "Save Group";
+                btnGroupDelete.Text = "Cancel";
+            }
+            else if (buttonsGroup == "edit")
+            {
+                btnGroupAdd.Enabled = false;
+                btnGroupDelete.Enabled = true;
+                btnGroupEdit.Enabled = true;
+                btnGroupEdit.Text = "Update Group";
+                btnGroupDelete.Text = "Cancel";
+            }
+        }
+
+        private void clearFieldsGroup()
+        {
+            txtGroup.Clear();
+        }
+
+        public void loadGroup()
+        {
+            str = Model.groupModel.getGroups();
+            if (str == "success")
+            {
+                lvGroup.Items.Clear();
+                cboGroup.Items.Clear();
+                for (int count = 0; count < config.records.Count; count++)
+                {
+                    ListViewItem item = new ListViewItem(config.records[count].id.ToString());
+                    item.SubItems.Add(count.ToString());
+                    item.SubItems.Add(config.records[count].group.ToString());
+                    lvGroup.Items.Add(item);
+                    cboGroup.Items.Add(config.records[count].group.ToString()); // add item in combobox
+                }
+            }
+            else
+            {
+
+            }
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = false;
-            pictureBox1.Hide();
-            pictureBox1.SendToBack();
+            panel2.Visible = false;
+            panel2.SendToBack();
+            lvContact.Enabled = true;
+            fieldGroup = false;
+            FieldsGroup();
+            buttonsGroup = "default";
+            ButtonsGroup();
+            cancelGroup = false;
+            clearFieldsGroup();
+        }
+
+        private void btnGroupAdd_Click(object sender, EventArgs e)
+        {
+            if (fieldGroup == false)
+            {
+                fieldGroup = true;
+                cancelGroup = true;
+                buttonsGroup = "add";
+                FieldsGroup(); // enable fields
+                ButtonsGroup();
+            }
+            else
+            {
+                if (fieldGroup == true)
+                {
+                    string group = txtGroup.Text;
+                    if (group == "")
+                    {
+                        MessageBox.Show("Please enter group name", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
+                    else
+                    {
+                        Entity.variables ent = new Entity.variables();
+                        ent.group = group;
+                        string str = Model.groupModel.addGroup(ent);
+                        if (str == "success")
+                        {
+                            loadGroup();
+                            MessageBox.Show("successfully added", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            fieldGroup = false;
+                            FieldsGroup();
+                            buttonsGroup = "default";
+                            ButtonsGroup();
+                            cancelGroup = false;
+                            clearFieldsGroup();
+                        }
+                        else
+                        {
+                            MessageBox.Show(str);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnGroupEdit_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                id = Convert.ToInt32(lvGroup.SelectedItems[0].SubItems[0].Text);
+                if (fieldGroup == false)
+                {
+                    fieldGroup = true;
+                    cancelGroup = true;
+                    buttonsGroup = "edit";
+                    FieldsGroup(); // enable fields
+                    ButtonsGroup();
+
+                    txtGroup.Text = lvGroup.SelectedItems[0].SubItems[2].Text;
+                }
+                else
+                {
+                    if (fieldGroup == true)
+                    {
+                        string group = txtGroup.Text;
+                        if (group == "")
+                        {
+                            MessageBox.Show("Please enter the group name", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        }
+                        else
+                        {
+                            Entity.variables ent = new Entity.variables();
+                            ent.group = group;
+                            ent.id = id;
+                            string str = Model.groupModel.editGroup(ent);
+                            if (str == "success")
+                            {
+                                loadGroup();
+                                MessageBox.Show("successfully update", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                fieldGroup = false;
+                                FieldsGroup();
+                                buttonsGroup = "default";
+                                ButtonsGroup();
+                                cancelGroup = false;
+                                clearFieldsGroup();
+                            }
+                            else
+                            {
+                                MessageBox.Show(str);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select the group name you want to edit", "Select", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnGroupDelete_Click(object sender, EventArgs e)
+        {
+            if (cancelGroup == true) // will clear textbox/input fields
+            {
+                fieldGroup = false;
+                buttonsGroup = "default";
+                FieldsGroup(); // enable fields
+                ButtonsGroup();
+                clearFieldsGroup();
+            }
+            else // delete selected record from listview
+            {
+                
+                try
+                {
+                    id = Convert.ToInt32(lvGroup.SelectedItems[0].SubItems[0].Text);
+                    
+                    DialogResult dr = MessageBox.Show("Are you sure want to delete this group?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
+
+                        str = Model.groupModel.deleteGroup(id);
+                        if (str == "success")
+                        {
+                            lvGroup.Items.Remove(lvGroup.SelectedItems[0]);
+                            MessageBox.Show("Successfully delete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show(str, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please select the group name you want to delete", "Select", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
         }
     }
 }

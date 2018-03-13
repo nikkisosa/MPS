@@ -56,7 +56,6 @@ D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.Properties.Resources.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucAutoreply.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.SplashForm.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
-D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucCreateGroup.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucDashboard.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucMessages.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucPromotion.resources
@@ -86,3 +85,4 @@ D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.pdb
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucPromotion.resources
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucSplash.resources
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
+D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.csprojResolveAssemblyReference.cache

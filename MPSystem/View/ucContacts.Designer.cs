@@ -55,19 +55,17 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGroup = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvGroup = new System.Windows.Forms.ListView();
             this.ids = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IDx = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGroupDelete = new System.Windows.Forms.Button();
+            this.btnGroupEdit = new System.Windows.Forms.Button();
+            this.btnGroupAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -171,7 +169,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.panel1.Controls.Add(this.btnGroup);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.cboNetwork);
             this.panel1.Controls.Add(this.cboGroup);
             this.panel1.Controls.Add(this.label4);
@@ -321,9 +318,9 @@
             this.lblPages.ForeColor = System.Drawing.Color.White;
             this.lblPages.Location = new System.Drawing.Point(23, 507);
             this.lblPages.Name = "lblPages";
-            this.lblPages.Size = new System.Drawing.Size(83, 13);
+            this.lblPages.Size = new System.Drawing.Size(68, 13);
             this.lblPages.TabIndex = 15;
-            this.lblPages.Text = "Page: 0 out of 0";
+            this.lblPages.Text = "Page: 0 of  0";
             // 
             // btnNext
             // 
@@ -374,25 +371,26 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtGroup);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.listView1);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.lvGroup);
+            this.panel2.Controls.Add(this.btnGroupDelete);
+            this.panel2.Controls.Add(this.btnGroupEdit);
+            this.panel2.Controls.Add(this.btnGroupAdd);
             this.panel2.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.panel2.Location = new System.Drawing.Point(43, 84);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(539, 348);
             this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
             // 
-            // textBox2
+            // txtGroup
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(215, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 21);
-            this.textBox2.TabIndex = 3;
+            this.txtGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGroup.Location = new System.Drawing.Point(215, 24);
+            this.txtGroup.Name = "txtGroup";
+            this.txtGroup.Size = new System.Drawing.Size(300, 21);
+            this.txtGroup.TabIndex = 3;
             // 
             // label5
             // 
@@ -404,31 +402,30 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Group Name";
             // 
-            // listView1
+            // lvGroup
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvGroup.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ids,
-            this.columnHeader1,
+            this.IDx,
             this.grpName});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.Location = new System.Drawing.Point(142, 64);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(373, 269);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvGroup.FullRowSelect = true;
+            this.lvGroup.GridLines = true;
+            this.lvGroup.Location = new System.Drawing.Point(142, 64);
+            this.lvGroup.Name = "lvGroup";
+            this.lvGroup.Size = new System.Drawing.Size(373, 269);
+            this.lvGroup.TabIndex = 1;
+            this.lvGroup.UseCompatibleStateImageBehavior = false;
+            this.lvGroup.View = System.Windows.Forms.View.Details;
             // 
             // ids
             // 
-            this.ids.DisplayIndex = 1;
             this.ids.Text = "IDS";
             this.ids.Width = 0;
             // 
-            // columnHeader1
+            // IDx
             // 
-            this.columnHeader1.DisplayIndex = 0;
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IDx.Text = "ID";
             // 
             // grpName
             // 
@@ -436,58 +433,50 @@
             this.grpName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.grpName.Width = 303;
             // 
-            // button3
+            // btnGroupDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(14, 83);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnGroupDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnGroupDelete.FlatAppearance.BorderSize = 0;
+            this.btnGroupDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroupDelete.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.btnGroupDelete.ForeColor = System.Drawing.Color.White;
+            this.btnGroupDelete.Location = new System.Drawing.Point(14, 83);
+            this.btnGroupDelete.Name = "btnGroupDelete";
+            this.btnGroupDelete.Size = new System.Drawing.Size(99, 23);
+            this.btnGroupDelete.TabIndex = 0;
+            this.btnGroupDelete.Text = "Delete";
+            this.btnGroupDelete.UseVisualStyleBackColor = false;
+            this.btnGroupDelete.Click += new System.EventHandler(this.btnGroupDelete_Click);
             // 
-            // button2
+            // btnGroupEdit
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(14, 54);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnGroupEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnGroupEdit.FlatAppearance.BorderSize = 0;
+            this.btnGroupEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroupEdit.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.btnGroupEdit.ForeColor = System.Drawing.Color.White;
+            this.btnGroupEdit.Location = new System.Drawing.Point(14, 54);
+            this.btnGroupEdit.Name = "btnGroupEdit";
+            this.btnGroupEdit.Size = new System.Drawing.Size(99, 23);
+            this.btnGroupEdit.TabIndex = 0;
+            this.btnGroupEdit.Text = "Edit";
+            this.btnGroupEdit.UseVisualStyleBackColor = false;
+            this.btnGroupEdit.Click += new System.EventHandler(this.btnGroupEdit_Click);
             // 
-            // button4
+            // btnGroupAdd
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(14, 25);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::MPSystem.Properties.Resources.opaqueBg_01;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(646, 451);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.btnGroupAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnGroupAdd.FlatAppearance.BorderSize = 0;
+            this.btnGroupAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroupAdd.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.btnGroupAdd.ForeColor = System.Drawing.Color.White;
+            this.btnGroupAdd.Location = new System.Drawing.Point(14, 25);
+            this.btnGroupAdd.Name = "btnGroupAdd";
+            this.btnGroupAdd.Size = new System.Drawing.Size(99, 23);
+            this.btnGroupAdd.TabIndex = 0;
+            this.btnGroupAdd.Text = "Add";
+            this.btnGroupAdd.UseVisualStyleBackColor = false;
+            this.btnGroupAdd.Click += new System.EventHandler(this.btnGroupAdd_Click);
             // 
             // ucContacts
             // 
@@ -512,7 +501,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,15 +535,14 @@
         private System.Windows.Forms.Button btnGroup;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGroup;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvGroup;
         private System.Windows.Forms.ColumnHeader ids;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader IDx;
         private System.Windows.Forms.ColumnHeader grpName;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnGroupDelete;
+        private System.Windows.Forms.Button btnGroupEdit;
+        private System.Windows.Forms.Button btnGroupAdd;
     }
 }
