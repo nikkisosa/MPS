@@ -38,6 +38,39 @@ namespace MPSystem.Model
             return str;
         }
 
+        public static string getMobileNetwork(string mobilePrefix)
+        {
+            string query = "SELECT * FROM mobilePrefix where mobilePrefix = @mobilePrefix";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+            try
+            {
+                config.records = new List<Entity.variables>();
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@mobilePrefix", mobilePrefix);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Entity.variables ent = new Entity.variables();
+                    str = reader["mobileNetwork"].ToString();
+                    
+                }
+                
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
         public static string deleteAvailablePorts()
         {
             string query = "DELETE FROM availablePorts";

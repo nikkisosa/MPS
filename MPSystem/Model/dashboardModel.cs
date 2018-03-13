@@ -11,6 +11,10 @@ namespace MPSystem.Model
         private static string str = string.Empty;
         
 
+        public getActivePorts(){
+
+        }
+
         public static string getBalance(){
             
             string query = "SELECT * FROM availablePorts";
@@ -45,6 +49,9 @@ namespace MPSystem.Model
             }
             return str;
         }
+
+        
+ 
 
         
 

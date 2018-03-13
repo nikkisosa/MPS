@@ -79,7 +79,6 @@ D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.pdb
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucAutoreply.resources
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.SplashForm.resources
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.ucContacts.resources
-\\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucCreateGroup.resources
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucDashboard.resources
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucMessages.resources
 \\VBOXSVR\Transfer\MPS\MPSystem\obj\Debug\MPSystem.View.ucPromotion.resources

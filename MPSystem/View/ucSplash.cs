@@ -73,17 +73,18 @@ namespace MPSystem.View
                                     StringSplitOptions.None
                                 );
                                 string[] strCNUM = lineResult[2].Split(',');
-
+                                string mobileNo = strCNUM[1].Replace('"', ' ').Trim();
+                                string mobilePrefix = Model.splashModel.getMobileNetwork(mobileNo.Substring(3,3));
                                 Entity.variables entity = new Entity.variables();
                                 entity.port = sp.PortName;
-                                entity.mobile_no = strCNUM[1];
-                                entity.network = "ON-Development";
+                                entity.mobile_no = mobileNo;
+                                entity.network = (mobilePrefix == "success" || mobilePrefix == "") ? "Unknown Network" : mobilePrefix;
                                 entity.balance = 0;
 
                                 string addAvailablePortsResult = Model.splashModel.addAvailablePorts(entity);
                                 if (addAvailablePortsResult == "success")
                                 {
-                                    //Insertion success
+                                    
                                 }
                                 else
                                 {
@@ -105,9 +106,11 @@ namespace MPSystem.View
                     this.Invoke(update, percentage);
 
                 }
-                catch (Exception exs)
+                catch (Exception exception)
                 {
+                    
                     //Log the Error
+                    MessageBox.Show(exception.Message);
                 }
             }
         }
