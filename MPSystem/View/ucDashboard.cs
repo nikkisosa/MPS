@@ -30,7 +30,19 @@ namespace MPSystem.View
 
         private void ucDashboard_Load(object sender, EventArgs e)
         {
-
+            string result = Model.dashBoardModel.getActivePorts();
+            if (result == "success")
+            {
+                // Check if the records contains data.
+                if (config.records.Count > 0)
+                {
+                    for (int i = 0; i < config.records.Count; i++)
+                    {
+                        //Add the fields to the DataGridView
+                    }
+                    
+                }
+            }
         }
     }
 }

@@ -68,7 +68,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\autoreplyModel.cs" />
-    <Compile Include="Model\dashboardModel.cs" />
+    <Compile Include="Model\dashBoardModel.cs" />
     <Compile Include="Model\groupModel.cs" />
     <Compile Include="Model\promotionModel.cs" />
     <Compile Include="Model\splashModel.cs" />

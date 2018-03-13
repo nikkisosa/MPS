@@ -34,7 +34,7 @@ namespace MPSystem.View
             {
                 try
                 {
-
+                    //Serial Ports Setting
                     SerialPort sp = new SerialPort();
                     sp.PortName = ports[i];
                     sp.BaudRate = 115200;
@@ -51,7 +51,7 @@ namespace MPSystem.View
                     sp.Open();
 
 
-
+                    //Creating a task to check for the available ports.
                     Task task = Task.Factory.StartNew(() =>
                     {
 
@@ -75,16 +75,18 @@ namespace MPSystem.View
                                 string[] strCNUM = lineResult[2].Split(',');
                                 string mobileNo = strCNUM[1].Replace('"', ' ').Trim();
                                 string mobilePrefix = Model.splashModel.getMobileNetwork(mobileNo.Substring(3,3));
+                                
                                 Entity.variables entity = new Entity.variables();
                                 entity.port = sp.PortName;
                                 entity.mobile_no = mobileNo;
                                 entity.network = (mobilePrefix == "success" || mobilePrefix == "") ? "Unknown Network" : mobilePrefix;
                                 entity.balance = 0;
 
+                                //Add all the active ports in [activePorts] table.
                                 string addAvailablePortsResult = Model.splashModel.addAvailablePorts(entity);
                                 if (addAvailablePortsResult == "success")
                                 {
-                                    
+                                    //Successful inserting the data.
                                 }
                                 else
                                 {
@@ -99,6 +101,7 @@ namespace MPSystem.View
 
                     task.Wait();
                     double percentage = (double)(i + 1) / (double)ports.Length;
+                    //Update the ProgressBar UI.
                     Action<double> update = p =>
                     {
                         SplashProgBar.Value = (int)Math.Round(p * 100);
@@ -110,7 +113,6 @@ namespace MPSystem.View
                 {
                     
                     //Log the Error
-                    MessageBox.Show(exception.Message);
                 }
             }
         }
