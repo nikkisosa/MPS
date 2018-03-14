@@ -106,7 +106,7 @@ namespace MPSystem
 
         private void MMS_Load(object sender, EventArgs e)
         {
-            
+            logs.log("hello test message1");
         }
 
         private void btn_dash_Click(object sender, EventArgs e)

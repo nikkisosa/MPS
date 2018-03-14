@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="config.cs" />
     <Compile Include="Entity\variables.cs" />
+    <Compile Include="logs.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +197,9 @@
     <None Include="Resources\btnpromopencil.png" />
     <None Include="Resources\Delete_20px.png" />
     <None Include="Resources\Cancel_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
