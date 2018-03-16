@@ -39,6 +39,8 @@
             // 
             // dashGrid
             // 
+            this.dashGrid.AllowUserToAddRows = false;
+            this.dashGrid.AllowUserToDeleteRows = false;
             this.dashGrid.BackgroundColor = System.Drawing.Color.White;
             this.dashGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dashGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -51,6 +53,7 @@
             this.load});
             this.dashGrid.Location = new System.Drawing.Point(8, 61);
             this.dashGrid.Name = "dashGrid";
+            this.dashGrid.ReadOnly = true;
             this.dashGrid.Size = new System.Drawing.Size(694, 462);
             this.dashGrid.TabIndex = 0;
             // 
@@ -58,6 +61,7 @@
             // 
             this.checkOption.HeaderText = "";
             this.checkOption.Name = "checkOption";
+            this.checkOption.ReadOnly = true;
             this.checkOption.Width = 50;
             // 
             // comPort
@@ -87,7 +91,7 @@
             this.btnUpdateLoad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateLoad.FlatAppearance.BorderSize = 0;
             this.btnUpdateLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateLoad.Font = new System.Drawing.Font("Helvetica-Normal", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateLoad.ForeColor = System.Drawing.Color.White;
             this.btnUpdateLoad.Location = new System.Drawing.Point(8, 6);
             this.btnUpdateLoad.Name = "btnUpdateLoad";

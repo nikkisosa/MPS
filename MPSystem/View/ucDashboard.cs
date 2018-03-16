@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace MPSystem.View
 {
@@ -39,6 +40,12 @@ namespace MPSystem.View
                     for (int i = 0; i < config.records.Count; i++)
                     {
                         //Add the fields to the DataGridView
+                        ArrayList row = new ArrayList();
+                        row.Add(false);
+                        row.Add(config.records[i].port);
+                        row.Add(config.records[i].mobile_no);
+                        row.Add(config.records[i].balance);
+                        dashGrid.Rows.Add(row.ToArray());
                     }
                     
                 }
