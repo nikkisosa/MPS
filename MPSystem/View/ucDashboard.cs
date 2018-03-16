@@ -49,6 +49,7 @@ namespace MPSystem.View
 
                         
                     }
+                    
                     //Only the checbox will be editable.
                     dashGrid.ReadOnly = false;
                     dashGrid.Columns[1].ReadOnly = true;

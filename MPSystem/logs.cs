@@ -22,12 +22,12 @@ namespace MPSystem
                 if (!File.Exists(path))
                 {
                     File.Create(path).Close();
-                    File.AppendAllLines(path, new[] { message });
+                    File.AppendAllLines(path, new[] { DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " [" + message + "]" });
                     str = "success";
                 }
                 else if (File.Exists(path))
                 {
-                    File.AppendAllLines(path, new[] { message });
+                    File.AppendAllLines(path, new[] { DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " [" + message + "]" });
                     str = "success";
                 }
             }

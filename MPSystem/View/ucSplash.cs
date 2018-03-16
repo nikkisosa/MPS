@@ -17,6 +17,7 @@ namespace MPSystem.View
         public ucSplash()
         {
             InitializeComponent();
+            logs.log("*****Program Started*****");
         }
 
         private void ucSplash_Load(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace MPSystem.View
             int portCounter = SerialPort.GetPortNames().Length;
             var tasks = new List<Task>();
             string[] ports = SerialPort.GetPortNames();
+            logs.log("Ports: " + string.Join(",",ports));
             //Model.splashModel.deleteAvailablePorts();
             for (int i = 0; i < ports.Length; i++)
             {
@@ -58,7 +60,7 @@ namespace MPSystem.View
                         if (sp.IsOpen)
                         {
                             string portName = sp.PortName;
-                            Thread.Sleep(1000);
+                           
                             sp.WriteLine("AT\r");
                             Thread.Sleep(2000);
 
@@ -87,10 +89,12 @@ namespace MPSystem.View
                                 if (addAvailablePortsResult == "success")
                                 {
                                     //Successful inserting the data.
+                                    logs.log(entity.port + " has been added to active ports list. Ports Detail (Mobile No: "+entity.mobile_no+",Network: "+entity.network);
                                 }
                                 else
                                 {
                                     // Log the errors
+                                    logs.log("Failed to add the active port: " + addAvailablePortsResult);
                                 }
                             }
 
@@ -113,6 +117,7 @@ namespace MPSystem.View
                 {
                     
                     //Log the Error
+                    logs.log("Failed to add Comport: (" + ports[i].ToString() + ")  Exception: " +exception.Message);
                 }
             }
         }
