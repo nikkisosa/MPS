@@ -46,8 +46,28 @@ namespace MPSystem.View
                         row.Add(config.records[i].mobile_no);
                         row.Add(config.records[i].balance);
                         dashGrid.Rows.Add(row.ToArray());
+
+                        
                     }
+                    //Only the checbox will be editable.
+                    dashGrid.ReadOnly = false;
+                    dashGrid.Columns[1].ReadOnly = true;
+                    dashGrid.Columns[2].ReadOnly = true;
+                    dashGrid.Columns[2].ReadOnly = true;
                     
+                }
+            }
+        }
+
+        private void btnUpdateLoad_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dashGrid.Rows.Count; i++)
+            {
+                bool isChecked = (bool)dashGrid.Rows[i].Cells[0].Value;
+
+                if (isChecked)
+                {
+                    MessageBox.Show(dashGrid.Rows[i].Cells[1].Value.ToString());
                 }
             }
         }

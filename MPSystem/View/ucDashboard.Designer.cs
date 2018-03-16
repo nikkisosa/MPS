@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dashGrid = new System.Windows.Forms.DataGridView();
+            this.btnUpdateLoad = new System.Windows.Forms.Button();
             this.checkOption = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.comPort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobileNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.load = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUpdateLoad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dashGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,37 +53,8 @@
             this.load});
             this.dashGrid.Location = new System.Drawing.Point(8, 61);
             this.dashGrid.Name = "dashGrid";
-            this.dashGrid.ReadOnly = true;
             this.dashGrid.Size = new System.Drawing.Size(694, 462);
             this.dashGrid.TabIndex = 0;
-            // 
-            // checkOption
-            // 
-            this.checkOption.HeaderText = "";
-            this.checkOption.Name = "checkOption";
-            this.checkOption.ReadOnly = true;
-            this.checkOption.Width = 50;
-            // 
-            // comPort
-            // 
-            this.comPort.HeaderText = "COMPORT";
-            this.comPort.Name = "comPort";
-            this.comPort.ReadOnly = true;
-            this.comPort.Width = 200;
-            // 
-            // mobileNumber
-            // 
-            this.mobileNumber.HeaderText = "Mobile Number";
-            this.mobileNumber.Name = "mobileNumber";
-            this.mobileNumber.ReadOnly = true;
-            this.mobileNumber.Width = 200;
-            // 
-            // load
-            // 
-            this.load.HeaderText = "Load ";
-            this.load.Name = "load";
-            this.load.ReadOnly = true;
-            this.load.Width = 200;
             // 
             // btnUpdateLoad
             // 
@@ -99,6 +70,31 @@
             this.btnUpdateLoad.TabIndex = 1;
             this.btnUpdateLoad.Text = "Update load balance";
             this.btnUpdateLoad.UseVisualStyleBackColor = false;
+            this.btnUpdateLoad.Click += new System.EventHandler(this.btnUpdateLoad_Click);
+            // 
+            // checkOption
+            // 
+            this.checkOption.HeaderText = "";
+            this.checkOption.Name = "checkOption";
+            this.checkOption.Width = 50;
+            // 
+            // comPort
+            // 
+            this.comPort.HeaderText = "COMPORT";
+            this.comPort.Name = "comPort";
+            this.comPort.Width = 200;
+            // 
+            // mobileNumber
+            // 
+            this.mobileNumber.HeaderText = "Mobile Number";
+            this.mobileNumber.Name = "mobileNumber";
+            this.mobileNumber.Width = 200;
+            // 
+            // load
+            // 
+            this.load.HeaderText = "Load ";
+            this.load.Name = "load";
+            this.load.Width = 200;
             // 
             // ucDashboard
             // 
@@ -119,10 +115,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dashGrid;
+        public System.Windows.Forms.Button btnUpdateLoad;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkOption;
         private System.Windows.Forms.DataGridViewTextBoxColumn comPort;
         private System.Windows.Forms.DataGridViewTextBoxColumn mobileNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn load;
-        public System.Windows.Forms.Button btnUpdateLoad;
     }
 }
