@@ -31,7 +31,7 @@ namespace MPSystem.View
             var tasks = new List<Task>();
             string[] ports = SerialPort.GetPortNames();
             logs.log("Ports: " + string.Join(",",ports));
-            //Model.splashModel.deleteAvailablePorts();
+            Model.splashModel.deleteAvailablePorts();
             for (int i = 0; i < ports.Length; i++)
             {
                 try
