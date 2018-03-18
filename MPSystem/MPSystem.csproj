@@ -118,6 +118,12 @@
     <Compile Include="View\ucSplash.Designer.cs">
       <DependentUpon>ucSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucUssd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucUssd.Designer.cs">
+      <DependentUpon>ucUssd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucSplash.resx">
       <DependentUpon>ucSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucUssd.resx">
+      <DependentUpon>ucUssd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

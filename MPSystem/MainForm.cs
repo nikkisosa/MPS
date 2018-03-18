@@ -140,5 +140,21 @@ namespace MPSystem
                 ucMessages.Instance.BringToFront();
             }
         }
+
+        private void btn_ussd_Click(object sender, EventArgs e)
+        {
+            Mainpanel.Controls.Clear();
+
+            if (!Mainpanel.Controls.Contains(ucUssd.Instance))
+            {
+                Mainpanel.Controls.Add(ucUssd.Instance);
+                ucUssd.Instance.Dock = DockStyle.Fill;
+                ucUssd.Instance.BringToFront();
+            }
+            else
+            {
+                ucUssd.Instance.BringToFront();
+            }
+        }
     }
 }

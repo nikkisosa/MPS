@@ -48,7 +48,6 @@ C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucSplash.resources
 C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
 C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucDashboard.resources
 C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucMessages.resources
-C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucCreateGroup.resources
 D:\Share data\MPS\MPSystem\bin\Debug\Data\MPS_DB.mdf
 D:\Share data\MPS\MPSystem\bin\Debug\Data\MPS_DB_log.ldf
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.MMS.resources
@@ -121,3 +120,4 @@ C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.View.ucSplash.re
 C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
 C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.exe
 C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.pdb
+C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucUssd.resources
