@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MPSystem.View;
+using System.IO.Ports;
+using System.Threading;
 
 namespace MPSystem
 {
@@ -106,7 +108,9 @@ namespace MPSystem
 
         private void MMS_Load(object sender, EventArgs e)
         {
-            logs.log("hello test message1");
+            //logs.log("hello test message1");
+            checkForIncommingMessage();
+
         }
 
         private void btn_dash_Click(object sender, EventArgs e)
@@ -123,6 +127,64 @@ namespace MPSystem
             {
                 ucDashboard.Instance.BringToFront();
             }
+        }
+
+        public void checkForIncommingMessage()
+        {
+
+            string[] ports = SerialPort.GetPortNames();
+            logs.log("Started checking : " + string.Join(",", ports));
+            //Model.splashModel.deleteAvailablePorts();
+            for (int i = 0; i < ports.Length; i++)
+            {
+                try
+                {
+                    //Serial Ports Setting
+                    SerialPort sp = new SerialPort();
+                    sp.PortName = ports[i];
+                    sp.BaudRate = 115200;
+                    sp.Parity = Parity.None;
+                    sp.StopBits = StopBits.One;
+                    sp.DataBits = 8;
+                    sp.Handshake = Handshake.None;
+                    sp.RtsEnable = true;
+                    sp.NewLine = "\n";
+
+                    sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+                    sp.Open();
+                    //sp.WriteLine("AT\r");
+                    Task task = Task.Factory.StartNew(() =>
+                   {
+
+                       if (sp.IsOpen)
+                       {
+                           string portName = sp.PortName;
+
+                           sp.WriteLine("AT\r");
+                           Thread.Sleep(1000);
+                
+                       }
+                   });
+                    
+
+                }
+                catch (Exception exception)
+                {
+                    //Log the Error
+                    logs.log("Exception: " + exception.Message);
+                }
+            }
+        }
+
+        private static void DataReceivedHandler(object sender,SerialDataReceivedEventArgs e)
+        {
+            SerialPort sp = (SerialPort)sender;
+            string indata = sp.ReadExisting();
+            if(sp.ReadExisting().Contains("+CMTI:")){
+                //New Message Received
+                MessageBox.Show(indata);
+            }
+           
         }
 
         private void btn_messages_Click(object sender, EventArgs e)

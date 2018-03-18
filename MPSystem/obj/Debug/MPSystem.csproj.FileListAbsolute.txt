@@ -121,3 +121,4 @@ C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateR
 C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.exe
 C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.pdb
 C:\Users\miste\Desktop\MPS\MPSystem\obj\Debug\MPSystem.View.ucUssd.resources
+C:\Users\Allan\Desktop\Projects\MPS\MPSystem\obj\Debug\MPSystem.View.ucUssd.resources

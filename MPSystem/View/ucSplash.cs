@@ -62,7 +62,7 @@ namespace MPSystem.View
                             string portName = sp.PortName;
                            
                             sp.WriteLine("AT\r");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(1000);
 
                             string result = sp.ReadExisting();
                             if (result.Contains("OK"))
@@ -96,6 +96,7 @@ namespace MPSystem.View
                                     // Log the errors
                                     logs.log("Failed to add the active port: " + addAvailablePortsResult);
                                 }
+                                sp.Close();
                             }
 
                         }

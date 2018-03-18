@@ -71,8 +71,8 @@ namespace MPSystem.View
 
                 if (isChecked)
                 {
-
-                    checkPortBalance(dashGrid.Rows[i].Cells[1].Value.ToString(), dashGrid.Rows[i].Cells[2].Value.ToString(), i);
+                    //onhold
+                    //checkPortBalance(dashGrid.Rows[i].Cells[1].Value.ToString(), dashGrid.Rows[i].Cells[2].Value.ToString(), i);
 
                 }
             }
