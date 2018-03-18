@@ -148,7 +148,7 @@ namespace MPSystem.View
                     btnEdit.Location = new Point(122, 0);
                     btnEdit.Margin = new Padding(0, 0, 0, 0);
                     btnEdit.Padding = new Padding(20, 20, 20, 20);
-                    btnEdit.Text = config.records[count].id.ToString() + "@" + config.records[count].promotionTitle.ToString() + "@" + config.records[count].promotionDetails.ToString() + "@" + config.records[count].sendTo.ToString();
+                    btnEdit.Text = config.records[count].id.ToString() + "@" + config.records[count].promotionTitle.ToString() + "@" + config.records[count].details.ToString() + "@" + config.records[count].sendTo.ToString();
                     btnEdit.TextAlign = ContentAlignment.MiddleCenter;
                     btnEdit.BackgroundImage = new System.Drawing.Bitmap(MPSystem.Properties.Resources.btnpromopencil);
                     btnEdit.BackgroundImageLayout = ImageLayout.Stretch;
@@ -321,7 +321,7 @@ namespace MPSystem.View
             {
                 Entity.variables ent = new Entity.variables();
                 ent.promotionTitle = title;
-                ent.promotionDetails = details;
+                ent.details = details;
                 ent.sendTo = sendto;
                 switch (buttons)
                 {

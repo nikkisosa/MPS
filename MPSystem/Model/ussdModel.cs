@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 namespace MPSystem.Model
 {
-    class promotionModel
+    class ussdModel
     {
         private static string str = string.Empty;
 
-        public static string addPromotion(Entity.variables ent)
+        public static string addUssdCommand(Entity.variables ent)
         {
 
-            string query = "INSERT INTO promotion([title],[details],[sendto]) VALUES (@title,@details,@sendto);";
+            string query = "INSERT INTO ussdcommand([command],[description]) VALUES (@command,@description);";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
 
@@ -22,9 +22,8 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@title", ent.promotionTitle);
-                cmd.Parameters.AddWithValue("@details", ent.details);
-                cmd.Parameters.AddWithValue("@sendto", ent.sendTo);
+                cmd.Parameters.AddWithValue("@command", ent.command);
+                cmd.Parameters.AddWithValue("@description", ent.details);
                 cmd.ExecuteNonQuery();
                 str = "success";
             }
@@ -39,10 +38,10 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string editPromotion(Entity.variables ent)
+        public static string editUssdCommand(Entity.variables ent)
         {
 
-            string query = "UPDATE promotion SET [title] = @title,[details] = @details,[sendto] = @sendto WHERE id = @id;";
+            string query = "UPDATE ussdcommand SET [command] = @command,[description] = @description WHERE id = @id;";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
 
@@ -51,9 +50,8 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@title", ent.promotionTitle);
-                cmd.Parameters.AddWithValue("@details", ent.details);
-                cmd.Parameters.AddWithValue("@sendto", ent.sendTo);
+                cmd.Parameters.AddWithValue("@command", ent.command);
+                cmd.Parameters.AddWithValue("@description", ent.details);
                 cmd.Parameters.AddWithValue("@id", ent.id);
                 cmd.ExecuteNonQuery();
                 str = "success";
@@ -69,9 +67,10 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string getPromotion()
+        public static string getUssdCommand(int page)
         {
-            string query = "SELECT * FROM promotion";
+            int pages = (Entity.variables.pageSize * (page - 1));
+            string query = "SELECT * FROM ussdcommand ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
@@ -86,9 +85,8 @@ namespace MPSystem.Model
                 {
                     Entity.variables ent = new Entity.variables();
                     ent.id = Convert.ToInt32(reader["id"].ToString());
-                    ent.promotionTitle = reader["title"].ToString();
-                    ent.details = reader["details"].ToString();
-                    ent.sendTo = reader["sendto"].ToString();
+                    ent.command = reader["command"].ToString();
+                    ent.details = reader["description"].ToString();
                     config.records.Add(ent);
                 }
                 str = "success";
@@ -104,9 +102,36 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string deletePromotion(int id)
+        public static string getTotalPage()
         {
-            string query = "DELETE FROM promotion WHERE id = @id";
+            string query = "SELECT COUNT(id) FROM ussdcommand";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                config.records = new List<Entity.variables>();
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                Entity.variables ent = new Entity.variables();
+                ent.totalpage = (Int32)cmd.ExecuteScalar();
+                config.records.Add(ent);
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
+        public static string deleteUssdCommand(int id)
+        {
+            string query = "DELETE FROM ussdcommand WHERE id = @id";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             try
