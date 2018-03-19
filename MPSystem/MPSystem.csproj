@@ -201,6 +201,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MPS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\closeBlack.png" />
+    <None Include="Resources\close.png" />
     <None Include="Resources\opaqueBg-01.png" />
     <None Include="Resources\addbtn.png" />
     <None Include="Resources\btnspromodelete.png" />
