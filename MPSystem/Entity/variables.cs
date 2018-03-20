@@ -48,7 +48,7 @@ namespace MPSystem.Entity
             set;
         }
 
-        public string promotionDetails
+        public string details
         {
             get;
             set;
@@ -80,6 +80,12 @@ namespace MPSystem.Entity
         }
         public int totalpage
 
+        {
+            get;
+            set;
+        }
+
+        public string ussdCommand
         {
             get;
             set;
