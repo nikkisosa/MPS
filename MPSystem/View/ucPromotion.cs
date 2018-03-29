@@ -356,5 +356,10 @@ namespace MPSystem.View
                 }
             }
         }
+
+        private void btnSendPromo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

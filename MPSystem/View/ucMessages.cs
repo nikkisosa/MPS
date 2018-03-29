@@ -26,5 +26,10 @@ namespace MPSystem.View
         {
             InitializeComponent();
         }
+
+        private void ucMessages_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

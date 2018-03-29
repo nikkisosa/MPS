@@ -71,11 +71,11 @@
             // lblPages
             // 
             this.lblPages.AutoSize = true;
-            this.lblPages.Font = new System.Drawing.Font("Helvetica-Normal", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPages.ForeColor = System.Drawing.Color.White;
             this.lblPages.Location = new System.Drawing.Point(6, 501);
             this.lblPages.Name = "lblPages";
-            this.lblPages.Size = new System.Drawing.Size(84, 16);
+            this.lblPages.Size = new System.Drawing.Size(83, 13);
             this.lblPages.TabIndex = 18;
             this.lblPages.Text = "Page: 0 out of 0";
             // 
@@ -84,7 +84,7 @@
             this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Helvetica-Normal", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(654, 496);
             this.btnNext.Name = "btnNext";
@@ -98,7 +98,7 @@
             this.btnPrev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.Font = new System.Drawing.Font("Helvetica-Normal", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.ForeColor = System.Drawing.Color.White;
             this.btnPrev.Location = new System.Drawing.Point(594, 496);
             this.btnPrev.Name = "btnPrev";
@@ -119,6 +119,7 @@
             this.MinimumSize = new System.Drawing.Size(711, 536);
             this.Name = "ucMessages";
             this.Size = new System.Drawing.Size(711, 536);
+            this.Load += new System.EventHandler(this.ucMessages_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

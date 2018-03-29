@@ -45,6 +45,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.backgroundworker = new System.ComponentModel.BackgroundWorker();
+            this.btnSendPromo = new System.Windows.Forms.Button();
             this.flpPromotion.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -197,6 +198,7 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnSave);
             this.flowLayoutPanel2.Controls.Add(this.btnCancel);
+            this.flowLayoutPanel2.Controls.Add(this.btnSendPromo);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(331, 289);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(353, 52);
@@ -235,6 +237,23 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSendPromo
+            // 
+            this.btnSendPromo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnSendPromo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendPromo.FlatAppearance.BorderSize = 0;
+            this.btnSendPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendPromo.ForeColor = System.Drawing.Color.White;
+            this.btnSendPromo.Location = new System.Drawing.Point(220, 0);
+            this.btnSendPromo.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnSendPromo.Name = "btnSendPromo";
+            this.btnSendPromo.Size = new System.Drawing.Size(107, 34);
+            this.btnSendPromo.TabIndex = 1;
+            this.btnSendPromo.Text = "Send";
+            this.btnSendPromo.UseVisualStyleBackColor = false;
+            this.btnSendPromo.Click += new System.EventHandler(this.btnSendPromo_Click);
             // 
             // ucPromotion
             // 
@@ -282,5 +301,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.ComponentModel.BackgroundWorker backgroundworker;
+        private System.Windows.Forms.Button btnSendPromo;
     }
 }

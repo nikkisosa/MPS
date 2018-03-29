@@ -1,3 +1,12 @@
 2018-03-20 21:36:37 [*****Program Started*****]
 2018-03-20 21:36:37 [Ports: ]
 2018-03-20 21:36:40 [Started checking : ]
+2018-03-20 21:52:40 [*****Program Started*****]
+2018-03-20 21:52:40 [Ports: COM19]
+2018-03-20 21:52:56 [Failed to add the active port: Cannot open database "C:\USERS\ALLAN\DESKTOP\PROJECTS\MPS\MPSYSTEM\DATA\MPS_DB.MDF" requested by the login. The login failed.
+Login failed for user 'DESKTOP-D7TA2R2\Allan'.]
+2018-03-20 21:52:56 [Started checking : COM19]
+2018-03-20 21:59:33 [*****Program Started*****]
+2018-03-20 21:59:33 [Ports: COM19]
+2018-03-20 21:59:37 [COM19 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-20 21:59:37 [Started checking : COM19]

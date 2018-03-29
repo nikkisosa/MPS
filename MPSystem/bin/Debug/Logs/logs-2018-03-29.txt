@@ -1,0 +1,6 @@
+2018-03-29 12:23:46 [*****Program Started*****]
+2018-03-29 12:23:46 [Ports: COM20]
+2018-03-29 12:23:52 [COM20 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-29 12:23:53 [Started checking : COM20]
+2018-03-29 12:42:05 [*****Program Started*****]
+2018-03-29 12:42:05 [Ports: COM20]
