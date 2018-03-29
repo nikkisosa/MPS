@@ -104,6 +104,40 @@ namespace MPSystem.Model
             return str;
         }
 
+        public static string getGroupMembersNumber(string group)
+        {
+            string query = "SELECT mobile_no FROM contact WHERE [group] = @group ";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+            try
+            {
+                config.records = new List<Entity.variables>();
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@group", group);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Entity.variables ent = new Entity.variables();
+                    ent.mobile_no = reader["mobile_no"].ToString();
+                    config.records.Add(ent);
+                }
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+           
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
         public static string deletePromotion(int id)
         {
             string query = "DELETE FROM promotion WHERE id = @id";

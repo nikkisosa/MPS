@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Text.RegularExpressions;
+using System.IO.Ports;
+using System.Collections;
 namespace MPSystem.View
 {
     public partial class ucPromotion : UserControl
@@ -359,7 +361,163 @@ namespace MPSystem.View
 
         private void btnSendPromo_Click(object sender, EventArgs e)
         {
+            string title = txtTitle.Text;
+            string group = cboSendTo.Text;
+            if (title == "")
+            {
+                MessageBox.Show("Please select a promo.", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+            if (group == "")
+            {
+                MessageBox.Show("Please select a group.", "MPS", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+           
+         
+                //string[] ports = SerialPort.GetPortNames();
+                getActivePorts();
+                pnlPortsToSend.Visible = true;
+                //sendPromo(mobileNumbers);
+               
+            
+            
 
         }
+
+
+        public void sendPromo(string port,List<string> mobileNumbers,string promoDetails)
+        {
+            //foreach (string mobileNumber in mobileNumbers)
+            //{
+            //    MessageBox.Show(mobileNumber);
+            //}
+          
+            //logs.log("Started checking : " + string.Join(",", ports));
+            //Model.splashModel.deleteAvailablePorts();
+            
+                try
+                {
+                    //Serial Ports Setting
+                    SerialPort sp = new SerialPort();
+                    sp.PortName = port;
+                    sp.BaudRate = 115200;
+                    sp.Parity = Parity.None;
+                    sp.StopBits = StopBits.One;
+                    sp.DataBits = 8;
+                    sp.Handshake = Handshake.None;
+                    sp.RtsEnable = true;
+                    sp.NewLine = "\n";
+
+                    //sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+                    sp.Open();
+                    //sp.WriteLine("AT\r");
+                    Task task = Task.Factory.StartNew(() =>
+                    {
+
+                        if (sp.IsOpen)
+                        {
+                            
+                            sp.WriteLine("AT+CMGF=1\r");
+                            Thread.Sleep(500);
+                            sp.WriteLine("AT+CMGD=1\r");
+                            Thread.Sleep(500);
+                            sp.WriteLine("AT+CMGW=\"" + mobileNumbers[0] + "\"\r");
+                            Thread.Sleep(500);
+                            sp.WriteLine(promoDetails+ "\x1a");
+                            Thread.Sleep(500);
+                            foreach (string mobileNumber in mobileNumbers)
+                            {
+                                
+                                sp.WriteLine("AT+CMSS=1,\"" + mobileNumber + "\"\r");
+                                Thread.Sleep(4000);
+
+                            }
+                            sp.WriteLine("AT+CMGD=1\r");
+                            Thread.Sleep(500);
+
+
+                        }
+                    });
+
+
+                }
+                catch (Exception exception)
+                {
+                    //Log the Error
+                    logs.log("Exception: " + exception.Message);
+                }
+            
+        }
+
+
+        public void getActivePorts()
+        {
+
+            lstGrid.Rows.Clear();
+            string result = Model.dashBoardModel.getActivePorts();
+            if (result == "success")
+            {
+                
+                // Check if the records contains data.
+                if (config.records.Count > 0)
+                {
+
+                    for (int i = 0; i < config.records.Count; i++)
+                    {
+                        //Add the fields to the DataGridView
+                       
+                       ArrayList row = new ArrayList();
+                       row.Add(false);
+                       row.Add(config.records[i].port);
+
+                       lstGrid.Rows.Add(row.ToArray());
+
+
+                    }
+               
+
+                }
+            }
+        }
+
+        private void btnPClose_Click(object sender, EventArgs e)
+        {
+            pnlPortsToSend.Visible = false;
+        }
+
+        private void btnPSend_Click(object sender, EventArgs e)
+        {
+           
+
+            for (int i = 0; i < lstGrid.Rows.Count; i++)
+            {
+                bool isChecked = (bool)lstGrid.Rows[i].Cells[0].Value;
+
+                if (isChecked)
+                {
+                    string selectedPort = lstGrid.Rows[i].Cells[1].Value.ToString();
+                    str = Model.promotionModel.getGroupMembersNumber(cboSendTo.Text);
+                    if (str == "success")
+                    {
+                        List<string> mobileNumbers = new List<string>();
+                
+                        for (int count = 0; count < config.records.Count; count++)
+                        {
+                            mobileNumbers.Add(config.records[count].mobile_no.ToString());
+                        }
+                        //MessageBox.Show(lstGrid.Rows[i].Cells[1].Value.ToString());
+                        sendPromo(selectedPort, mobileNumbers, txtDetails.Text);
+                        pnlPortsToSend.Visible = false;
+                        MessageBox.Show("The Promo has been sent to group :" + cboSendTo.Text);
+                    }
+
+                }
+            }
+        }
+
+ 
+
+        
     }
 }

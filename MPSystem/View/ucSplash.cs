@@ -75,9 +75,9 @@ namespace MPSystem.View
                                     StringSplitOptions.None
                                 );
                                 string[] strCNUM = lineResult[2].Split(',');
-                                string mobileNo = strCNUM[1].Replace('"', ' ').Trim();
+                                string mobileNo = (strCNUM.Length > 1 ) ? strCNUM[1].Replace('"', ' ').Trim().ToString() : "Unknown";
                                 string mobilePrefix = Model.splashModel.getMobileNetwork(mobileNo.Substring(3,3));
-                                
+                    
                                 Entity.variables entity = new Entity.variables();
                                 entity.port = sp.PortName;
                                 entity.mobile_no = mobileNo;
