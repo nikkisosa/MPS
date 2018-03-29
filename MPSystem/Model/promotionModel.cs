@@ -39,6 +39,34 @@ namespace MPSystem.Model
             return str;
         }
 
+        public static string addLastSentPromotion(Entity.variables ent)
+        {
+
+            string query = "INSERT INTO lastPromoSent([lastPromoSent],[group]) VALUES (@lastpromo,@group);";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+
+            try
+            {
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@lastpromo", ent.promotionTitle);
+                cmd.Parameters.AddWithValue("@group", ent.group);
+                cmd.ExecuteNonQuery();
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
         public static string editPromotion(Entity.variables ent)
         {
 

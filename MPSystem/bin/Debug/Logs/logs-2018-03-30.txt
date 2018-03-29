@@ -1,0 +1,4 @@
+2018-03-30 00:01:33 [*****Program Started*****]
+2018-03-30 00:01:33 [Ports: COM28]
+2018-03-30 00:01:37 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 00:01:38 [Started checking : COM28]

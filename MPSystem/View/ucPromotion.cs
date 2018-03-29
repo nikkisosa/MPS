@@ -447,6 +447,7 @@ namespace MPSystem.View
                     //Log the Error
                     logs.log("Exception: " + exception.Message);
                 }
+               
             
         }
 
@@ -507,9 +508,23 @@ namespace MPSystem.View
                             mobileNumbers.Add(config.records[count].mobile_no.ToString());
                         }
                         //MessageBox.Show(lstGrid.Rows[i].Cells[1].Value.ToString());
-                        sendPromo(selectedPort, mobileNumbers, txtDetails.Text);
+                        Entity.variables entity = new Entity.variables();
+                        entity.promotionTitle = txtTitle.Text;
+                        entity.group = cboSendTo.Text;
+
+                        string insertLastPromoSent = Model.promotionModel.addLastSentPromotion(entity);
+                        if (insertLastPromoSent == "success")
+                        {
+                            sendPromo(selectedPort, mobileNumbers, txtDetails.Text);
+                            MessageBox.Show("The Promo has been sent to " + cboSendTo.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Unable to sent the promo to " + cboSendTo.Text + " " + insertLastPromoSent);
+                        }
+                        
                         pnlPortsToSend.Visible = false;
-                        MessageBox.Show("The Promo has been sent to group :" + cboSendTo.Text);
+                        
                     }
 
                 }
