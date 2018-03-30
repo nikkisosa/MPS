@@ -2,3 +2,869 @@
 2018-03-30 00:01:33 [Ports: COM28]
 2018-03-30 00:01:37 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
 2018-03-30 00:01:38 [Started checking : COM28]
+2018-03-30 14:47:20 [*****Program Started*****]
+2018-03-30 14:47:20 [Ports: ]
+2018-03-30 14:47:23 [Started checking : ]
+2018-03-30 14:57:44 [*****Program Started*****]
+2018-03-30 14:57:44 [Ports: ]
+2018-03-30 14:57:45 [Started checking : ]
+2018-03-30 15:07:45 [*****Program Started*****]
+2018-03-30 15:07:45 [Ports: COM28]
+2018-03-30 15:08:02 [Failed to add the active port: Cannot open database "C:\PROJECTS\MPS\MPSYSTEM\DATA\MPS_DB.MDF" requested by the login. The login failed.
+Login failed for user 'ALLAN-RABANILLO\ASUS'.]
+2018-03-30 15:08:02 [Started checking : ]
+2018-03-30 15:08:25 [*****Program Started*****]
+2018-03-30 15:08:25 [Ports: COM28]
+2018-03-30 15:08:29 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:08:29 [Started checking : COM28]
+2018-03-30 15:22:18 [*****Program Started*****]
+2018-03-30 15:22:18 [Ports: COM28]
+2018-03-30 15:22:35 [Failed to add the active port: Cannot open database "C:\PROJECTS\MPS\MPSYSTEM\DATA\MPS_DB.MDF" requested by the login. The login failed.
+Login failed for user 'ALLAN-RABANILLO\ASUS'.]
+2018-03-30 15:22:35 [Started checking : ]
+2018-03-30 15:23:01 [*****Program Started*****]
+2018-03-30 15:23:01 [Ports: COM28]
+2018-03-30 15:23:04 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:23:04 [Started checking : COM28]
+2018-03-30 15:23:04 [New Message Read: AT]
+2018-03-30 15:23:04 [New Message Read: 
+]
+2018-03-30 15:23:04 [New Message Read: 
+OK
+]
+2018-03-30 15:23:16 [*****Program Started*****]
+2018-03-30 15:23:16 [Ports: COM28]
+2018-03-30 15:23:19 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:23:20 [Started checking : COM28]
+2018-03-30 15:23:20 [New Message Read: AT]
+2018-03-30 15:23:20 [New Message Read: 
+]
+2018-03-30 15:23:20 [New Message Read: 
+OK
+]
+2018-03-30 15:24:37 [New Message Read: 
++CMTI: "SM",6
+]
+2018-03-30 15:25:53 [*****Program Started*****]
+2018-03-30 15:25:53 [Ports: COM28]
+2018-03-30 15:25:57 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:25:57 [Started checking : COM28]
+2018-03-30 15:25:57 [New Message Read: AT]
+2018-03-30 15:25:57 [New Message Read: 
+]
+2018-03-30 15:25:57 [New Message Read: 
+OK
+]
+2018-03-30 15:26:41 [New Message Read: 
++CMTI: "SM",7
+]
+2018-03-30 15:27:08 [Started checking : COM28]
+2018-03-30 15:27:08 [New Message Read: AT
+
+OK
+]
+2018-03-30 15:30:04 [*****Program Started*****]
+2018-03-30 15:30:04 [Ports: COM28]
+2018-03-30 15:30:08 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:30:08 [Started checking : COM28]
+2018-03-30 15:30:08 [New Message Read: AT]
+2018-03-30 15:30:08 [New Message Read: 
+]
+2018-03-30 15:30:08 [New Message Read: 
+OK
+]
+2018-03-30 15:30:35 [Started checking : COM28]
+2018-03-30 15:30:35 [New Message Read: AT]
+2018-03-30 15:30:35 [New Message Read: 
+
+OK
+]
+2018-03-30 15:32:00 [*****Program Started*****]
+2018-03-30 15:32:00 [Ports: COM28]
+2018-03-30 15:32:15 [Failed to add the active port: Cannot open database "C:\PROJECTS\MPS\MPSYSTEM\DATA\MPS_DB.MDF" requested by the login. The login failed.
+Login failed for user 'ALLAN-RABANILLO\ASUS'.]
+2018-03-30 15:32:15 [Started checking : ]
+2018-03-30 15:33:42 [*****Program Started*****]
+2018-03-30 15:33:42 [Ports: COM28]
+2018-03-30 15:33:46 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:33:47 [Started checking : COM28]
+2018-03-30 15:33:47 [New Message Read: AT]
+2018-03-30 15:33:47 [New Message Read: 
+]
+2018-03-30 15:33:47 [New Message Read: 
+OK
+]
+2018-03-30 15:34:07 [Started checking : COM28]
+2018-03-30 15:34:07 [New Message Read: AT
+]
+2018-03-30 15:34:07 [New Message Read: 
+OK
+]
+2018-03-30 15:35:20 [*****Program Started*****]
+2018-03-30 15:35:20 [Ports: COM28]
+2018-03-30 15:35:24 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:35:24 [Started checking : COM28]
+2018-03-30 15:35:24 [New Message Read: AT]
+2018-03-30 15:35:24 [New Message Read: 
+
+OK
+]
+2018-03-30 15:38:14 [*****Program Started*****]
+2018-03-30 15:38:14 [Ports: COM28]
+2018-03-30 15:38:18 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:38:18 [Started checking : COM28]
+2018-03-30 15:38:18 [New Message Read: AT
+
+OK
+]
+2018-03-30 15:39:07 [*****Program Started*****]
+2018-03-30 15:39:07 [Ports: COM28]
+2018-03-30 15:39:11 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:39:11 [Started checking : COM28]
+2018-03-30 15:39:11 [New Message Read: AT
+
+OK
+]
+2018-03-30 15:42:43 [*****Program Started*****]
+2018-03-30 15:42:43 [Ports: COM28]
+2018-03-30 15:42:56 [*****Program Started*****]
+2018-03-30 15:42:56 [Ports: COM28]
+2018-03-30 15:42:59 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:44:36 [*****Program Started*****]
+2018-03-30 15:44:36 [Ports: COM28]
+2018-03-30 15:44:39 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:46:21 [*****Program Started*****]
+2018-03-30 15:46:21 [Ports: COM28]
+2018-03-30 15:46:24 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:48:52 [*****Program Started*****]
+2018-03-30 15:48:52 [Ports: COM28]
+2018-03-30 15:48:55 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:49:13 [sending promo]
+2018-03-30 15:49:13 [sending promo done]
+2018-03-30 15:49:44 [*****Program Started*****]
+2018-03-30 15:49:44 [Ports: COM28]
+2018-03-30 15:49:47 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:49:59 [sending promo]
+2018-03-30 15:49:59 [sending promo done]
+2018-03-30 15:50:08 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Sa presyong Abot Kaya, sa Size na di mo kaya.
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 243
+
+OK
+]
+2018-03-30 15:50:13 [AT+CMSS=1,"09560628431"
+
++CMSS: 244
+
+OK
+]
+2018-03-30 15:50:18 [AT+CMSS=1,"09369696185"
+
++CMSS: 245
+
+OK
+]
+2018-03-30 15:51:52 [*****Program Started*****]
+2018-03-30 15:51:52 [Ports: COM28]
+2018-03-30 15:52:10 [*****Program Started*****]
+2018-03-30 15:52:10 [Ports: COM28]
+2018-03-30 15:52:14 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 15:52:15 [Started checking : COM28]
+2018-03-30 15:52:15 [New Message Read: AT]
+2018-03-30 15:52:15 [New Message Read: 
+]
+2018-03-30 15:52:15 [New Message Read: 
+OK]
+2018-03-30 15:52:15 [New Message Read: 
+]
+2018-03-30 15:52:33 [sending promo]
+2018-03-30 15:52:33 [sending promo done]
+2018-03-30 15:52:34 [Started checking : COM28]
+2018-03-30 15:52:34 [Exception: Access to the port 'COM28' is denied.]
+2018-03-30 15:52:39 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Promotion Five
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 246
+
+OK
+]
+2018-03-30 15:52:43 [AT+CMSS=1,"09560628431"
+
++CMSS: 247
+
+OK
+]
+2018-03-30 15:52:47 [AT+CMSS=1,"09369696185"
+
++CMSS: 248
+
+OK
+]
+2018-03-30 16:39:16 [*****Program Started*****]
+2018-03-30 16:39:16 [Ports: COM28]
+2018-03-30 16:39:34 [*****Program Started*****]
+2018-03-30 16:39:34 [Ports: COM28]
+2018-03-30 16:39:37 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 16:39:38 [Started checking : COM28]
+2018-03-30 16:39:38 [New Message Read: AT
+
+OK
+]
+2018-03-30 18:15:08 [*****Program Started*****]
+2018-03-30 18:15:08 [Ports: COM28]
+2018-03-30 18:15:22 [*****Program Started*****]
+2018-03-30 18:15:22 [Ports: COM28]
+2018-03-30 18:15:26 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 18:15:26 [Started checking : COM28]
+2018-03-30 18:15:26 [New Message Read: AT]
+2018-03-30 18:15:26 [New Message Read: 
+]
+2018-03-30 18:15:26 [New Message Read: 
+OK
+]
+2018-03-30 18:15:39 [sending promo]
+2018-03-30 18:15:45 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Promotion Five
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 249
+
+OK
+]
+2018-03-30 18:15:49 [AT+CMSS=1,"09560628431"
+]
+2018-03-30 18:15:53 [AT+CMSS=1,"09369696185"
+
+ERROR
+
++CMSS: 250
+
+OK
+]
+2018-03-30 18:15:54 [Started checking : COM28]
+2018-03-30 18:15:54 [Exception: Access to the port 'COM28' is denied.]
+2018-03-30 18:15:54 [sending promo done]
+2018-03-30 18:32:33 [*****Program Started*****]
+2018-03-30 18:32:33 [Ports: COM28]
+2018-03-30 18:32:38 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 18:32:38 [Started checking : COM28]
+2018-03-30 18:32:38 [New Message Read: AT
+
+OK
+]
+2018-03-30 18:41:37 [*****Program Started*****]
+2018-03-30 18:41:37 [Ports: COM28]
+2018-03-30 18:41:41 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 18:41:41 [Started checking : COM28]
+2018-03-30 18:41:41 [New Message Read: AT
+
+O]
+2018-03-30 18:41:41 [New Message Read: K
+]
+2018-03-30 18:44:01 [Must declare the scalar variable "@mobile_no".]
+2018-03-30 18:44:01 [ YES]
+2018-03-30 18:44:01 [this is a test message for the last try]
+2018-03-30 18:44:01 [123456790 test message]
+2018-03-30 18:44:01 [New Message Read: 
++CMTI: "SM",9
+]
+2018-03-30 18:47:59 [*****Program Started*****]
+2018-03-30 18:47:59 [Ports: COM28]
+2018-03-30 18:48:03 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 18:48:03 [Started checking : COM28]
+2018-03-30 18:48:03 [New Message Read: AT
+
+OK
+]
+2018-03-30 18:48:21 [sending promo]
+2018-03-30 18:48:27 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Sa presyong Abot Kaya, sa Size na di mo kaya.
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 251
+
+OK
+]
+2018-03-30 18:48:31 [AT+CMSS=1,"09560628431"
+
++CMSS: 252
+
+OK
+]
+2018-03-30 18:48:35 [AT+CMSS=1,"09369696185"
+
++CMSS: 253
+
+OK
+]
+2018-03-30 18:48:36 [Started checking : COM28]
+2018-03-30 18:48:36 [Exception: Access to the port 'COM28' is denied.]
+2018-03-30 18:48:36 [sending promo done]
+2018-03-30 18:49:46 [*****Program Started*****]
+2018-03-30 18:49:46 [Ports: COM28]
+2018-03-30 18:49:50 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 18:49:50 [Started checking : COM28]
+2018-03-30 18:49:50 [New Message Read: AT
+
+OK
+]
+2018-03-30 18:50:28 [YES]
+2018-03-30 18:50:28 [this is the last of last message]
+2018-03-30 18:50:28 [New Message Read: 
++CMTI: "SM",10
+]
+2018-03-30 18:59:03 [*****Program Started*****]
+2018-03-30 18:59:03 [Ports: COM28]
+2018-03-30 18:59:16 [*****Program Started*****]
+2018-03-30 18:59:16 [Ports: COM28]
+2018-03-30 18:59:20 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 18:59:20 [Started checking : COM28]
+2018-03-30 18:59:20 [New Message Read: AT]
+2018-03-30 18:59:20 [New Message Read: 
+
+OK
+]
+2018-03-30 19:02:04 [*****Program Started*****]
+2018-03-30 19:02:04 [Ports: COM28]
+2018-03-30 19:02:08 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:02:08 [Started checking : COM28]
+2018-03-30 19:02:08 [New Message Read: AT
+]
+2018-03-30 19:02:08 [New Message Read: 
+OK
+]
+2018-03-30 19:02:57 [YES]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [asd]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [asd]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [this is a test message for testing only]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [this is a second message for test only]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [this is the third message try]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [this is the 4th message]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [this is a test message for the last try]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [123456790 test message]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [this is the last of last message]
+2018-03-30 19:02:57 [Not Match]
+2018-03-30 19:02:57 [third test message]
+2018-03-30 19:02:57 [New Message Read: 
++CMTI: "SM",12
+]
+2018-03-30 19:02:58 [New Message Read: +C]
+2018-03-30 19:02:58 [New Message Read: MGL: 12,"REC UNREAD","+639171320488",,"18/03/30,19:02:48+32"
+ako ay nag replay lang nman
+
+OK
+]
+2018-03-30 19:05:58 [*****Program Started*****]
+2018-03-30 19:05:58 [Ports: COM28]
+2018-03-30 19:06:02 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:06:02 [Started checking : COM28]
+2018-03-30 19:06:02 [New Message Read: AT
+
+OK
+]
+2018-03-30 19:11:48 [*****Program Started*****]
+2018-03-30 19:11:48 [Ports: COM28]
+2018-03-30 19:11:52 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:11:52 [Started checking : COM28]
+2018-03-30 19:11:52 [New Message Read: AT
+
+OK
+]
+2018-03-30 19:12:38 [Match]
+2018-03-30 19:12:38 [YES]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [asd]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [asd]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [this is a test message for testing only]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [this is a second message for test only]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [this is the third message try]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [this is the 4th message]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [this is a test message for the last try]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [123456790 test message]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [this is the last of last message]
+2018-03-30 19:12:38 [Not Match]
+2018-03-30 19:12:38 [third test message]
+2018-03-30 19:12:38 [New Message Read: 
++CMTI: "SM",13
+]
+2018-03-30 19:12:38 [New Message Read: +CMGL: 12,"REC READ","+6391]
+2018-03-30 19:12:38 [New Message Read: 71320488",,"18/03/30,19:02:48+32"
+ako ay nag replay lang nman
+]
+2018-03-30 19:12:38 [New Message Read: +CMG]
+2018-03-30 19:12:38 [New Message Read: L: 13,"REC UNREAD","+639177736927",,"18/03/30,19:12:27+32"
+test me agian pls
+
+OK
+]
+2018-03-30 19:14:36 [Match]
+2018-03-30 19:14:36 [YES]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [asd]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [asd]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [this is a test message for testing only]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [this is a second message for test only]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [this is the third message try]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [this is the 4th message]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [this is a test message for the last try]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [123456790 test message]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [this is the last of last message]
+2018-03-30 19:14:36 [Not Match]
+2018-03-30 19:14:36 [third test message]
+2018-03-30 19:14:36 [New Message Read: 
++CMTI: "SM",14
+]
+2018-03-30 19:14:36 [New Message Read: +C]
+2018-03-30 19:14:36 [New Message Read: MGL: 12,"REC READ","+639171320488",,"18/03/30,19:02:48+32"
+ako ay nag replay lang nman
+]
+2018-03-30 19:14:36 [New Message Read: +CM]
+2018-03-30 19:14:36 [New Message Read: GL: 13,"REC READ","+639177736927",,"18/03/30,19:12:27+32"
+test me agian pls
+]
+2018-03-30 19:14:37 [New Message Read: +CM]
+2018-03-30 19:14:37 [New Message Read: GL: 14,"REC UNREAD","+639171320733",,"18/03/30,19:14:27+32"
+this is re-testing
+
+OK
+]
+2018-03-30 19:20:07 [*****Program Started*****]
+2018-03-30 19:20:07 [Ports: COM28]
+2018-03-30 19:20:11 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:20:11 [Started checking : COM28]
+2018-03-30 19:20:17 [Match]
+2018-03-30 19:20:17 [YES]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [asd]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [asd]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [this is a test message for testing only]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [this is a second message for test only]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [this is the third message try]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [this is the 4th message]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [this is a test message for the last try]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [123456790 test message]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [this is the last of last message]
+2018-03-30 19:20:17 [Not Match]
+2018-03-30 19:20:17 [third test message]
+2018-03-30 19:20:17 [New Message Read: AT
+]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [test me agian pls]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [this is re-testing]
+2018-03-30 19:20:23 [Match]
+2018-03-30 19:20:23 [YES]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [asd]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [asd]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [this is a test message for testing only]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [this is a second message for test only]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [this is the third message try]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [this is the 4th message]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [this is a test message for the last try]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [123456790 test message]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [this is the last of last message]
+2018-03-30 19:20:23 [Not Match]
+2018-03-30 19:20:23 [third test message]
+2018-03-30 19:20:23 [New Message Read: +C]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [test me agian pls]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [this is re-testing]
+2018-03-30 19:22:06 [Match]
+2018-03-30 19:22:06 [YES]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [asd]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [asd]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [this is a test message for testing only]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [this is a second message for test only]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [this is the third message try]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [this is the 4th message]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [this is a test message for the last try]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [123456790 test message]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [this is the last of last message]
+2018-03-30 19:22:06 [Not Match]
+2018-03-30 19:22:06 [third test message]
+2018-03-30 19:22:06 [New Message Read: +CM]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [test me agian pls]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [this is re-testing]
+2018-03-30 19:22:17 [Match]
+2018-03-30 19:22:17 [YES]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [asd]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [asd]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [this is a test message for testing only]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [this is a second message for test only]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [this is the third message try]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [this is the 4th message]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [this is a test message for the last try]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [123456790 test message]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [this is the last of last message]
+2018-03-30 19:22:17 [Not Match]
+2018-03-30 19:22:17 [third test message]
+2018-03-30 19:22:17 [New Message Read: +CMGL: 12,"REC READ","+639171320488",,"18/03/30,19:02:48+32"
+ako ay nag replay lang nman
+]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [test me agian pls]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [this is re-testing]
+2018-03-30 19:22:42 [Match]
+2018-03-30 19:22:42 [YES]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [asd]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [asd]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [this is a test message for testing only]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [this is a second message for test only]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [this is the third message try]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [this is the 4th message]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [this is a test message for the last try]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [123456790 test message]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [this is the last of last message]
+2018-03-30 19:22:42 [Not Match]
+2018-03-30 19:22:42 [third test message]
+2018-03-30 19:22:42 [New Message Read: +CMGL: 12,"REC READ","]
+2018-03-30 19:24:32 [*****Program Started*****]
+2018-03-30 19:24:32 [Ports: COM28]
+2018-03-30 19:25:45 [*****Program Started*****]
+2018-03-30 19:25:45 [Ports: COM28]
+2018-03-30 19:25:48 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:25:49 [Started checking : COM28]
+2018-03-30 19:25:54 [Match]
+2018-03-30 19:25:54 [failed]
+2018-03-30 19:25:54 [YES]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [asd]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [asd]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [this is a test message for testing only]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [this is a second message for test only]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [this is the third message try]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [this is the 4th message]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [this is a test message for the last try]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [123456790 test message]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [this is the last of last message]
+2018-03-30 19:25:54 [Not Match]
+2018-03-30 19:25:54 [third test message]
+2018-03-30 19:27:45 [*****Program Started*****]
+2018-03-30 19:27:46 [Ports: COM28]
+2018-03-30 19:27:49 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:27:49 [Started checking : COM28]
+2018-03-30 19:27:54 [Match]
+2018-03-30 19:27:54 [+639974503364]
+2018-03-30 19:27:54 [YES]
+2018-03-30 19:27:54 [Not Match]
+2018-03-30 19:27:54 [asd]
+2018-03-30 19:27:54 [Not Match]
+2018-03-30 19:27:54 [asd]
+2018-03-30 19:27:54 [Not Match]
+2018-03-30 19:27:54 [this is a test message for testing only]
+2018-03-30 19:27:55 [Not Match]
+2018-03-30 19:27:55 [this is a second message for test only]
+2018-03-30 19:27:55 [Not Match]
+2018-03-30 19:27:55 [this is the third message try]
+2018-03-30 19:27:55 [Not Match]
+2018-03-30 19:27:55 [this is the 4th message]
+2018-03-30 19:27:55 [Not Match]
+2018-03-30 19:27:55 [this is a test message for the last try]
+2018-03-30 19:27:55 [Not Match]
+2018-03-30 19:27:55 [123456790 test message]
+2018-03-30 19:27:55 [Not Match]
+2018-03-30 19:27:55 [this is the last of last message]
+2018-03-30 19:27:55 [Not Match]
+2018-03-30 19:27:55 [third test message]
+2018-03-30 19:29:51 [*****Program Started*****]
+2018-03-30 19:29:51 [Ports: COM28]
+2018-03-30 19:29:55 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:29:55 [Started checking : COM28]
+2018-03-30 19:30:00 [Match]
+2018-03-30 19:30:00 []
+2018-03-30 19:30:00 []
+2018-03-30 19:30:00 [+639974503364]
+2018-03-30 19:30:00 [YES]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [asd]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [asd]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [this is a test message for testing only]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [this is a second message for test only]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [this is the third message try]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [this is the 4th message]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [this is a test message for the last try]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [123456790 test message]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [this is the last of last message]
+2018-03-30 19:30:00 [Not Match]
+2018-03-30 19:30:00 [third test message]
+2018-03-30 19:32:18 [*****Program Started*****]
+2018-03-30 19:32:18 [Ports: COM28]
+2018-03-30 19:32:21 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:32:22 [Started checking : COM28]
+2018-03-30 19:32:27 [Match]
+2018-03-30 19:32:27 [+639974503364]
+2018-03-30 19:32:27 [+639974503364]
+2018-03-30 19:32:27 [+639974503364]
+2018-03-30 19:32:27 [YES]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [asd]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [asd]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [this is a test message for testing only]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [this is a second message for test only]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [this is the third message try]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [this is the 4th message]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [this is a test message for the last try]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [123456790 test message]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [this is the last of last message]
+2018-03-30 19:32:27 [Not Match]
+2018-03-30 19:32:27 [third test message]
+2018-03-30 19:32:59 [*****Program Started*****]
+2018-03-30 19:32:59 [Ports: COM28]
+2018-03-30 19:33:02 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:33:03 [Started checking : COM28]
+2018-03-30 19:33:08 [Match]
+2018-03-30 19:33:08 [+639974503364]
+2018-03-30 19:33:08 [+639974503364]
+2018-03-30 19:33:08 [+639974503364]
+2018-03-30 19:33:08 [+639974503364]
+2018-03-30 19:33:08 [YES]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [asd]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [asd]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [this is a test message for testing only]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [this is a second message for test only]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [this is the third message try]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [this is the 4th message]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [this is a test message for the last try]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [123456790 test message]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [this is the last of last message]
+2018-03-30 19:33:08 [Not Match]
+2018-03-30 19:33:08 [third test message]
+2018-03-30 19:41:15 [*****Program Started*****]
+2018-03-30 19:41:15 [Ports: COM28]
+2018-03-30 19:41:19 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:41:20 [Started checking : COM28]
+2018-03-30 19:41:25 [Match]
+2018-03-30 19:41:25 [+639974503364]
+2018-03-30 19:41:25 [+639974503364]
+2018-03-30 19:41:25 [+639974503364]
+2018-03-30 19:41:25 [+639974503364]
+2018-03-30 19:41:25 [YES]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [asd]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [asd]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [this is a test message for testing only]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [this is a second message for test only]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [this is the third message try]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [this is the 4th message]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [this is a test message for the last try]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [123456790 test message]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [this is the last of last message]
+2018-03-30 19:41:25 [Not Match]
+2018-03-30 19:41:25 [third test message]
+2018-03-30 19:42:40 [*****Program Started*****]
+2018-03-30 19:42:40 [Ports: COM28]
+2018-03-30 19:42:44 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:42:44 [Started checking : COM28]
+2018-03-30 19:42:49 [Match]
+2018-03-30 19:42:49 [success]
+2018-03-30 19:42:49 [success]
+2018-03-30 19:42:49 [YES]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [asd]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [asd]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [this is a test message for testing only]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [this is a second message for test only]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [this is the third message try]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [this is the 4th message]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [this is a test message for the last try]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [123456790 test message]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [this is the last of last message]
+2018-03-30 19:42:49 [Not Match]
+2018-03-30 19:42:49 [third test message]
+2018-03-30 19:45:40 [*****Program Started*****]
+2018-03-30 19:45:40 [Ports: COM28]
+2018-03-30 19:45:44 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 19:45:44 [Started checking : COM28]
+2018-03-30 19:45:49 [Match]
+2018-03-30 19:45:49 [success]
+2018-03-30 19:45:49 [success]
+2018-03-30 19:45:49 [YES]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [asd]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [asd]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [this is a test message for testing only]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [this is a second message for test only]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [this is the third message try]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [this is the 4th message]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [this is a test message for the last try]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [123456790 test message]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [this is the last of last message]
+2018-03-30 19:45:49 [Not Match]
+2018-03-30 19:45:49 [third test message]

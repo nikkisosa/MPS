@@ -386,67 +386,84 @@ namespace MPSystem.View
         }
 
 
-        public void sendPromo(string port,List<string> mobileNumbers,string promoDetails)
+        public async void sendPromo(List<string> ports,List<string> mobileNumbers,string promoDetails)
         {
-            //foreach (string mobileNumber in mobileNumbers)
-            //{
-            //    MessageBox.Show(mobileNumber);
-            //}
-          
-            //logs.log("Started checking : " + string.Join(",", ports));
-            //Model.splashModel.deleteAvailablePorts();
-            
-                try
-                {
-                    //Serial Ports Setting
-                    SerialPort sp = new SerialPort();
-                    sp.PortName = port;
-                    sp.BaudRate = 115200;
-                    sp.Parity = Parity.None;
-                    sp.StopBits = StopBits.One;
-                    sp.DataBits = 8;
-                    sp.Handshake = Handshake.None;
-                    sp.RtsEnable = true;
-                    sp.NewLine = "\n";
 
-                    //sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
-                    sp.Open();
-                    //sp.WriteLine("AT\r");
-                    Task task = Task.Factory.StartNew(() =>
+            logs.log("sending promo");
+            Task[] tasks = new Task[ports.Count];
+            int taskIndex = 0;
+            foreach(string port in ports)
+            {
+
+                tasks[taskIndex] = Task.Factory.StartNew(() =>
+                {
+                    try
                     {
+                        //Serial Ports Setting
+                        SerialPort sp = new SerialPort();
+                        sp.PortName = port;
+                        sp.BaudRate = 115200;
+                        sp.Parity = Parity.None;
+                        sp.StopBits = StopBits.One;
+                        sp.DataBits = 8;
+                        sp.Handshake = Handshake.None;
+                        sp.RtsEnable = true;
+                        sp.NewLine = "\n";
+
+
+                        sp.Open();
+
+
 
                         if (sp.IsOpen)
                         {
-                            
+
                             sp.WriteLine("AT+CMGF=1\r");
                             Thread.Sleep(500);
+                            //logs.log(sp.ReadExisting());
                             sp.WriteLine("AT+CMGD=1\r");
                             Thread.Sleep(500);
+                            //logs.log(sp.ReadExisting());
                             sp.WriteLine("AT+CMGW=\"" + mobileNumbers[0] + "\"\r");
                             Thread.Sleep(500);
-                            sp.WriteLine(promoDetails+ "\x1a");
+                            //logs.log(sp.ReadExisting());
+                            sp.WriteLine(promoDetails + "\x1a");
                             Thread.Sleep(500);
+                            //logs.log(sp.ReadExisting());
                             foreach (string mobileNumber in mobileNumbers)
                             {
-                                
+
                                 sp.WriteLine("AT+CMSS=1,\"" + mobileNumber + "\"\r");
                                 Thread.Sleep(4000);
+                                logs.log(sp.ReadExisting());
 
                             }
                             sp.WriteLine("AT+CMGD=1\r");
                             Thread.Sleep(500);
+                            //logs.log(sp.ReadExisting());
 
 
                         }
-                    });
 
 
-                }
-                catch (Exception exception)
-                {
-                    //Log the Error
-                    logs.log("Exception: " + exception.Message);
-                }
+                        //sp.Close();
+
+
+                    }
+                    catch (Exception exception)
+                    {
+                        //Log the Error
+                        logs.log("Exception: " + exception.Message);
+                    }
+                });
+                taskIndex++;
+            }
+            Task.WaitAll(tasks);
+            MMS mf = new MMS();
+            mf.checkForIncommingMessage();
+
+
+            logs.log("sending promo done");
                
             
         }
@@ -489,46 +506,54 @@ namespace MPSystem.View
 
         private void btnPSend_Click(object sender, EventArgs e)
         {
-           
 
+            List<string> portsSelected = new List<string>();
             for (int i = 0; i < lstGrid.Rows.Count; i++)
             {
                 bool isChecked = (bool)lstGrid.Rows[i].Cells[0].Value;
 
                 if (isChecked)
                 {
-                    string selectedPort = lstGrid.Rows[i].Cells[1].Value.ToString();
-                    str = Model.promotionModel.getGroupMembersNumber(cboSendTo.Text);
-                    if (str == "success")
-                    {
-                        List<string> mobileNumbers = new List<string>();
-                
-                        for (int count = 0; count < config.records.Count; count++)
-                        {
-                            mobileNumbers.Add(config.records[count].mobile_no.ToString());
-                        }
-                        //MessageBox.Show(lstGrid.Rows[i].Cells[1].Value.ToString());
-                        Entity.variables entity = new Entity.variables();
-                        entity.promotionTitle = txtTitle.Text;
-                        entity.group = cboSendTo.Text;
-
-                        string insertLastPromoSent = Model.promotionModel.addLastSentPromotion(entity);
-                        if (insertLastPromoSent == "success")
-                        {
-                            sendPromo(selectedPort, mobileNumbers, txtDetails.Text);
-                            MessageBox.Show("The Promo has been sent to " + cboSendTo.Text);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Unable to sent the promo to " + cboSendTo.Text + " " + insertLastPromoSent);
-                        }
-                        
-                        pnlPortsToSend.Visible = false;
-                        
-                    }
+                    portsSelected.Add(lstGrid.Rows[i].Cells[1].Value.ToString());
 
                 }
             }
+            //string selectedPort = lstGrid.Rows[i].Cells[1].Value.ToString();
+            str = Model.promotionModel.getGroupMembersNumber(cboSendTo.Text);
+            if (str == "success")
+            {
+                List<string> mobileNumbers = new List<string>();
+                int errorCounter = 0;
+                for (int count = 0; count < config.records.Count; count++)
+                {
+                    string mobileNumber = config.records[count].mobile_no.ToString();
+                    Entity.variables entity = new Entity.variables();
+                    entity.promotionTitle = txtTitle.Text;
+                    entity.mobile_no = mobileNumber;
+
+                    string insertLastPromoSent = Model.promotionModel.addLastSentPromotion(entity);
+                    if (insertLastPromoSent == "success")
+                    {
+                        mobileNumbers.Add(mobileNumber);
+                    }
+
+                }
+
+                if (errorCounter == 0)
+                {
+                    sendPromo(portsSelected, mobileNumbers, txtDetails.Text);
+
+                    MessageBox.Show("The Promo has been sent to " + cboSendTo.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Unable to sent the promo to " + cboSendTo.Text);
+                }
+
+                pnlPortsToSend.Visible = false;
+
+            }
+            
         }
 
  

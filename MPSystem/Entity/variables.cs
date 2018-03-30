@@ -42,6 +42,12 @@ namespace MPSystem.Entity
             set;
         }
 
+        public string message
+        {
+            get;
+            set;
+        }
+
         public string promotionTitle
         {
             get;

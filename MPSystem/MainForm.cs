@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MPSystem.View;
 using System.IO.Ports;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace MPSystem
 {
@@ -22,6 +23,7 @@ namespace MPSystem
 
         private bool mouseDown;
         private Point lastLocation;
+        public static string filteredMobileNo;
 
         private void btn_contacts_Click(object sender, EventArgs e)
         {
@@ -132,10 +134,10 @@ namespace MPSystem
         public void checkForIncommingMessage()
         {
 
-            string[] ports = SerialPort.GetPortNames();
+            List<string> ports = Model.MainFormModel.getListActivePorts();
             logs.log("Started checking : " + string.Join(",", ports));
-            //Model.splashModel.deleteAvailablePorts();
-            for (int i = 0; i < ports.Length; i++)
+        
+            for (int i = 0; i < ports.Count; i++)
             {
                 try
                 {
@@ -150,7 +152,7 @@ namespace MPSystem
                     sp.RtsEnable = true;
                     sp.NewLine = "\n";
 
-                    sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+                    //sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
                     sp.Open();
                     //sp.WriteLine("AT\r");
                     Task task = Task.Factory.StartNew(() =>
@@ -158,11 +160,61 @@ namespace MPSystem
 
                        if (sp.IsOpen)
                        {
-                           string portName = sp.PortName;
+                           
 
                            sp.WriteLine("AT\r");
                            Thread.Sleep(1000);
-                
+                           //sp.WriteLine("AT+CMGF=1\r");
+                           //Thread.Sleep(1000);
+                           //sp.WriteLine("AT+CMGL=\"ALL\"\r");
+                           //Thread.Sleep(3000);
+                           //Regex regEx = new Regex(@"\+CMGL: (\d+),""(.+)"",""(.+)"",(.*),""(.+)""\r\n(.+)\r\n");
+                           //Match match = regEx.Match(sp.ReadExisting());
+                           //while (match.Success)
+                           //{
+                           //    string inboxID = match.Groups[1].Value;
+                           //    string inboxStatus = match.Groups[2].Value;
+                           //    string inboxSender = match.Groups[3].Value;
+                           //    string inboxDateAndTime = match.Groups[4].Value;
+                           //    string inboxBlank = match.Groups[5].Value;
+                           //    string inboxData = match.Groups[6].Value;
+
+                           //    if (inboxData.Trim().Contains("YES"))
+                           //    {
+                           //        logs.log("Match");
+                           //        filteredMobileNo = inboxSender.Replace("+63", "0").Trim();
+                           //        string checkMobileNumber = Model.MainFormModel.checkMobileLastPromo(filteredMobileNo);
+                           //        logs.log(checkMobileNumber);
+                           //        if (checkMobileNumber == "success")
+                           //        {
+
+                           //            Entity.variables entity = new Entity.variables();
+                           //            entity.promotionTitle = Model.MainFormModel.getLastPromo(filteredMobileNo);
+                           //            entity.mobile_no = inboxSender;
+                           //            entity.message = inboxData;
+                           //            string insertMessage = Model.MainFormModel.addMessages(entity);
+                           //            logs.log(insertMessage);
+                           //            if (insertMessage != "success")
+                           //            {
+                           //                logs.log("Saving Message Failed: " + insertMessage);
+                           //            }
+                           //        }
+
+
+
+                           //    }
+                           //    else
+                           //    {
+                           //        logs.log("Not Match");
+                           //    }
+
+                           //    logs.log(inboxData);
+
+                           //    match = match.NextMatch();
+
+                           //    // }
+                           //}
+
                        }
                    });
                     
@@ -180,11 +232,72 @@ namespace MPSystem
         {
             SerialPort sp = (SerialPort)sender;
             string indata = sp.ReadExisting();
-            if(sp.ReadExisting().Contains("+CMTI:")){
+            //if (indata.Contains("+CMTI:"))
+            //{
                 //New Message Received
                 MessageBox.Show(indata);
+                sp.WriteLine("AT+CMGF=1\r");
+                Thread.Sleep(1000);
+                sp.WriteLine("AT+CMGL=\"ALL\"\r");
+                Thread.Sleep(3000);
+                Regex regEx = new Regex(@"\+CMGL: (\d+),""(.+)"",""(.+)"",(.*),""(.+)""\r\n(.+)\r\n");
+                Match match = regEx.Match(sp.ReadExisting());
+                while (match.Success)
+                {
+                    string inboxID = match.Groups[1].Value;
+                    string inboxStatus = match.Groups[2].Value;
+                    string inboxSender = match.Groups[3].Value;
+                    string inboxDateAndTime = match.Groups[4].Value;
+                    string inboxBlank = match.Groups[5].Value;
+                    string inboxData = match.Groups[6].Value;
+                   
+                    if (inboxData.Trim().Contains("YES"))
+                    {
+                        logs.log("Match");
+                        filteredMobileNo = inboxSender.Replace("+63", "0").Trim();
+                        string checkMobileNumber = Model.MainFormModel.checkMobileLastPromo(filteredMobileNo);
+                        logs.log(checkMobileNumber);
+                        if (checkMobileNumber == "success")
+                        {
+                            
+                            Entity.variables entity = new Entity.variables();
+                            entity.promotionTitle = Model.MainFormModel.getLastPromo(filteredMobileNo);
+                            entity.mobile_no = inboxSender;
+                            entity.message = inboxData;
+                            string insertMessage = Model.MainFormModel.addMessages(entity);
+                            logs.log(insertMessage);
+                            if (insertMessage != "success")
+                            {
+                                logs.log("Saving Message Failed: " + insertMessage);
+                            }
+                        }
+
+
+
+                    }else
+                    {
+                        logs.log("Not Match");
+                    }
+                   
+                    logs.log(inboxData);
+
+                    match = match.NextMatch();
+
+               // }
             }
+            logs.log("New Message Read: "+indata);
            
+        }
+
+        public string mobileNumberFixer(string str)
+        {
+            string filteredStr = str;
+            logs.log(filteredStr);
+            filteredStr.Replace('"', ' ').Trim();
+            logs.log(filteredStr);
+            filteredStr.Replace("+63", "0").Trim();
+            logs.log(filteredStr);
+            return filteredStr;
         }
 
         private void btn_messages_Click(object sender, EventArgs e)

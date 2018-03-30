@@ -42,7 +42,7 @@ namespace MPSystem.Model
         public static string addLastSentPromotion(Entity.variables ent)
         {
 
-            string query = "INSERT INTO lastPromoSent([lastPromoSent],[group]) VALUES (@lastpromo,@group);";
+            string query = "INSERT INTO lastPromoSent([lastPromoSent],[mobile_no]) VALUES (@lastpromo,@mobile_no);";
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
 
@@ -52,7 +52,7 @@ namespace MPSystem.Model
                 cmd.CommandText = query;
                 cmd.Connection = conn;
                 cmd.Parameters.AddWithValue("@lastpromo", ent.promotionTitle);
-                cmd.Parameters.AddWithValue("@group", ent.group);
+                cmd.Parameters.AddWithValue("@mobile_no", ent.mobile_no);
                 cmd.ExecuteNonQuery();
                 str = "success";
             }

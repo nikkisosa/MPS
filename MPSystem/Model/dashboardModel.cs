@@ -84,6 +84,39 @@ namespace MPSystem.Model
             return str;
         }
 
+        public static List<string> getListActivePorts()
+        {
+            var activePorts = new List<string>();
+            string query = "SELECT * FROM availablePorts";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+            try
+            {
+                
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    activePorts.Add(reader["port"].ToString());
+                    
+                }
+                
+            }
+            catch (SqlException err)
+            {
+                
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return activePorts;
+        }
+
         
  
 
