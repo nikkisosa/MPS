@@ -28,45 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvList = new System.Windows.Forms.ListView();
+            this.msgID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contactNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Message = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.promo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblPages = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.backgroundworker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
-            // listView1
+            // lvList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.msgID,
             this.contactNumber,
             this.Message,
-            this.dateTime});
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(3, 62);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(705, 422);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.dateTime,
+            this.promo});
+            this.lvList.FullRowSelect = true;
+            this.lvList.GridLines = true;
+            this.lvList.Location = new System.Drawing.Point(3, 62);
+            this.lvList.Name = "lvList";
+            this.lvList.Size = new System.Drawing.Size(705, 422);
+            this.lvList.TabIndex = 0;
+            this.lvList.UseCompatibleStateImageBehavior = false;
+            this.lvList.View = System.Windows.Forms.View.Details;
+            // 
+            // msgID
+            // 
+            this.msgID.Text = "ID";
+            this.msgID.Width = 0;
             // 
             // contactNumber
             // 
             this.contactNumber.Text = "Contact Number";
-            this.contactNumber.Width = 127;
+            this.contactNumber.Width = 113;
             // 
             // Message
             // 
             this.Message.Text = "Message";
             this.Message.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Message.Width = 468;
+            this.Message.Width = 231;
             // 
             // dateTime
             // 
             this.dateTime.Text = "Date/Time";
             this.dateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dateTime.Width = 105;
+            this.dateTime.Width = 147;
+            // 
+            // promo
+            // 
+            this.promo.Text = "Promo";
+            this.promo.Width = 202;
             // 
             // lblPages
             // 
@@ -92,6 +110,7 @@
             this.btnNext.TabIndex = 17;
             this.btnNext.Text = "next";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrev
             // 
@@ -106,15 +125,53 @@
             this.btnPrev.TabIndex = 16;
             this.btnPrev.Text = "prev";
             this.btnPrev.UseVisualStyleBackColor = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(470, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.button1.MaximumSize = new System.Drawing.Size(56, 21);
+            this.button1.MinimumSize = new System.Drawing.Size(56, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 21);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(175, 8);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+            this.textBox1.MaximumSize = new System.Drawing.Size(288, 21);
+            this.textBox1.MinimumSize = new System.Drawing.Size(288, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(288, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // backgroundworker
+            // 
+            this.backgroundworker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundworker_DoWork);
+            this.backgroundworker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundworker_ProgressChanged);
+            this.backgroundworker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundworker_RunWorkerCompleted);
             // 
             // ucMessages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPages);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvList);
             this.MaximumSize = new System.Drawing.Size(711, 536);
             this.MinimumSize = new System.Drawing.Size(711, 536);
             this.Name = "ucMessages";
@@ -127,12 +184,17 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvList;
         private System.Windows.Forms.ColumnHeader contactNumber;
         private System.Windows.Forms.ColumnHeader Message;
         private System.Windows.Forms.ColumnHeader dateTime;
         private System.Windows.Forms.Label lblPages;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.ColumnHeader promo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.ComponentModel.BackgroundWorker backgroundworker;
+        private System.Windows.Forms.ColumnHeader msgID;
     }
 }

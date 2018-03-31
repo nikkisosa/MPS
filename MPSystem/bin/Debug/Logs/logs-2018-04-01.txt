@@ -1,0 +1,217 @@
+2018-04-01 00:01:15 [*****Program Started*****]
+2018-04-01 00:01:15 [Ports: COM28]
+2018-04-01 00:01:19 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-04-01 00:03:19 [Checking Message : COM28]
+2018-04-01 00:05:23 [Checking Message : COM28]
+2018-04-01 00:06:10 [*****Program Started*****]
+2018-04-01 00:06:10 [Ports: COM28]
+2018-04-01 00:06:13 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-04-01 00:07:47 [sending promo]
+2018-04-01 00:07:53 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Promotion Three
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 8
+
+OK
+]
+2018-04-01 00:07:57 [AT+CMSS=1,"09560628431"
+
++CMSS: 9
+
+OK
+]
+2018-04-01 00:08:01 [AT+CMSS=1,"09369696185"
+
++CMSS: 10
+
+OK
+
++CMTI: "SM",19
+]
+2018-04-01 00:08:05 [AT+CMSS=1,"09567383179"
+]
+2018-04-01 00:08:06 [sending promo done]
+2018-04-01 00:08:14 [Checking Message : COM28]
+2018-04-01 00:16:13 [*****Program Started*****]
+2018-04-01 00:16:13 [Ports: COM28]
+2018-04-01 00:16:18 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-04-01 00:17:20 [sending promo]
+2018-04-01 00:17:26 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Promotion Two
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 11
+
+OK
+]
+2018-04-01 00:17:30 [AT+CMSS=1,"09560628431"
+
++CMSS: 12
+
+OK
+
++CMTI: "SM",21
+]
+2018-04-01 00:17:34 [AT+CMSS=1,"09369696185"
+
++CMSS: 13
+
+OK
+]
+2018-04-01 00:17:38 [AT+CMSS=1,"09567383179"
+
++CMSS: 14
+
+OK
+]
+2018-04-01 00:17:38 [sending promo done]
+2018-04-01 00:18:18 [Checking Message : COM28]
+2018-04-01 00:19:08 [*****Program Started*****]
+2018-04-01 00:19:08 [Ports: COM28]
+2018-04-01 00:19:12 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-04-01 00:21:12 [Checking Message : COM28]
+2018-04-01 00:23:17 [Checking Message : COM28]
+2018-04-01 00:25:21 [Checking Message : COM28]
+2018-04-01 00:27:25 [Checking Message : COM28]
+2018-04-01 00:29:29 [Checking Message : COM28]
+2018-04-01 00:31:33 [Checking Message : COM28]
+2018-04-01 00:33:38 [Checking Message : COM28]
+2018-04-01 00:35:42 [Checking Message : COM28]
+2018-04-01 00:37:46 [Checking Message : COM28]
+2018-04-01 00:39:50 [Checking Message : COM28]
+2018-04-01 00:41:54 [Checking Message : COM28]
+2018-04-01 00:43:59 [Checking Message : COM28]
+2018-04-01 00:46:03 [Checking Message : COM28]
+2018-04-01 00:48:07 [Checking Message : COM28]
+2018-04-01 00:50:11 [Checking Message : COM28]
+2018-04-01 00:52:15 [Checking Message : COM28]
+2018-04-01 00:54:20 [Checking Message : COM28]
+2018-04-01 00:56:24 [Checking Message : COM28]
+2018-04-01 00:58:28 [Checking Message : COM28]
+2018-04-01 01:00:32 [Checking Message : COM28]
+2018-04-01 01:02:36 [Checking Message : COM28]
+2018-04-01 01:04:41 [Checking Message : COM28]
+2018-04-01 01:06:45 [Checking Message : COM28]
+2018-04-01 01:06:53 [Auto Replay Done]
+2018-04-01 01:06:58 [Auto Replay Done]
+2018-04-01 01:07:38 [sending promo]
+2018-04-01 01:07:44 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Promotion One
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 17
+
+OK
+]
+2018-04-01 01:07:48 [AT+CMSS=1,"09560628431"
+
++CMSS: 18
+
+OK
+]
+2018-04-01 01:07:52 [AT+CMSS=1,"09369696185"
+
++CMSS: 19
+
+OK
+
++CMTI: "SM",25
+]
+2018-04-01 01:07:56 [AT+CMSS=1,"09567383179"
+
++CMSS: 20
+
+OK
+]
+2018-04-01 01:07:56 [sending promo done]
+2018-04-01 01:08:58 [Checking Message : COM28]
+2018-04-01 01:09:57 [*****Program Started*****]
+2018-04-01 01:09:58 [Ports: COM28]
+2018-04-01 01:10:01 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-04-01 01:12:02 [Checking Message : COM28]
+2018-04-01 01:14:06 [Checking Message : COM28]
+2018-04-01 01:16:10 [Checking Message : COM28]
+2018-04-01 01:21:16 [*****Program Started*****]
+2018-04-01 01:21:16 [Ports: COM28]
+2018-04-01 01:21:20 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-04-01 01:21:32 [sending promo]
+2018-04-01 01:21:38 [Sending message to :09974503364 FAILED]
+2018-04-01 01:21:38 [
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Promotion Five
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
++CMSS: 21
+
+OK
+]
+2018-04-01 01:21:42 [Sending message to :09560628431 FAILED]
+2018-04-01 01:21:42 [
++CMSS: 22
+
+OK
+]
+2018-04-01 01:21:46 [Sending message to :09369696185 FAILED]
+2018-04-01 01:21:46 [
++CMSS: 23
+
+OK
+
++CMTI: "SM",26
+]
+2018-04-01 01:21:50 [Sending message to :09567383179 FAILED]
+2018-04-01 01:21:50 []
+2018-04-01 01:21:51 [sending promo done]
+2018-04-01 01:23:20 [Checking Message : COM28]
+2018-04-01 01:23:51 [Checking Message : COM28]
+2018-04-01 01:25:25 [Checking Message : COM28]
+2018-04-01 01:25:55 [Checking Message : COM28]
+2018-04-01 01:27:29 [Checking Message : COM28]
+2018-04-01 01:27:59 [Checking Message : COM28]
+2018-04-01 01:29:33 [Checking Message : COM28]
+2018-04-01 01:32:17 [*****Program Started*****]
+2018-04-01 01:32:17 [Ports: COM28]
+2018-04-01 01:32:21 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]

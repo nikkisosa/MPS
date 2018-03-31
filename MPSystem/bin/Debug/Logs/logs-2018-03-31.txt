@@ -1,0 +1,323 @@
+2018-03-31 19:39:01 [*****Program Started*****]
+2018-03-31 19:39:01 [Ports: COM28]
+2018-03-31 19:39:06 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 19:39:06 [Started checking : COM28]
+2018-03-31 19:39:06 [New Message Read: AT
+
+OK
+]
+2018-03-31 19:40:50 [*****Program Started*****]
+2018-03-31 19:40:50 [Ports: COM28]
+2018-03-31 19:40:54 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 19:40:54 [Started checking : COM28]
+2018-03-31 19:40:54 [New Message Read: AT
+
+OK
+]
+2018-03-31 19:41:03 [sending promo]
+2018-03-31 19:41:09 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Sa presyong Abot Kaya, sa Size na di mo kaya.
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
+ERROR
+]
+2018-03-31 19:41:13 [AT+CMSS=1,"09560628431"
+
+ERROR
+]
+2018-03-31 19:41:17 [AT+CMSS=1,"09369696185"
+
+ERROR
+]
+2018-03-31 19:41:17 [Started checking : COM28]
+2018-03-31 19:41:17 [Exception: Access to the port 'COM28' is denied.]
+2018-03-31 19:41:17 [sending promo done]
+2018-03-31 19:44:07 [*****Program Started*****]
+2018-03-31 19:44:07 [Ports: COM28]
+2018-03-31 19:44:11 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 19:44:11 [Started checking : COM28]
+2018-03-31 19:44:11 [New Message Read: AT
+
+OK
+]
+2018-03-31 19:44:20 [sending promo]
+2018-03-31 19:44:20 [Started checking : COM28]
+2018-03-31 19:44:20 [sending promo done]
+2018-03-31 19:44:20 [New Message Read: AT]
+2018-03-31 19:44:20 [New Message Read: 
+
+OK
+]
+2018-03-31 19:46:37 [*****Program Started*****]
+2018-03-31 19:46:37 [Ports: COM28]
+2018-03-31 19:46:42 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 19:46:42 [Started checking : COM28]
+2018-03-31 19:46:42 [New Message Read: AT
+
+OK]
+2018-03-31 19:46:42 [New Message Read: 
+]
+2018-03-31 19:46:56 [sending promo]
+2018-03-31 19:47:02 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Sa presyong Abot Kaya, sa Size na di mo kaya.
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
+ERROR
+]
+2018-03-31 19:47:06 [AT+CMSS=1,"09560628431"
+]
+2018-03-31 19:47:10 [AT+CMSS=1,"09369696185"
+
+ERROR
+
+ERROR
+]
+2018-03-31 19:47:11 [Started checking : COM28]
+2018-03-31 19:47:11 [ExceptionMain: Access to the port 'COM28' is denied.]
+2018-03-31 19:47:11 [sending promo done]
+2018-03-31 19:53:53 [*****Program Started*****]
+2018-03-31 19:53:53 [Ports: COM28]
+2018-03-31 19:53:58 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 19:53:58 [Started checking : COM28]
+2018-03-31 19:53:58 [New Message Read: AT
+
+OK
+]
+2018-03-31 19:54:23 [sending promo]
+2018-03-31 19:54:29 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Sa presyong Abot Kaya, sa Size na di mo kaya.
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
+ERROR
+]
+2018-03-31 19:54:33 [AT+CMSS=1,"09560628431"
+
+ERROR
+]
+2018-03-31 19:54:37 [AT+CMSS=1,"09369696185"
+
+ERROR
+]
+2018-03-31 19:54:37 [Started checking : COM28]
+2018-03-31 19:54:37 [Access to the port 'COM28' is denied.]
+2018-03-31 19:54:37 [sending promo done]
+2018-03-31 19:55:27 [*****Program Started*****]
+2018-03-31 19:55:27 [Ports: COM28]
+2018-03-31 19:55:30 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 19:55:31 [Started checking : COM28]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:31 [New Message Read: AT
+
+OK
+]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:31 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:32 [Access to the port 'COM28' is denied.]
+2018-03-31 19:55:32 [Access to the port 'COM28' is denied.]
+2018-03-31 19:57:06 [*****Program Started*****]
+2018-03-31 19:57:06 [Ports: COM28]
+2018-03-31 19:57:09 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 19:57:10 [Started checking : COM28]
+2018-03-31 19:57:10 [New Message Read: AT
+
+OK
+]
+2018-03-31 19:58:06 [Must declare the scalar variable "@message".]
+2018-03-31 19:58:06 [New Message Read: 
++CMTI: "SM",1
+]
+2018-03-31 19:58:06 [New Message Read: AT+CMGS="091713205]
+2018-03-31 19:58:06 [New Message Read: 52"
+
+> ]
+2018-03-31 19:58:06 [New Message Read: ]
+2018-03-31 19:58:06 [New Message Read: ]
+2018-03-31 19:58:06 [New Message Read: 
+]
+2018-03-31 19:58:09 [New Message Read: 
+]
+2018-03-31 19:58:09 [New Message Read: ERROR
+]
+2018-03-31 19:58:10 [Replay Done]
+2018-03-31 19:59:21 [sending promo]
+2018-03-31 19:59:27 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09974503364"
+
+> Sa presyong Abot Kaya, sa Size na di mo kaya.
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09974503364"
+
+ERROR
+]
+2018-03-31 19:59:31 [AT+CMSS=1,"09560628431"
+
+ERROR
+]
+2018-03-31 19:59:35 [AT+CMSS=1,"09369696185"
+
+ERROR
+]
+2018-03-31 19:59:35 [sending promo done]
+2018-03-31 22:09:24 [*****Program Started*****]
+2018-03-31 22:09:24 [Ports: COM28]
+2018-03-31 22:09:29 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 22:09:29 [Started checking : COM28]
+2018-03-31 22:09:33 [Must declare the scalar variable "@message".]
+2018-03-31 22:09:38 [Replay Done]
+2018-03-31 22:18:47 [*****Program Started*****]
+2018-03-31 22:18:48 [Ports: COM28]
+2018-03-31 22:18:51 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 22:18:51 [Started checking : COM28]
+2018-03-31 22:20:51 [Started checking : COM28]
+2018-03-31 22:20:52 [ExceptionMAin: Access to the port 'COM28' is denied.]
+2018-03-31 22:22:52 [Started checking : COM28]
+2018-03-31 22:22:52 [ExceptionMAin: Access to the port 'COM28' is denied.]
+2018-03-31 22:25:17 [*****Program Started*****]
+2018-03-31 22:25:17 [Ports: COM28]
+2018-03-31 22:25:21 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 22:25:21 [Started checking : COM28]
+2018-03-31 22:27:21 [Started checking : COM28]
+2018-03-31 22:29:21 [Started checking : COM28]
+2018-03-31 22:31:21 [Started checking : COM28]
+2018-03-31 22:33:21 [Started checking : COM28]
+2018-03-31 22:35:22 [Started checking : COM28]
+2018-03-31 22:35:26 [Invalid object name 'autoreplay'.]
+2018-03-31 22:37:01 [*****Program Started*****]
+2018-03-31 22:37:01 [Ports: COM28]
+2018-03-31 22:37:05 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 22:37:05 [Started checking : COM28]
+2018-03-31 22:39:10 [Started checking : COM28]
+2018-03-31 22:39:14 [Invalid object name 'autoreplay'.]
+2018-03-31 22:39:18 [Replay Done]
+2018-03-31 22:44:31 [*****Program Started*****]
+2018-03-31 22:44:32 [Ports: COM28]
+2018-03-31 23:12:06 [*****Program Started*****]
+2018-03-31 23:12:06 [Ports: COM28]
+2018-03-31 23:12:11 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 23:14:11 [Started checking : COM28]
+2018-03-31 23:16:16 [Started checking : COM28]
+2018-03-31 23:16:20 [ExceptionMAin: replay]
+2018-03-31 23:17:35 [*****Program Started*****]
+2018-03-31 23:17:35 [Ports: COM28]
+2018-03-31 23:17:39 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 23:17:56 [*****Program Started*****]
+2018-03-31 23:17:56 [Ports: COM28]
+2018-03-31 23:18:00 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 23:20:00 [Started checking : COM28]
+2018-03-31 23:20:09 [Replay Done]
+2018-03-31 23:22:09 [Started checking : COM28]
+2018-03-31 23:24:13 [Started checking : COM28]
+2018-03-31 23:24:26 [sending promo]
+2018-03-31 23:24:32 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09567383179"
+
+> Sa presyong Abot Kaya, sa Size na di mo kaya.
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09567383179"
+
++CMSS: 5
+
+OK
+]
+2018-03-31 23:24:32 [sending promo done]
+2018-03-31 23:26:17 [Started checking : COM28]
+2018-03-31 23:26:32 [Started checking : COM28]
+2018-03-31 23:28:21 [Started checking : COM28]
+2018-03-31 23:28:37 [Started checking : COM28]
+2018-03-31 23:28:49 [*****Program Started*****]
+2018-03-31 23:28:49 [Ports: COM28]
+2018-03-31 23:28:53 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 23:44:59 [*****Program Started*****]
+2018-03-31 23:44:59 [Ports: COM28]
+2018-03-31 23:45:04 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 23:47:04 [Checking Message : COM28]
+2018-03-31 23:48:38 [sending promo]
+2018-03-31 23:48:45 [AT+CMGF=1
+
+OK
+AT+CMGD=1
+
+OK
+AT+CMGW="09567383179"
+
+> Promotion Five
+
++CMGW: 1
+
+OK
+AT+CMSS=1,"09567383179"
+
++CMSS: 6
+
+OK
+]
+2018-03-31 23:48:45 [sending promo done]
+2018-03-31 23:49:09 [Checking Message : COM28]
+2018-03-31 23:50:45 [Checking Message : COM28]
+2018-03-31 23:51:13 [Checking Message : COM28]
+2018-03-31 23:52:50 [Checking Message : COM28]
+2018-03-31 23:53:17 [Checking Message : COM28]
+2018-03-31 23:53:26 [Auto Replay Done]
+2018-03-31 23:54:54 [Checking Message : COM28]
+2018-03-31 23:55:26 [Checking Message : COM28]
+2018-03-31 23:56:07 [*****Program Started*****]
+2018-03-31 23:56:07 [Ports: COM28]
+2018-03-31 23:56:11 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]
+2018-03-31 23:58:11 [Checking Message : COM28]
+2018-03-31 23:59:11 [*****Program Started*****]
+2018-03-31 23:59:11 [Ports: COM28]
+2018-03-31 23:59:15 [COM28 has been added to active ports list. Ports Detail (Mobile No: +639560628431,Network: Globe]

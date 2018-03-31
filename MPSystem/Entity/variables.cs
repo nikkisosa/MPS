@@ -96,5 +96,11 @@ namespace MPSystem.Entity
             get;
             set;
         }
+
+        public string dateCreated
+        {
+            get;
+            set;
+        }
     }
 }

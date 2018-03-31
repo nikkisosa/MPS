@@ -868,3 +868,101 @@ ako ay nag replay lang nman
 2018-03-30 19:45:49 [this is the last of last message]
 2018-03-30 19:45:49 [Not Match]
 2018-03-30 19:45:49 [third test message]
+2018-03-30 20:38:04 [*****Program Started*****]
+2018-03-30 20:38:04 [Ports: ]
+2018-03-30 20:38:05 [Started checking : ]
+2018-03-30 20:40:12 [*****Program Started*****]
+2018-03-30 20:40:12 [Ports: ]
+2018-03-30 20:40:12 [Started checking : ]
+2018-03-30 20:41:11 [*****Program Started*****]
+2018-03-30 20:41:11 [Ports: ]
+2018-03-30 20:41:13 [Unable to open the physical file "C:\Users\niks\Desktop\MPS\Production\MPSystem\Data\MPS_DB_log.ldf". Operating system error 32: "32(The process cannot access the file because it is being used by another process.)".
+Cannot create file 'C:\Users\niks\Desktop\MPS\Production\MPSystem\DATA\MPS_DB_log.ldf' because it already exists. Change the file path or the file name, and retry the operation.
+Could not open new database 'C:\USERS\NIKS\DESKTOP\MPS\PRODUCTION\MPSYSTEM\DATA\MPS_DB.MDF'. CREATE DATABASE is aborted.
+An attempt to attach an auto-named database for file C:\Users\niks\Desktop\MPS\Production\MPSystem\DATA\MPS_DB.MDF failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.
+File activation failure. The physical file name "C:\Users\niks\Desktop\MPS\Production\MPSystem\Data\MPS_DB_log.ldf" may be incorrect.]
+2018-03-30 20:41:13 [Started checking : ]
+2018-03-30 20:42:27 [*****Program Started*****]
+2018-03-30 20:42:28 [Ports: ]
+2018-03-30 20:42:28 [Started checking : ]
+2018-03-30 20:43:07 [*****Program Started*****]
+2018-03-30 20:43:07 [Ports: ]
+2018-03-30 20:43:08 [Started checking : ]
+2018-03-30 20:43:32 [*****Program Started*****]
+2018-03-30 20:43:32 [Ports: ]
+2018-03-30 20:43:33 [Started checking : ]
+2018-03-30 20:43:55 [*****Program Started*****]
+2018-03-30 20:43:55 [Ports: ]
+2018-03-30 20:43:55 [Started checking : ]
+2018-03-30 20:44:57 [*****Program Started*****]
+2018-03-30 20:44:57 [Ports: ]
+2018-03-30 20:44:59 [Unable to open the physical file "C:\Users\niks\Desktop\MPS\Production\MPSystem\DATA\MPS_DB.MDF". Operating system error 32: "32(The process cannot access the file because it is being used by another process.)".
+An attempt to attach an auto-named database for file C:\Users\niks\Desktop\MPS\Production\MPSystem\DATA\MPS_DB.MDF failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.]
+2018-03-30 20:44:59 [Started checking : ]
+2018-03-30 20:45:25 [*****Program Started*****]
+2018-03-30 20:45:25 [Ports: ]
+2018-03-30 20:45:27 [Started checking : ]
+2018-03-30 20:46:43 [*****Program Started*****]
+2018-03-30 20:46:43 [Ports: ]
+2018-03-30 20:46:43 [Started checking : ]
+2018-03-30 20:47:24 [*****Program Started*****]
+2018-03-30 20:47:24 [Ports: ]
+2018-03-30 20:47:24 [Started checking : ]
+2018-03-30 20:49:30 [*****Program Started*****]
+2018-03-30 20:49:30 [Ports: ]
+2018-03-30 20:49:30 [Started checking : ]
+2018-03-30 20:50:26 [*****Program Started*****]
+2018-03-30 20:50:26 [Ports: ]
+2018-03-30 20:50:27 [Started checking : ]
+2018-03-30 20:50:50 [*****Program Started*****]
+2018-03-30 20:50:50 [Ports: ]
+2018-03-30 20:50:50 [Started checking : ]
+2018-03-30 20:51:55 [*****Program Started*****]
+2018-03-30 20:51:55 [Ports: ]
+2018-03-30 20:51:55 [Started checking : ]
+2018-03-30 21:49:40 [*****Program Started*****]
+2018-03-30 21:49:40 [Ports: COM28]
+2018-03-30 21:49:45 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 21:49:46 [Started checking : COM28]
+2018-03-30 22:46:02 [*****Program Started*****]
+2018-03-30 22:46:02 [Ports: COM28]
+2018-03-30 22:46:07 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 22:46:07 [Started checking : COM28]
+2018-03-30 22:46:08 [New Message Read: AT
+
+OK
+]
+2018-03-30 22:52:27 [*****Program Started*****]
+2018-03-30 22:52:27 [Ports: COM28]
+2018-03-30 22:52:31 [COM28 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
+2018-03-30 22:52:31 [Started checking : COM28]
+2018-03-30 22:52:31 [New Message Read: AT
+
+OK
+]
+2018-03-30 22:53:19 [Must declare the scalar variable "@message".]
+2018-03-30 22:53:19 [Must declare the scalar variable "@message".]
+2018-03-30 22:53:19 [New Message Read: 
++CMTI: "SM",16
+]
+2018-03-30 22:53:19 [New Message Read: AT+CMGS="09171267603"]
+2018-03-30 22:53:19 [New Message Read: 
+
+> ]
+2018-03-30 22:53:19 [New Message Read: A]
+2018-03-30 22:53:19 [New Message Read: T+CMGS="09177044590"
+
+> ]
+2018-03-30 22:53:19 [New Message Read: ]
+2018-03-30 22:53:19 [New Message Read: 
+
+]
+2018-03-30 22:53:19 [New Message Read: ]
+2018-03-30 22:53:22 [New Message Read: 
++C]
+2018-03-30 22:53:22 [New Message Read: MGS: 254
+
+OK
+]
+2018-03-30 22:53:23 [Replay Done]
+2018-03-30 22:53:23 [Replay Done]

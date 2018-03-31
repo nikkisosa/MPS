@@ -389,13 +389,13 @@ namespace MPSystem.View
         public async void sendPromo(List<string> ports,List<string> mobileNumbers,string promoDetails)
         {
 
-            logs.log("sending promo");
-            Task[] tasks = new Task[ports.Count];
-            int taskIndex = 0;
+            logs.log("Sending Promo...");
+            List<Task> tasks = new List<Task>();
+            
             foreach(string port in ports)
             {
 
-                tasks[taskIndex] = Task.Factory.StartNew(() =>
+                var task = Task.Factory.StartNew(() =>
                 {
                     try
                     {
@@ -435,7 +435,9 @@ namespace MPSystem.View
 
                                 sp.WriteLine("AT+CMSS=1,\"" + mobileNumber + "\"\r");
                                 Thread.Sleep(4000);
-                                logs.log(sp.ReadExisting());
+                                logs.log("Sending promo message to :"+ mobileNumber+ " OK");
+                               
+                                //logs.log(sp.ReadExisting());
 
                             }
                             sp.WriteLine("AT+CMGD=1\r");
@@ -446,7 +448,7 @@ namespace MPSystem.View
                         }
 
 
-                        //sp.Close();
+                        sp.Close();
 
 
                     }
@@ -456,14 +458,18 @@ namespace MPSystem.View
                         logs.log("Exception: " + exception.Message);
                     }
                 });
-                taskIndex++;
+                tasks.Add(task);
+                //taskIndex++;
             }
-            Task.WaitAll(tasks);
-            MMS mf = new MMS();
-            mf.checkForIncommingMessage();
+            await Task.WhenAll(tasks.ToArray());
+            MMS mainForm = new MMS();
+            mainForm.bgTimer.Start();
+            
+            //MMS mf = new MMS();
+            //mf.checkForIncommingMessage();
 
 
-            logs.log("sending promo done");
+            logs.log("Sending Promo OK");
                
             
         }
@@ -541,7 +547,14 @@ namespace MPSystem.View
 
                 if (errorCounter == 0)
                 {
-                    sendPromo(portsSelected, mobileNumbers, txtDetails.Text);
+                    string message = txtDetails.Text;
+                    MMS mainForm = new MMS();
+                    mainForm.bgTimer.Stop();
+                    mainForm.bgWorker.CancelAsync();
+                    Task task = Task.Factory.StartNew(() =>
+                    {
+                        sendPromo(portsSelected, mobileNumbers, message);
+                    });
 
                     MessageBox.Show("The Promo has been sent to " + cboSendTo.Text);
                 }

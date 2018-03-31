@@ -78,97 +78,97 @@ namespace MPSystem.View
             }
         }
 
-        public async void checkPortBalance(string port,string mobileNo,int row)
-        {
-            try
-            {
-                //Serial Ports Setting
-                SerialPort sp = new SerialPort();
-                sp.PortName = port;
-                sp.BaudRate = 115200;
-                sp.Parity = Parity.None;
-                sp.StopBits = StopBits.One;
-                sp.DataBits = 8;
-                sp.Handshake = Handshake.None;
-                sp.RtsEnable = true;
-                sp.NewLine = "\n";
+        //public async void checkPortBalance(string port,string mobileNo,int row)
+        //{
+        //    try
+        //    {
+        //        //Serial Ports Setting
+        //        SerialPort sp = new SerialPort();
+        //        sp.PortName = port;
+        //        sp.BaudRate = 115200;
+        //        sp.Parity = Parity.None;
+        //        sp.StopBits = StopBits.One;
+        //        sp.DataBits = 8;
+        //        sp.Handshake = Handshake.None;
+        //        sp.RtsEnable = true;
+        //        sp.NewLine = "\n";
                
-                //sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+        //        //sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
 
-                sp.Open();
+        //        sp.Open();
 
 
-                //Creating a task to check for the available ports.
-                Task task = Task.Factory.StartNew(() =>
-                {
+        //        //Creating a task to check for the available ports.
+        //        Task task = Task.Factory.StartNew(() =>
+        //        {
 
-                    if (sp.IsOpen)
-                    {
+        //            if (sp.IsOpen)
+        //            {
                         
-                        string portName = sp.PortName;
+        //                string portName = sp.PortName;
 
-                        sp.WriteLine("AT\r");
-                        Thread.Sleep(2000);
+        //                sp.WriteLine("AT\r");
+        //                Thread.Sleep(2000);
 
-                        if (sp.ReadExisting().Contains("OK"))
-                        {
+        //                if (sp.ReadExisting().Contains("OK"))
+        //                {
                             
-                            sp.WriteLine("AT+CMGF=1\r");
-                            Thread.Sleep(1000);
+        //                    sp.WriteLine("AT+CMGF=1\r");
+        //                    Thread.Sleep(1000);
                             
-                            if (sp.ReadExisting().Contains("OK"))
-                            {
-                                sp.WriteLine("AT+CMGS=\"222\"\r\n");
-                                Thread.Sleep(1000);
-                                sp.WriteLine("BAL\x1a");
-                                Thread.Sleep(5000);
-                                sp.WriteLine("AT+CMGL=\"REC UNREAD\"\r");
-                                Thread.Sleep(3000);
-                                Regex regEx = new Regex(@"\+CMGL: (\d+),""(.+)"",""(.+)"",(.*),""(.+)""\r\n(.+)\r\n");
-                                Match match = regEx.Match(sp.ReadExisting());
-                                while(match.Success){
-                                    string inboxID = match.Groups[1].Value;
-                                    string inboxStatus = match.Groups[2].Value;
-                                    string inboxSender = match.Groups[3].Value;
-                                    string inboxDateAndTime = match.Groups[4].Value;
-                                    string inboxBlank = match.Groups[5].Value;
-                                    string inboxData = match.Groups[6].Value;
+        //                    if (sp.ReadExisting().Contains("OK"))
+        //                    {
+        //                        sp.WriteLine("AT+CMGS=\"222\"\r\n");
+        //                        Thread.Sleep(1000);
+        //                        sp.WriteLine("BAL\x1a");
+        //                        Thread.Sleep(5000);
+        //                        sp.WriteLine("AT+CMGL=\"REC UNREAD\"\r");
+        //                        Thread.Sleep(3000);
+        //                        Regex regEx = new Regex(@"\+CMGL: (\d+),""(.+)"",""(.+)"",(.*),""(.+)""\r\n(.+)\r\n");
+        //                        Match match = regEx.Match(sp.ReadExisting());
+        //                        while(match.Success){
+        //                            string inboxID = match.Groups[1].Value;
+        //                            string inboxStatus = match.Groups[2].Value;
+        //                            string inboxSender = match.Groups[3].Value;
+        //                            string inboxDateAndTime = match.Groups[4].Value;
+        //                            string inboxBlank = match.Groups[5].Value;
+        //                            string inboxData = match.Groups[6].Value;
 
-                                    Action<string> updateDataGridBalance = balance =>
-                                    {
-                                        dashGrid.Rows[row].Cells[3].Value = balance;
-                                    };
-                                    this.Invoke(updateDataGridBalance, inboxData);
-                                    logs.log(inboxData);
+        //                            Action<string> updateDataGridBalance = balance =>
+        //                            {
+        //                                dashGrid.Rows[row].Cells[3].Value = balance;
+        //                            };
+        //                            this.Invoke(updateDataGridBalance, inboxData);
+        //                            logs.log(inboxData);
 
-                                    match = match.NextMatch();
+        //                            match = match.NextMatch();
 
-                                }
+        //                        }
 
-                            }
-                            else
-                            {
-                                MessageBox.Show("Failed, Checking of balance. Please try again later when the modem is not busy.");
-                                logs.log("Checking of balance failed for :" +port+ ", port might be busy.");
-                            }
+        //                    }
+        //                    else
+        //                    {
+        //                        MessageBox.Show("Failed, Checking of balance. Please try again later when the modem is not busy.");
+        //                        logs.log("Checking of balance failed for :" +port+ ", port might be busy.");
+        //                    }
                            
-                        }
-                        sp.Close();
-                    }
+        //                }
+        //                sp.Close();
+        //            }
 
 
-                });
+        //        });
 
 
-            }
-            catch (Exception exception)
-            {
+        //    }
+        //    catch (Exception exception)
+        //    {
 
-                //Log the Error
+        //        //Log the Error
                 
-            }
+        //    }
 
-        }
+        //}
     }
 }

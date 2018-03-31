@@ -108,7 +108,7 @@ namespace MPSystem.Model
             }
             catch (SqlException err)
             {
-                
+                logs.log("List of Active Ports Error: "+ err.Message);
             }
             finally
             {

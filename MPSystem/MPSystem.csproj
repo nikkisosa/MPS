@@ -72,6 +72,7 @@
     <Compile Include="Model\MainFormModel.cs" />
     <Compile Include="Model\dashBoardModel.cs" />
     <Compile Include="Model\groupModel.cs" />
+    <Compile Include="Model\messageModel.cs" />
     <Compile Include="Model\promotionModel.cs" />
     <Compile Include="Model\splashModel.cs" />
     <Compile Include="Model\contactModel.cs" />

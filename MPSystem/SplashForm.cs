@@ -108,7 +108,8 @@ namespace MPSystem
 
                     }
                     catch(Exception exs){
-                        //Log the Error
+                    //Log the Error
+                        logs.log("Splash BG Worker: "+ exs);
                     }
             }
                 

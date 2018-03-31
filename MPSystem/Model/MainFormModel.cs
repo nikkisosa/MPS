@@ -180,6 +180,50 @@ namespace MPSystem.Model
             return str;
         }
 
+        public static string checkForAutoReplay(string message)
+        {
+            string query = "SELECT TOP 1 * FROM [autoreply] where [command] = @command";
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+            try
+            {
+
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@command", message);
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+
+                        str = reader["reply"].ToString();
+
+                    }
+                }
+                else
+                {
+                    str = "false";
+                }
+
+            }
+            catch (SqlException err)
+            {
+                //str = err.Message;
+                logs.log(err.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
+
+        
+
 
 
 

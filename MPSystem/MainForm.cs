@@ -11,19 +11,86 @@ using MPSystem.View;
 using System.IO.Ports;
 using System.Threading;
 using System.Text.RegularExpressions;
+using System.Timers;
 
 namespace MPSystem
 {
     public partial class MMS : Form
     {
+        public BackgroundWorker bgWorker;
+        public System.Timers.Timer bgTimer;
         public MMS()
         {
             InitializeComponent();
+            bgWorker = new BackgroundWorker()
+            {
+                WorkerSupportsCancellation = true,
+                WorkerReportsProgress = true
+            };
+            bgWorker.DoWork += worker_DoWork;
+            bgWorker.ProgressChanged += worker_ProgressChanged;
+            bgWorker.RunWorkerCompleted += worker_RunWorkerCompleted;
+            //bgWorker.RunWorkerAsync();
+
+            bgTimer = new System.Timers.Timer(1000 * 60 * 2); // Check Message Every 2 minutes
+            bgTimer.Elapsed += bgTimer_Elapsed;
+            bgTimer.Start();
+
+           
+
         }
 
         private bool mouseDown;
         private Point lastLocation;
-        public static string filteredMobileNo;
+
+        void bgTimer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            if (!bgWorker.IsBusy)
+                bgWorker.RunWorkerAsync();
+        }
+
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker w = (BackgroundWorker)sender;
+
+            while (true)
+            {
+                //check if cancellation was requested
+                if (w.CancellationPending)
+                {
+                    //take any necessary action upon cancelling (rollback, etc.)
+
+                    //notify the RunWorkerCompleted event handler
+                    //that the operation was cancelled
+                    e.Cancel = true;
+                    return;
+                }
+                checkForIncommingMessage();
+                Thread.Sleep(1000 * 60 * 2); // 5 minutes sleep
+
+                //w.ReportProgress(/*percentage*/);
+
+            }
+        }
+
+        void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            //display the progress using e.ProgressPercentage and/or e.UserState
+            logs.log("Checking Message....");
+        }
+
+        void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                logs.log("Checking Message Canceled");
+            }
+            else
+            {
+                //do something else
+            }
+        }
+
 
         private void btn_contacts_Click(object sender, EventArgs e)
         {
@@ -111,7 +178,7 @@ namespace MPSystem
         private void MMS_Load(object sender, EventArgs e)
         {
             //logs.log("hello test message1");
-            checkForIncommingMessage();
+            //checkForIncommingMessage();
 
         }
 
@@ -135,7 +202,7 @@ namespace MPSystem
         {
 
             List<string> ports = Model.MainFormModel.getListActivePorts();
-            logs.log("Started checking : " + string.Join(",", ports));
+            logs.log("Checking Message : " + string.Join(",", ports));
         
             for (int i = 0; i < ports.Count; i++)
             {
@@ -155,149 +222,82 @@ namespace MPSystem
                     //sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
                     sp.Open();
                     //sp.WriteLine("AT\r");
-                    Task task = Task.Factory.StartNew(() =>
-                   {
+                    
 
                        if (sp.IsOpen)
                        {
                            
-
                            sp.WriteLine("AT\r");
-                           Thread.Sleep(1000);
-                           //sp.WriteLine("AT+CMGF=1\r");
-                           //Thread.Sleep(1000);
-                           //sp.WriteLine("AT+CMGL=\"ALL\"\r");
-                           //Thread.Sleep(3000);
-                           //Regex regEx = new Regex(@"\+CMGL: (\d+),""(.+)"",""(.+)"",(.*),""(.+)""\r\n(.+)\r\n");
-                           //Match match = regEx.Match(sp.ReadExisting());
-                           //while (match.Success)
-                           //{
-                           //    string inboxID = match.Groups[1].Value;
-                           //    string inboxStatus = match.Groups[2].Value;
-                           //    string inboxSender = match.Groups[3].Value;
-                           //    string inboxDateAndTime = match.Groups[4].Value;
-                           //    string inboxBlank = match.Groups[5].Value;
-                           //    string inboxData = match.Groups[6].Value;
-
-                           //    if (inboxData.Trim().Contains("YES"))
-                           //    {
-                           //        logs.log("Match");
-                           //        filteredMobileNo = inboxSender.Replace("+63", "0").Trim();
-                           //        string checkMobileNumber = Model.MainFormModel.checkMobileLastPromo(filteredMobileNo);
-                           //        logs.log(checkMobileNumber);
-                           //        if (checkMobileNumber == "success")
-                           //        {
-
-                           //            Entity.variables entity = new Entity.variables();
-                           //            entity.promotionTitle = Model.MainFormModel.getLastPromo(filteredMobileNo);
-                           //            entity.mobile_no = inboxSender;
-                           //            entity.message = inboxData;
-                           //            string insertMessage = Model.MainFormModel.addMessages(entity);
-                           //            logs.log(insertMessage);
-                           //            if (insertMessage != "success")
-                           //            {
-                           //                logs.log("Saving Message Failed: " + insertMessage);
-                           //            }
-                           //        }
+                           Thread.Sleep(500);
+                           sp.WriteLine("AT+CMGF=1\r");
+                           Thread.Sleep(500);
+                           sp.WriteLine("AT+CMGL=\"REC UNREAD\"\r");
+                           Thread.Sleep(3000);
+                           Regex regEx = new Regex(@"\+CMGL: (\d+),""(.+)"",""(.+)"",(.*),""(.+)""\r\n(.+)\r\n");
+                           Match match = regEx.Match(sp.ReadExisting());
+                           while (match.Success)
+                           {
+                               string inboxID = match.Groups[1].Value;
+                               string inboxStatus = match.Groups[2].Value;
+                               string inboxSender = match.Groups[3].Value;
+                               string inboxDateAndTime = match.Groups[4].Value;
+                               string inboxBlank = match.Groups[5].Value;
+                               string inboxData = match.Groups[6].Value;
 
 
+                               string filteredMobileNo = inboxSender.Replace("+63", "0").Trim();
+                               if (inboxData.Trim().Contains("YES"))
+                               {
 
-                           //    }
-                           //    else
-                           //    {
-                           //        logs.log("Not Match");
-                           //    }
 
-                           //    logs.log(inboxData);
+                                   string checkMobileNumber = Model.MainFormModel.checkMobileLastPromo(filteredMobileNo);
 
-                           //    match = match.NextMatch();
+                                   if (checkMobileNumber == "success")
+                                   {
 
-                           //    // }
-                           //}
+                                       Entity.variables entity = new Entity.variables();
+                                       entity.promotionTitle = Model.MainFormModel.getLastPromo(filteredMobileNo);
+                                       entity.mobile_no = inboxSender;
+                                       entity.message = inboxData;
+                                       string insertMessage = Model.MainFormModel.addMessages(entity);
+
+                                       if (insertMessage != "success")
+                                       {
+                                           logs.log("Saving Message Failed: " + insertMessage);
+                                       }
+                                   }
+
+                               }
+
+                               string checkForAutoReplay = Model.MainFormModel.checkForAutoReplay(inboxData);
+                               if (checkForAutoReplay != "false")
+                               {
+                                   
+                                       sp.WriteLine("AT+CMGS=\"" + filteredMobileNo + "\"\r");
+                                       Thread.Sleep(500);
+                                       sp.WriteLine(checkForAutoReplay + "\x1a");
+                                       Thread.Sleep(4000);
+                                       logs.log("Auto Replay Done");
+                                  
+                               }
+
+
+                               match = match.NextMatch();
+
+                           }
+
 
                        }
-                   });
-                    
+                        sp.Close();
+                  
 
                 }
                 catch (Exception exception)
                 {
                     //Log the Error
-                    logs.log("Exception: " + exception.Message);
+                    logs.log("ExceptionMainForm: " + exception.Message);
                 }
             }
-        }
-
-        private static void DataReceivedHandler(object sender,SerialDataReceivedEventArgs e)
-        {
-            SerialPort sp = (SerialPort)sender;
-            string indata = sp.ReadExisting();
-            //if (indata.Contains("+CMTI:"))
-            //{
-                //New Message Received
-                MessageBox.Show(indata);
-                sp.WriteLine("AT+CMGF=1\r");
-                Thread.Sleep(1000);
-                sp.WriteLine("AT+CMGL=\"ALL\"\r");
-                Thread.Sleep(3000);
-                Regex regEx = new Regex(@"\+CMGL: (\d+),""(.+)"",""(.+)"",(.*),""(.+)""\r\n(.+)\r\n");
-                Match match = regEx.Match(sp.ReadExisting());
-                while (match.Success)
-                {
-                    string inboxID = match.Groups[1].Value;
-                    string inboxStatus = match.Groups[2].Value;
-                    string inboxSender = match.Groups[3].Value;
-                    string inboxDateAndTime = match.Groups[4].Value;
-                    string inboxBlank = match.Groups[5].Value;
-                    string inboxData = match.Groups[6].Value;
-                   
-                    if (inboxData.Trim().Contains("YES"))
-                    {
-                        logs.log("Match");
-                        filteredMobileNo = inboxSender.Replace("+63", "0").Trim();
-                        string checkMobileNumber = Model.MainFormModel.checkMobileLastPromo(filteredMobileNo);
-                        logs.log(checkMobileNumber);
-                        if (checkMobileNumber == "success")
-                        {
-                            
-                            Entity.variables entity = new Entity.variables();
-                            entity.promotionTitle = Model.MainFormModel.getLastPromo(filteredMobileNo);
-                            entity.mobile_no = inboxSender;
-                            entity.message = inboxData;
-                            string insertMessage = Model.MainFormModel.addMessages(entity);
-                            logs.log(insertMessage);
-                            if (insertMessage != "success")
-                            {
-                                logs.log("Saving Message Failed: " + insertMessage);
-                            }
-                        }
-
-
-
-                    }else
-                    {
-                        logs.log("Not Match");
-                    }
-                   
-                    logs.log(inboxData);
-
-                    match = match.NextMatch();
-
-               // }
-            }
-            logs.log("New Message Read: "+indata);
-           
-        }
-
-        public string mobileNumberFixer(string str)
-        {
-            string filteredStr = str;
-            logs.log(filteredStr);
-            filteredStr.Replace('"', ' ').Trim();
-            logs.log(filteredStr);
-            filteredStr.Replace("+63", "0").Trim();
-            logs.log(filteredStr);
-            return filteredStr;
         }
 
         private void btn_messages_Click(object sender, EventArgs e)
