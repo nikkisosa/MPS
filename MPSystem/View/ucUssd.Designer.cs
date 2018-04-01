@@ -45,17 +45,17 @@
             this.Command = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UssdDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backgroundworker = new System.ComponentModel.BackgroundWorker();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlUSD = new System.Windows.Forms.Panel();
             this.btnCloseUssdPanel = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblDescription = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSendUSSD = new System.Windows.Forms.Button();
             this.txtCommandBox = new System.Windows.Forms.TextBox();
             this.cboPort = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlUSD.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,45 +69,50 @@
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Location = new System.Drawing.Point(26, 3);
+            this.panel1.Location = new System.Drawing.Point(35, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(658, 97);
+            this.panel1.Size = new System.Drawing.Size(877, 119);
             this.panel1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(177, 59);
+            this.label1.Location = new System.Drawing.Point(236, 73);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Description";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(267, 52);
+            this.txtDescription.Location = new System.Drawing.Point(356, 64);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.MaxLength = 100;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(289, 20);
+            this.txtDescription.Size = new System.Drawing.Size(384, 22);
             this.txtDescription.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(177, 31);
+            this.label2.Location = new System.Drawing.Point(236, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Command";
             // 
             // txtCommand
             // 
-            this.txtCommand.Location = new System.Drawing.Point(267, 24);
+            this.txtCommand.Location = new System.Drawing.Point(356, 30);
+            this.txtCommand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCommand.MaxLength = 50;
             this.txtCommand.Name = "txtCommand";
-            this.txtCommand.Size = new System.Drawing.Size(289, 20);
+            this.txtCommand.Size = new System.Drawing.Size(384, 22);
             this.txtCommand.TabIndex = 7;
             // 
             // btnDelete
@@ -116,12 +121,12 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(17, 62);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
-            this.btnDelete.MaximumSize = new System.Drawing.Size(97, 23);
-            this.btnDelete.MinimumSize = new System.Drawing.Size(97, 23);
+            this.btnDelete.Location = new System.Drawing.Point(23, 76);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 0, 0, 4);
+            this.btnDelete.MaximumSize = new System.Drawing.Size(129, 28);
+            this.btnDelete.MinimumSize = new System.Drawing.Size(129, 28);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 23);
+            this.btnDelete.Size = new System.Drawing.Size(129, 28);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete Command";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -133,12 +138,12 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(17, 37);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnEdit.MaximumSize = new System.Drawing.Size(97, 23);
-            this.btnEdit.MinimumSize = new System.Drawing.Size(97, 23);
+            this.btnEdit.Location = new System.Drawing.Point(23, 46);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnEdit.MaximumSize = new System.Drawing.Size(129, 28);
+            this.btnEdit.MinimumSize = new System.Drawing.Size(129, 28);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(97, 23);
+            this.btnEdit.Size = new System.Drawing.Size(129, 28);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Edit Command";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -150,12 +155,12 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(17, 12);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
-            this.btnAdd.MaximumSize = new System.Drawing.Size(97, 23);
-            this.btnAdd.MinimumSize = new System.Drawing.Size(97, 23);
+            this.btnAdd.Location = new System.Drawing.Point(23, 15);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 0, 0);
+            this.btnAdd.MaximumSize = new System.Drawing.Size(129, 28);
+            this.btnAdd.MinimumSize = new System.Drawing.Size(129, 28);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(97, 23);
+            this.btnAdd.Size = new System.Drawing.Size(129, 28);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add a Command";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -166,9 +171,10 @@
             this.lblPages.AutoSize = true;
             this.lblPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPages.ForeColor = System.Drawing.Color.White;
-            this.lblPages.Location = new System.Drawing.Point(23, 504);
+            this.lblPages.Location = new System.Drawing.Point(31, 620);
+            this.lblPages.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPages.Name = "lblPages";
-            this.lblPages.Size = new System.Drawing.Size(65, 13);
+            this.lblPages.Size = new System.Drawing.Size(85, 17);
             this.lblPages.TabIndex = 16;
             this.lblPages.Text = "Page: 0 of 0";
             // 
@@ -180,9 +186,10 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(630, 498);
+            this.btnNext.Location = new System.Drawing.Point(840, 613);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(54, 23);
+            this.btnNext.Size = new System.Drawing.Size(72, 28);
             this.btnNext.TabIndex = 15;
             this.btnNext.Text = "next";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -196,9 +203,10 @@
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.ForeColor = System.Drawing.Color.White;
-            this.btnPrev.Location = new System.Drawing.Point(570, 498);
+            this.btnPrev.Location = new System.Drawing.Point(760, 613);
+            this.btnPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(54, 23);
+            this.btnPrev.Size = new System.Drawing.Size(72, 28);
             this.btnPrev.TabIndex = 14;
             this.btnPrev.Text = "prev";
             this.btnPrev.UseVisualStyleBackColor = false;
@@ -213,14 +221,16 @@
             this.UssdDescription});
             this.lvList.FullRowSelect = true;
             this.lvList.GridLines = true;
-            this.lvList.Location = new System.Drawing.Point(26, 116);
-            this.lvList.MaximumSize = new System.Drawing.Size(658, 376);
-            this.lvList.MinimumSize = new System.Drawing.Size(658, 376);
+            this.lvList.Location = new System.Drawing.Point(35, 143);
+            this.lvList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvList.MaximumSize = new System.Drawing.Size(876, 462);
+            this.lvList.MinimumSize = new System.Drawing.Size(876, 462);
             this.lvList.Name = "lvList";
-            this.lvList.Size = new System.Drawing.Size(658, 376);
+            this.lvList.Size = new System.Drawing.Size(876, 462);
             this.lvList.TabIndex = 13;
             this.lvList.UseCompatibleStateImageBehavior = false;
             this.lvList.View = System.Windows.Forms.View.Details;
+            this.lvList.SelectedIndexChanged += new System.EventHandler(this.lvList_SelectedIndexChanged);
             this.lvList.DoubleClick += new System.EventHandler(this.lvList_DoubleClick);
             // 
             // ussdid
@@ -245,22 +255,23 @@
             this.UssdDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UssdDescription.Width = 364;
             // 
-            // panel2
+            // pnlUSD
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnCloseUssdPanel);
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.txtCommandBox);
-            this.panel2.Controls.Add(this.cboPort);
-            this.panel2.Location = new System.Drawing.Point(206, 154);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(316, 263);
-            this.panel2.TabIndex = 17;
-            this.panel2.Visible = false;
+            this.pnlUSD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.pnlUSD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlUSD.Controls.Add(this.btnCloseUssdPanel);
+            this.pnlUSD.Controls.Add(this.flowLayoutPanel1);
+            this.pnlUSD.Controls.Add(this.label4);
+            this.pnlUSD.Controls.Add(this.label3);
+            this.pnlUSD.Controls.Add(this.btnSendUSSD);
+            this.pnlUSD.Controls.Add(this.txtCommandBox);
+            this.pnlUSD.Controls.Add(this.cboPort);
+            this.pnlUSD.Location = new System.Drawing.Point(275, 190);
+            this.pnlUSD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlUSD.Name = "pnlUSD";
+            this.pnlUSD.Size = new System.Drawing.Size(421, 323);
+            this.pnlUSD.TabIndex = 17;
+            this.pnlUSD.Visible = false;
             // 
             // btnCloseUssdPanel
             // 
@@ -269,9 +280,10 @@
             this.btnCloseUssdPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseUssdPanel.FlatAppearance.BorderSize = 0;
             this.btnCloseUssdPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseUssdPanel.Location = new System.Drawing.Point(265, 3);
+            this.btnCloseUssdPanel.Location = new System.Drawing.Point(353, 4);
+            this.btnCloseUssdPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCloseUssdPanel.Name = "btnCloseUssdPanel";
-            this.btnCloseUssdPanel.Size = new System.Drawing.Size(46, 20);
+            this.btnCloseUssdPanel.Size = new System.Drawing.Size(61, 25);
             this.btnCloseUssdPanel.TabIndex = 5;
             this.btnCloseUssdPanel.UseVisualStyleBackColor = true;
             this.btnCloseUssdPanel.Click += new System.EventHandler(this.btnCloseUssdPanel_Click);
@@ -279,10 +291,11 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.lblDescription);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 117);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 144);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(268, 69);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(357, 85);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // lblDescription
@@ -290,9 +303,10 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(6, 3);
+            this.lblDescription.Location = new System.Drawing.Point(8, 4);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(0, 13);
+            this.lblDescription.Size = new System.Drawing.Size(0, 17);
             this.lblDescription.TabIndex = 0;
             // 
             // label4
@@ -300,9 +314,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(21, 84);
+            this.label4.Location = new System.Drawing.Point(28, 103);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 15);
+            this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Command";
             // 
@@ -311,62 +326,68 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(21, 45);
+            this.label3.Location = new System.Drawing.Point(28, 55);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.Size = new System.Drawing.Size(86, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "COMPORT";
             // 
-            // button1
+            // btnSendUSSD
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(24, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 46);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSendUSSD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnSendUSSD.FlatAppearance.BorderSize = 0;
+            this.btnSendUSSD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendUSSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendUSSD.ForeColor = System.Drawing.Color.White;
+            this.btnSendUSSD.Location = new System.Drawing.Point(32, 241);
+            this.btnSendUSSD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSendUSSD.Name = "btnSendUSSD";
+            this.btnSendUSSD.Size = new System.Drawing.Size(357, 57);
+            this.btnSendUSSD.TabIndex = 2;
+            this.btnSendUSSD.Text = "Send";
+            this.btnSendUSSD.UseVisualStyleBackColor = false;
+            this.btnSendUSSD.Click += new System.EventHandler(this.btnSendUSSD_Click);
             // 
             // txtCommandBox
             // 
             this.txtCommandBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommandBox.Location = new System.Drawing.Point(96, 77);
+            this.txtCommandBox.Location = new System.Drawing.Point(128, 95);
+            this.txtCommandBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCommandBox.Name = "txtCommandBox";
-            this.txtCommandBox.Size = new System.Drawing.Size(196, 21);
+            this.txtCommandBox.Size = new System.Drawing.Size(260, 24);
             this.txtCommandBox.TabIndex = 1;
             // 
             // cboPort
             // 
             this.cboPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPort.FormattingEnabled = true;
-            this.cboPort.Location = new System.Drawing.Point(96, 41);
+            this.cboPort.Location = new System.Drawing.Point(128, 50);
+            this.cboPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboPort.Name = "cboPort";
-            this.cboPort.Size = new System.Drawing.Size(196, 21);
+            this.cboPort.Size = new System.Drawing.Size(260, 24);
             this.cboPort.TabIndex = 0;
             // 
             // ucUssd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlUSD);
             this.Controls.Add(this.lblPages);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.lvList);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(711, 536);
-            this.MinimumSize = new System.Drawing.Size(711, 536);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(948, 660);
+            this.MinimumSize = new System.Drawing.Size(948, 660);
             this.Name = "ucUssd";
-            this.Size = new System.Drawing.Size(711, 536);
+            this.Size = new System.Drawing.Size(948, 660);
             this.Load += new System.EventHandler(this.ucUssd_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlUSD.ResumeLayout(false);
+            this.pnlUSD.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -393,8 +414,8 @@
         private System.Windows.Forms.ColumnHeader Command;
         private System.Windows.Forms.ColumnHeader UssdDescription;
         private System.ComponentModel.BackgroundWorker backgroundworker;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlUSD;
+        private System.Windows.Forms.Button btnSendUSSD;
         private System.Windows.Forms.TextBox txtCommandBox;
         private System.Windows.Forms.ComboBox cboPort;
         private System.Windows.Forms.Label label3;

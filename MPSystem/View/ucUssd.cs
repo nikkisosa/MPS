@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO.Ports;
+
 namespace MPSystem.View
 {
     public partial class ucUssd : UserControl
@@ -194,8 +196,8 @@ namespace MPSystem.View
             Fields();
             Buttons();
             backgroundworker.RunWorkerAsync();
-            panel2.Visible = false;
-            panel2.SendToBack();
+            pnlUSD.Visible = false;
+            pnlUSD.SendToBack();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -403,16 +405,18 @@ namespace MPSystem.View
 
         private void btnCloseUssdPanel_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
-            panel2.SendToBack();
+            pnlUSD.Visible = false;
+            pnlUSD.SendToBack();
         }
 
         private void lvList_DoubleClick(object sender, EventArgs e)
         {
             try
             {
-                panel2.Visible = true;
-                panel2.BringToFront();
+                pnlUSD.Visible = true;
+                pnlUSD.BringToFront();
+                cboPort.Items.Clear();
+                cboPort.DataSource = Model.MainFormModel.getListActivePorts();
                 lblDescription.Text = lvList.SelectedItems[0].SubItems[3].Text;
                 txtCommandBox.Text = lvList.SelectedItems[0].SubItems[2].Text;
             }
@@ -420,6 +424,110 @@ namespace MPSystem.View
             {
 
             }
+        }
+
+        private void btnSendUSSD_Click(object sender, EventArgs e)
+        {
+            string port = cboPort.Text;
+            string ussdCommand = txtCommandBox.Text;
+            if(port != "")
+            {
+                Task task = Task.Factory.StartNew(() =>
+                {
+                    MMS mainForm = new MMS();
+                    mainForm.bgTimer.Stop();
+                    mainForm.bgWorker.CancelAsync();
+                    SendUSSD(port, ussdCommand);
+
+                });
+                pnlUSD.Visible = false;
+                MessageBox.Show("Command has been successfully sent to :" + port);
+            }else
+            {
+                MessageBox.Show("Please select a port.");
+            }
+            
+        }
+
+        public void SendUSSD(string port, string ussdCode)
+        {
+            logs.log("Sending USSD Command...");
+
+            //Serial Ports Setting
+            SerialPort sp = new SerialPort();
+            sp.PortName = port;
+            sp.BaudRate = 115200;
+            sp.Parity = Parity.None;
+            sp.StopBits = StopBits.One;
+            sp.DataBits = 8;
+            sp.Handshake = Handshake.None;
+            sp.RtsEnable = true;
+            sp.NewLine = "\n";
+
+
+            try
+            {
+              
+                sp.Open();
+
+
+
+                if (sp.IsOpen)
+                {
+
+                    sp.WriteLine("AT+CMGF=0\r");
+                    Thread.Sleep(500);
+                    sp.ReadExisting();
+                    logs.log("Sending USSD Code("+ ussdCode + ") to : " + port + " OK");
+                    sp.WriteLine("AT+CUSD=1,\"" + ussdCode + "\"\r");
+                    sp.ReadExisting();
+                    Thread.Sleep(6000);
+                    string commandReponse = sp.ReadExisting();
+                    if (commandReponse.Contains("OK"))
+                    {
+                        int startingIndex = commandReponse.IndexOf("+CUSD: 2,\"");
+                        int endingIndex = commandReponse.IndexOf("\",15");
+                        int trimLength = endingIndex - startingIndex;
+                        string trimFinalOut = commandReponse.Substring(startingIndex, trimLength);
+                        logs.log("USSD Command Reply :\r" + trimFinalOut + " \rOK");
+                        Task.Factory.StartNew(() =>
+                        {
+
+                            MessageBox.Show("USSD Command Reply :\r" + trimFinalOut + " \rOK");
+                        });
+                        
+                    }else
+                    {
+                        logs.log("USSD Command Reply :\r There is unexpected error. Please try agian. \rERROR");
+                        MessageBox.Show("USSD Command Reply :\r There is unexpected error. Please try agian. \rERROR");
+                    }
+                   
+
+                }
+
+
+            }
+            catch (Exception exception)
+            {
+                //Log the Error
+                logs.log("ExceptionUSSD: " + exception.Message);
+            }
+            finally
+            {
+                sp.Close();
+            }
+
+
+
+
+            MMS mainForm = new MMS();
+            mainForm.bgTimer.Start();
+            logs.log("Sending USSD Command OK");
+        }
+
+        private void lvList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

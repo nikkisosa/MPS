@@ -525,47 +525,54 @@ namespace MPSystem.View
                 }
             }
             //string selectedPort = lstGrid.Rows[i].Cells[1].Value.ToString();
-            str = Model.promotionModel.getGroupMembersNumber(cboSendTo.Text);
-            if (str == "success")
+            if(portsSelected.Count > 0)
             {
-                List<string> mobileNumbers = new List<string>();
-                int errorCounter = 0;
-                for (int count = 0; count < config.records.Count; count++)
+                str = Model.promotionModel.getGroupMembersNumber(cboSendTo.Text);
+                if (str == "success")
                 {
-                    string mobileNumber = config.records[count].mobile_no.ToString();
-                    Entity.variables entity = new Entity.variables();
-                    entity.promotionTitle = txtTitle.Text;
-                    entity.mobile_no = mobileNumber;
-
-                    string insertLastPromoSent = Model.promotionModel.addLastSentPromotion(entity);
-                    if (insertLastPromoSent == "success")
+                    List<string> mobileNumbers = new List<string>();
+                    int errorCounter = 0;
+                    for (int count = 0; count < config.records.Count; count++)
                     {
-                        mobileNumbers.Add(mobileNumber);
+                        string mobileNumber = config.records[count].mobile_no.ToString();
+                        Entity.variables entity = new Entity.variables();
+                        entity.promotionTitle = txtTitle.Text;
+                        entity.mobile_no = mobileNumber;
+
+                        string insertLastPromoSent = Model.promotionModel.addLastSentPromotion(entity);
+                        if (insertLastPromoSent == "success")
+                        {
+                            mobileNumbers.Add(mobileNumber);
+                        }
+
                     }
 
-                }
-
-                if (errorCounter == 0)
-                {
-                    string message = txtDetails.Text;
-                    MMS mainForm = new MMS();
-                    mainForm.bgTimer.Stop();
-                    mainForm.bgWorker.CancelAsync();
-                    Task task = Task.Factory.StartNew(() =>
+                    if (errorCounter == 0)
                     {
-                        sendPromo(portsSelected, mobileNumbers, message);
-                    });
+                        string message = txtDetails.Text;
+                        MMS mainForm = new MMS();
+                        mainForm.bgTimer.Stop();
+                        mainForm.bgWorker.CancelAsync();
+                        Task task = Task.Factory.StartNew(() =>
+                        {
+                            sendPromo(portsSelected, mobileNumbers, message);
+                        });
 
-                    MessageBox.Show("The Promo has been sent to " + cboSendTo.Text);
+                        MessageBox.Show("The Promo has been sent to " + cboSendTo.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to sent the promo to " + cboSendTo.Text);
+                    }
+
+                    pnlPortsToSend.Visible = false;
+
                 }
-                else
-                {
-                    MessageBox.Show("Unable to sent the promo to " + cboSendTo.Text);
-                }
-
-                pnlPortsToSend.Visible = false;
-
+            }else
+            {
+                MessageBox.Show("Please select a port.");
             }
+            
             
         }
 
