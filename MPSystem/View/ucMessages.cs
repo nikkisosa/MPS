@@ -187,5 +187,10 @@ namespace MPSystem.View
                 }
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 }

@@ -79,6 +79,11 @@
     <Compile Include="Model\ussdModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="View\ucAutoreply.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,14 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="View\ucAutoreply.resx">
       <DependentUpon>ucAutoreply.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +203,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MPS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Refresh_20px.png" />
     <None Include="Resources\closeBlack.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\opaqueBg-01.png" />

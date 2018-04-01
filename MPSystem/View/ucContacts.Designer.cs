@@ -39,7 +39,6 @@
             this.Network = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Group = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGroup = new System.Windows.Forms.Button();
             this.cboNetwork = new System.Windows.Forms.ComboBox();
             this.cboGroup = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.btnGroupDelete = new System.Windows.Forms.Button();
             this.btnGroupEdit = new System.Windows.Forms.Button();
             this.btnGroupAdd = new System.Windows.Forms.Button();
+            this.btnGroup = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -182,23 +182,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(658, 97);
             this.panel1.TabIndex = 5;
-            // 
-            // btnGroup
-            // 
-            this.btnGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.btnGroup.BackgroundImage = global::MPSystem.Properties.Resources.addbtn;
-            this.btnGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGroup.FlatAppearance.BorderSize = 0;
-            this.btnGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnGroup.ForeColor = System.Drawing.Color.White;
-            this.btnGroup.Location = new System.Drawing.Point(535, 63);
-            this.btnGroup.Name = "btnGroup";
-            this.btnGroup.Size = new System.Drawing.Size(21, 21);
-            this.btnGroup.TabIndex = 10;
-            this.btnGroup.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGroup.UseVisualStyleBackColor = false;
-            this.btnGroup.Click += new System.EventHandler(this.btnGroup_Click);
             // 
             // cboNetwork
             // 
@@ -477,6 +460,23 @@
             this.btnGroupAdd.Text = "Add";
             this.btnGroupAdd.UseVisualStyleBackColor = false;
             this.btnGroupAdd.Click += new System.EventHandler(this.btnGroupAdd_Click);
+            // 
+            // btnGroup
+            // 
+            this.btnGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnGroup.BackgroundImage = global::MPSystem.Properties.Resources.addbtn;
+            this.btnGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGroup.FlatAppearance.BorderSize = 0;
+            this.btnGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnGroup.ForeColor = System.Drawing.Color.White;
+            this.btnGroup.Location = new System.Drawing.Point(535, 63);
+            this.btnGroup.Name = "btnGroup";
+            this.btnGroup.Size = new System.Drawing.Size(21, 21);
+            this.btnGroup.TabIndex = 10;
+            this.btnGroup.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGroup.UseVisualStyleBackColor = false;
+            this.btnGroup.Click += new System.EventHandler(this.btnGroup_Click);
             // 
             // ucContacts
             // 

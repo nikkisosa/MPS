@@ -120,4 +120,16 @@
   <metadata name="backgroundworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRefresh.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAEkSURBVDhP7ZO9SgNBFIVXxCgELGyCxMreWKQIiA8hlpaJj2LnIwixVrC0sgmkSkhha5E23SIr
+        +9eN3zUn7CbOso12+eCw3HvPHGZ2doMt/4dz7iBJkjc0r9AY9WX3k2XZJaY7lUEcxx3qKZp59IkcupJ9
+        nTzPTxmGMg3UriRN0xN5h2oVcLwmg3cZTBkLehpXIu+zyiWE7dB80bCsBaFt2bzI9ytw146rI7+aaVWH
+        YXgomxdvYBkbmkmlFy6qhacrOWr7En5qNteQbQnN2sAoio7w2GdTfj2mB1kKaNYGGuzqHJ+xCpuwu32N
+        Cxg8mqHuMgxCbxS2QMdqr0PQtQK/eG7+GXNCPtCZ7Oa/Rxcq/bDwlkUjnr6/Y8bsiePtyb7lzwmCb/6U
+        jakZLSLqAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
