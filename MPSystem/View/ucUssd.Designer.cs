@@ -221,7 +221,7 @@
             this.lvList.TabIndex = 13;
             this.lvList.UseCompatibleStateImageBehavior = false;
             this.lvList.View = System.Windows.Forms.View.Details;
-            this.lvList.SelectedIndexChanged += new System.EventHandler(this.lvList_SelectedIndexChanged);
+            this.lvList.DoubleClick += new System.EventHandler(this.lvList_DoubleClick);
             // 
             // ussdid
             // 

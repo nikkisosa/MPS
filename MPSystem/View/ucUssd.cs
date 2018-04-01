@@ -33,7 +33,6 @@ namespace MPSystem.View
         private static int itemOldId = 0;
         private static int totalCount = 0;
         private static int totalPage = 0;
-        private static int onClickCount = 0;
         public ucUssd()
         {
             InitializeComponent();
@@ -402,40 +401,25 @@ namespace MPSystem.View
             }
         }
 
-        private void lvList_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnCloseUssdPanel_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            panel2.SendToBack();
+        }
+
+        private void lvList_DoubleClick(object sender, EventArgs e)
         {
             try
             {
-                id = Convert.ToInt32(lvList.SelectedItems[0].SubItems[0].Text);
-                if (onClickCount == 0)
-                {
-                    onClickCount = 1;
-                }
-                else if (onClickCount == 1 && id.ToString() == id.ToString())
-                {
-                    onClickCount = 2;
-                    if(onClickCount == 2)
-                    {
-                        panel2.Visible = true;
-                        panel2.BringToFront();
-                        lblDescription.Text = lvList.SelectedItems[0].SubItems[3].Text;
-                        txtCommandBox.Text = lvList.SelectedItems[0].SubItems[2].Text;
-                    }
-                    
-                }
+                panel2.Visible = true;
+                panel2.BringToFront();
+                lblDescription.Text = lvList.SelectedItems[0].SubItems[3].Text;
+                txtCommandBox.Text = lvList.SelectedItems[0].SubItems[2].Text;
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
-            
-        }
-
-        private void btnCloseUssdPanel_Click(object sender, EventArgs e)
-        {
-            onClickCount = 0;
-            panel2.Visible = false;
-            panel2.SendToBack();
         }
     }
 }
