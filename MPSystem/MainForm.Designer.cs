@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMS));
-            this.btn_dash = new System.Windows.Forms.Button();
-            this.btn_messages = new System.Windows.Forms.Button();
-            this.btn_contacts = new System.Windows.Forms.Button();
             this.btn_promos = new System.Windows.Forms.Button();
             this.btn_autoreply = new System.Windows.Forms.Button();
             this.btn_ussd = new System.Windows.Forms.Button();
             this.Mainpanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pbClose = new System.Windows.Forms.PictureBox();
+            this.btn_contacts = new System.Windows.Forms.Button();
+            this.btn_messages = new System.Windows.Forms.Button();
+            this.btn_dash = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -45,75 +45,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_dash
-            // 
-            this.btn_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.btn_dash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_dash.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.btn_dash.FlatAppearance.BorderSize = 0;
-            this.btn_dash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_dash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_dash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btn_dash.ForeColor = System.Drawing.Color.White;
-            this.btn_dash.Location = new System.Drawing.Point(0, 195);
-            this.btn_dash.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_dash.MaximumSize = new System.Drawing.Size(210, 45);
-            this.btn_dash.MinimumSize = new System.Drawing.Size(210, 45);
-            this.btn_dash.Name = "btn_dash";
-            this.btn_dash.Size = new System.Drawing.Size(210, 45);
-            this.btn_dash.TabIndex = 1;
-            this.btn_dash.Text = "Dashboard";
-            this.btn_dash.UseVisualStyleBackColor = false;
-            this.btn_dash.Click += new System.EventHandler(this.btn_dash_Click);
-            // 
-            // btn_messages
-            // 
-            this.btn_messages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.btn_messages.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_messages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.btn_messages.FlatAppearance.BorderSize = 0;
-            this.btn_messages.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_messages.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_messages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_messages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btn_messages.ForeColor = System.Drawing.Color.White;
-            this.btn_messages.Location = new System.Drawing.Point(0, 240);
-            this.btn_messages.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_messages.MaximumSize = new System.Drawing.Size(210, 45);
-            this.btn_messages.MinimumSize = new System.Drawing.Size(210, 45);
-            this.btn_messages.Name = "btn_messages";
-            this.btn_messages.Size = new System.Drawing.Size(210, 45);
-            this.btn_messages.TabIndex = 2;
-            this.btn_messages.Text = "Messages";
-            this.btn_messages.UseVisualStyleBackColor = false;
-            this.btn_messages.Click += new System.EventHandler(this.btn_messages_Click);
-            // 
-            // btn_contacts
-            // 
-            this.btn_contacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.btn_contacts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_contacts.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.btn_contacts.FlatAppearance.BorderSize = 0;
-            this.btn_contacts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_contacts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_contacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btn_contacts.ForeColor = System.Drawing.Color.White;
-            this.btn_contacts.Location = new System.Drawing.Point(0, 285);
-            this.btn_contacts.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_contacts.MaximumSize = new System.Drawing.Size(210, 45);
-            this.btn_contacts.MinimumSize = new System.Drawing.Size(210, 45);
-            this.btn_contacts.Name = "btn_contacts";
-            this.btn_contacts.Size = new System.Drawing.Size(210, 45);
-            this.btn_contacts.TabIndex = 3;
-            this.btn_contacts.Text = "Contacts";
-            this.btn_contacts.UseVisualStyleBackColor = false;
-            this.btn_contacts.Click += new System.EventHandler(this.btn_contacts_Click);
-            // 
             // btn_promos
             // 
             this.btn_promos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_promos.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_18;
+            this.btn_promos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_promos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_promos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.btn_promos.FlatAppearance.BorderSize = 0;
@@ -129,13 +65,14 @@
             this.btn_promos.Name = "btn_promos";
             this.btn_promos.Size = new System.Drawing.Size(210, 45);
             this.btn_promos.TabIndex = 4;
-            this.btn_promos.Text = "Promos";
             this.btn_promos.UseVisualStyleBackColor = false;
             this.btn_promos.Click += new System.EventHandler(this.btn_promos_Click);
             // 
             // btn_autoreply
             // 
             this.btn_autoreply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_autoreply.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_19;
+            this.btn_autoreply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_autoreply.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_autoreply.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.btn_autoreply.FlatAppearance.BorderSize = 0;
@@ -151,13 +88,14 @@
             this.btn_autoreply.Name = "btn_autoreply";
             this.btn_autoreply.Size = new System.Drawing.Size(210, 45);
             this.btn_autoreply.TabIndex = 5;
-            this.btn_autoreply.Text = "Auto-reply";
             this.btn_autoreply.UseVisualStyleBackColor = false;
             this.btn_autoreply.Click += new System.EventHandler(this.btn_autoreply_Click);
             // 
             // btn_ussd
             // 
             this.btn_ussd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_ussd.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_20;
+            this.btn_ussd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ussd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ussd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.btn_ussd.FlatAppearance.BorderSize = 0;
@@ -173,7 +111,6 @@
             this.btn_ussd.Name = "btn_ussd";
             this.btn_ussd.Size = new System.Drawing.Size(210, 45);
             this.btn_ussd.TabIndex = 6;
-            this.btn_ussd.Text = "USSD Commands";
             this.btn_ussd.UseVisualStyleBackColor = false;
             this.btn_ussd.Click += new System.EventHandler(this.btn_ussd_Click);
             // 
@@ -189,6 +126,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.button1.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_21;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.button1.FlatAppearance.BorderSize = 0;
@@ -204,7 +143,6 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(210, 45);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Settings";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // pbClose
@@ -222,6 +160,75 @@
             this.pbClose.TabIndex = 7;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // btn_contacts
+            // 
+            this.btn_contacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_contacts.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_17;
+            this.btn_contacts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_contacts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_contacts.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_contacts.FlatAppearance.BorderSize = 0;
+            this.btn_contacts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_contacts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_contacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btn_contacts.ForeColor = System.Drawing.Color.White;
+            this.btn_contacts.Location = new System.Drawing.Point(0, 285);
+            this.btn_contacts.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_contacts.MaximumSize = new System.Drawing.Size(210, 45);
+            this.btn_contacts.MinimumSize = new System.Drawing.Size(210, 45);
+            this.btn_contacts.Name = "btn_contacts";
+            this.btn_contacts.Size = new System.Drawing.Size(210, 45);
+            this.btn_contacts.TabIndex = 3;
+            this.btn_contacts.UseVisualStyleBackColor = false;
+            this.btn_contacts.Click += new System.EventHandler(this.btn_contacts_Click);
+            // 
+            // btn_messages
+            // 
+            this.btn_messages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_messages.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_16;
+            this.btn_messages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_messages.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_messages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_messages.FlatAppearance.BorderSize = 0;
+            this.btn_messages.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_messages.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_messages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_messages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btn_messages.ForeColor = System.Drawing.Color.White;
+            this.btn_messages.Location = new System.Drawing.Point(0, 240);
+            this.btn_messages.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_messages.MaximumSize = new System.Drawing.Size(210, 45);
+            this.btn_messages.MinimumSize = new System.Drawing.Size(210, 45);
+            this.btn_messages.Name = "btn_messages";
+            this.btn_messages.Size = new System.Drawing.Size(210, 45);
+            this.btn_messages.TabIndex = 2;
+            this.btn_messages.UseVisualStyleBackColor = false;
+            this.btn_messages.Click += new System.EventHandler(this.btn_messages_Click);
+            // 
+            // btn_dash
+            // 
+            this.btn_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_dash.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_15;
+            this.btn_dash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_dash.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_dash.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_dash.FlatAppearance.BorderSize = 0;
+            this.btn_dash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_dash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_dash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btn_dash.ForeColor = System.Drawing.Color.White;
+            this.btn_dash.Location = new System.Drawing.Point(0, 195);
+            this.btn_dash.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_dash.MaximumSize = new System.Drawing.Size(210, 45);
+            this.btn_dash.MinimumSize = new System.Drawing.Size(210, 45);
+            this.btn_dash.Name = "btn_dash";
+            this.btn_dash.Size = new System.Drawing.Size(210, 45);
+            this.btn_dash.TabIndex = 1;
+            this.btn_dash.UseVisualStyleBackColor = false;
+            this.btn_dash.Click += new System.EventHandler(this.btn_dash_Click);
             // 
             // pictureBox2
             // 

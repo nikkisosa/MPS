@@ -203,6 +203,20 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MPS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\nwhmbtns-21.png" />
+    <None Include="Resources\nwhmbtns-20.png" />
+    <None Include="Resources\nwhmbtns-19.png" />
+    <None Include="Resources\nwhmbtns-18.png" />
+    <None Include="Resources\nwhmbtns-17.png" />
+    <None Include="Resources\nwhmbtns-16.png" />
+    <None Include="Resources\nwhmbtns-15.png" />
+    <None Include="Resources\btnshm-15.png" />
+    <None Include="Resources\btnshm-17.png" />
+    <None Include="Resources\btnshm-16.png" />
+    <None Include="Resources\messagesbtnbg.png" />
+    <None Include="Resources\dashbtnbg.png" />
+    <None Include="Resources\dashbtnbg-15.png" />
+    <None Include="Resources\dashbg.png" />
     <None Include="Resources\Refresh_20px.png" />
     <None Include="Resources\closeBlack.png" />
     <None Include="Resources\close.png" />

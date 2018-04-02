@@ -145,4 +145,43 @@
   <data name="Refresh_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dashbtnbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashbtnbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashbtnbg_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashbtnbg-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="messagesbtnbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\messagesbtnbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnshm_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnshm-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnshm_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnshm-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnshm_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnshm-17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nwhmbtns_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nwhmbtns-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nwhmbtns_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nwhmbtns-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nwhmbtns_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nwhmbtns-17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nwhmbtns_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nwhmbtns-18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nwhmbtns_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nwhmbtns-19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nwhmbtns_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nwhmbtns-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nwhmbtns_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nwhmbtns-21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

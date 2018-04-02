@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPromotion));
             this.flpPromotion = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,11 +50,9 @@
             this.lstGrid = new System.Windows.Forms.DataGridView();
             this.checkOption = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.comPort = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPSend = new System.Windows.Forms.Button();
             this.btnPClose = new System.Windows.Forms.Button();
+            this.btnPSend = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.flpPromotion.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -82,6 +82,37 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 37);
             this.panel2.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(162, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 34);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(125, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 34);
+            this.button3.TabIndex = 1;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -240,9 +271,9 @@
             this.pnlPortsToSend.Controls.Add(this.lstGrid);
             this.pnlPortsToSend.Controls.Add(this.btnPClose);
             this.pnlPortsToSend.Controls.Add(this.btnPSend);
-            this.pnlPortsToSend.Location = new System.Drawing.Point(199, 162);
+            this.pnlPortsToSend.Location = new System.Drawing.Point(254, 129);
             this.pnlPortsToSend.Name = "pnlPortsToSend";
-            this.pnlPortsToSend.Size = new System.Drawing.Size(316, 263);
+            this.pnlPortsToSend.Size = new System.Drawing.Size(349, 258);
             this.pnlPortsToSend.TabIndex = 18;
             this.pnlPortsToSend.Visible = false;
             // 
@@ -258,9 +289,9 @@
             this.lstGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.checkOption,
             this.comPort});
-            this.lstGrid.Location = new System.Drawing.Point(24, 40);
+            this.lstGrid.Location = new System.Drawing.Point(8, 45);
             this.lstGrid.Name = "lstGrid";
-            this.lstGrid.Size = new System.Drawing.Size(268, 150);
+            this.lstGrid.Size = new System.Drawing.Size(333, 151);
             this.lstGrid.TabIndex = 7;
             // 
             // checkOption
@@ -275,21 +306,6 @@
             this.comPort.Name = "comPort";
             this.comPort.Width = 200;
             // 
-            // btnPSend
-            // 
-            this.btnPSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.btnPSend.FlatAppearance.BorderSize = 0;
-            this.btnPSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPSend.ForeColor = System.Drawing.Color.White;
-            this.btnPSend.Location = new System.Drawing.Point(24, 196);
-            this.btnPSend.Name = "btnPSend";
-            this.btnPSend.Size = new System.Drawing.Size(268, 46);
-            this.btnPSend.TabIndex = 2;
-            this.btnPSend.Text = "Send";
-            this.btnPSend.UseVisualStyleBackColor = false;
-            this.btnPSend.Click += new System.EventHandler(this.btnPSend_Click);
-            // 
             // btnPClose
             // 
             this.btnPClose.BackgroundImage = global::MPSystem.Properties.Resources.closeBlack;
@@ -297,12 +313,27 @@
             this.btnPClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPClose.FlatAppearance.BorderSize = 0;
             this.btnPClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPClose.Location = new System.Drawing.Point(265, 3);
+            this.btnPClose.Location = new System.Drawing.Point(295, 3);
             this.btnPClose.Name = "btnPClose";
             this.btnPClose.Size = new System.Drawing.Size(46, 20);
             this.btnPClose.TabIndex = 5;
             this.btnPClose.UseVisualStyleBackColor = true;
             this.btnPClose.Click += new System.EventHandler(this.btnPClose_Click);
+            // 
+            // btnPSend
+            // 
+            this.btnPSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnPSend.FlatAppearance.BorderSize = 0;
+            this.btnPSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPSend.ForeColor = System.Drawing.Color.White;
+            this.btnPSend.Location = new System.Drawing.Point(8, 210);
+            this.btnPSend.Name = "btnPSend";
+            this.btnPSend.Size = new System.Drawing.Size(333, 33);
+            this.btnPSend.TabIndex = 2;
+            this.btnPSend.Text = "Send";
+            this.btnPSend.UseVisualStyleBackColor = false;
+            this.btnPSend.Click += new System.EventHandler(this.btnPSend_Click);
             // 
             // btnRefresh
             // 
@@ -320,37 +351,6 @@
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(162, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 34);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(125, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 34);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // ucPromotion
             // 
