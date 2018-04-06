@@ -33,7 +33,7 @@
             this.btn_autoreply = new System.Windows.Forms.Button();
             this.btn_ussd = new System.Windows.Forms.Button();
             this.Mainpanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_settings = new System.Windows.Forms.Button();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.btn_contacts = new System.Windows.Forms.Button();
             this.btn_messages = new System.Windows.Forms.Button();
@@ -123,27 +123,28 @@
             this.Mainpanel.Size = new System.Drawing.Size(711, 536);
             this.Mainpanel.TabIndex = 0;
             // 
-            // button1
+            // btn_settings
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.button1.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_21;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 465);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.MaximumSize = new System.Drawing.Size(210, 45);
-            this.button1.MinimumSize = new System.Drawing.Size(210, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 45);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_settings.BackgroundImage = global::MPSystem.Properties.Resources.nwhmbtns_21;
+            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_settings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_settings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btn_settings.FlatAppearance.BorderSize = 0;
+            this.btn_settings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_settings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btn_settings.ForeColor = System.Drawing.Color.White;
+            this.btn_settings.Location = new System.Drawing.Point(0, 465);
+            this.btn_settings.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_settings.MaximumSize = new System.Drawing.Size(210, 45);
+            this.btn_settings.MinimumSize = new System.Drawing.Size(210, 45);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(210, 45);
+            this.btn_settings.TabIndex = 6;
+            this.btn_settings.UseVisualStyleBackColor = false;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // pbClose
             // 
@@ -262,7 +263,7 @@
             this.ClientSize = new System.Drawing.Size(950, 600);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.Mainpanel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_ussd);
             this.Controls.Add(this.btn_autoreply);
             this.Controls.Add(this.btn_promos);
@@ -300,7 +301,7 @@
         private System.Windows.Forms.Button btn_ussd;
         private System.Windows.Forms.Panel Mainpanel;
         private System.Windows.Forms.PictureBox pbClose;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_settings;
     }
 }
 

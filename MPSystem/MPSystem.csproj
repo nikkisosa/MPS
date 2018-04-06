@@ -84,6 +84,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\frmDumpContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDumpContact.Designer.cs">
+      <DependentUpon>frmDumpContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucAutoreply.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDumpContact.resx">
+      <DependentUpon>frmDumpContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucAutoreply.resx">
       <DependentUpon>ucAutoreply.cs</DependentUpon>

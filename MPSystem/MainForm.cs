@@ -243,7 +243,7 @@ namespace MPSystem
                                string inboxDateAndTime = match.Groups[4].Value;
                                string inboxBlank = match.Groups[5].Value;
                                string inboxData = match.Groups[6].Value;
-
+                               MessageBox.Show(inboxID);
 
                                string filteredMobileNo = inboxSender.Replace("+63", "0").Trim();
                                if (inboxData.Trim().Contains("YES"))
@@ -330,6 +330,12 @@ namespace MPSystem
             {
                 ucUssd.Instance.BringToFront();
             }
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            frmDumpContact dc = new frmDumpContact();
+            dc.ShowDialog();
         }
     }
 }

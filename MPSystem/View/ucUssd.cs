@@ -524,10 +524,5 @@ namespace MPSystem.View
             mainForm.bgTimer.Start();
             logs.log("Sending USSD Command OK");
         }
-
-        private void lvList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
