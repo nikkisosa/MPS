@@ -334,8 +334,20 @@ namespace MPSystem
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            frmDumpContact dc = new frmDumpContact();
-            dc.ShowDialog();
+            //frmDumpContact dc = new frmDumpContact();
+            //dc.ShowDialog();
+            Mainpanel.Controls.Clear();
+
+            if (!Mainpanel.Controls.Contains(ucSettings.Instance))
+            {
+                Mainpanel.Controls.Add(ucSettings.Instance);
+                ucSettings.Instance.Dock = DockStyle.Fill;
+                ucSettings.Instance.BringToFront();
+            }
+            else
+            {
+                ucSettings.Instance.BringToFront();
+            }
         }
     }
 }

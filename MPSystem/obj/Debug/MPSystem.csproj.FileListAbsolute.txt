@@ -187,3 +187,5 @@ C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.View.ucUssd.resources
 C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.csproj.GenerateResource.Cache
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucUssd.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.frmDumpContact.resources
+C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.View.frmDumpContact.resources
+C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.View.ucSettings.resources

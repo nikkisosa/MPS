@@ -21,7 +21,40 @@ namespace MPSystem.View
 
         private void btnDump_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                logs.log("========Start Dumping Contacts========");
+                SerialPort _serial = new SerialPort();
+                _serial.BaudRate = 115200;
+                _serial.Parity = Parity.None;
+                _serial.StopBits = StopBits.One;
+                _serial.DataBits = 8;
+                _serial.Handshake = Handshake.None;
+                _serial.RtsEnable = true;
+                _serial.NewLine = "\n";
+                _serial.PortName = cboPorts.Text;
+                _serial.Open();
+                _serial.WriteLine("AT+CPBS=\"SM\"\r");
+                Thread.Sleep(100);
+                _serial.WriteLine("AT+CPBR=1,250\r");
+                Thread.Sleep(100);
+                _serial.Write(new byte[] { 26 }, 0, 1);
+                Thread.Sleep(100);
+
+                Regex regEx = new Regex(@"\+CPBR: (\d+),""(.+)"",(.+),""(.+)""\r\n");
+                foreach(Match match in regEx.Matches(_serial.ReadExisting()))
+                {
+                    logs.dumpContact("Mobile Number: (" + match.Groups[2].Value + ") ", "Prefix: ", lblNetwork.Text);
+                }
+                
+
+                _serial.Close();
+                logs.log("========Stop Dumping Contacts========");
+            }
+            catch (Exception ex)
+            {
+                logs.log(ex.Message);
+            }
         }
 
         private void frmDumpContact_Load(object sender, EventArgs e)
@@ -44,6 +77,7 @@ namespace MPSystem.View
         {
             try
             {
+                logs.log("========"+cboPorts.Text+" Selected========");
                 SerialPort _serial = new SerialPort();
                 _serial.BaudRate = 115200;
                 _serial.Parity = Parity.None;
@@ -54,18 +88,18 @@ namespace MPSystem.View
                 _serial.NewLine = "\n";
                 _serial.PortName = cboPorts.Text;
                 _serial.Open();
-                _serial.WriteLine("AT+CPBS=\"SM\"\r");
+                _serial.WriteLine("AT+COPS=3,0\r");
                 Thread.Sleep(100);
-                _serial.WriteLine("AT+CPBR=1,255\r");
+                _serial.WriteLine("AT+COPS?\r");
                 Thread.Sleep(100);
                 _serial.Write(new byte[] { 26 }, 0, 1);
                 Thread.Sleep(100);
 
-                Regex regEx = new Regex(@"\+CPBR: (\w),""(\d+)"",(\w),(\w)\r\n");
+                Regex regEx = new Regex(@"\+COPS: (\d+),(.+),""(.+)""\r\n");
                 Match match = regEx.Match(_serial.ReadExisting());
-                MessageBox.Show(_serial.ReadExisting());
-                lblNetwork.Text = match.Groups[2].Value;
-                logs.log(match.Groups[0].Value);
+                lblNetwork.Text = match.Groups[3].Value;
+                
+                
                 _serial.Close();
             }
             catch(Exception ex)

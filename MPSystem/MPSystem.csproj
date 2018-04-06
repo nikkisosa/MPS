@@ -126,6 +126,12 @@
     <Compile Include="View\ucPromotion.Designer.cs">
       <DependentUpon>ucPromotion.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSettings.Designer.cs">
+      <DependentUpon>ucSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucPromotion.resx">
       <DependentUpon>ucPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSettings.resx">
+      <DependentUpon>ucSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucSplash.resx">
       <DependentUpon>ucSplash.cs</DependentUpon>
@@ -237,6 +246,7 @@
     <None Include="Resources\Cancel_24px.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Dump\" />
     <Folder Include="logs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
