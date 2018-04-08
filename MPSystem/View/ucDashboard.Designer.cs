@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dashGrid = new System.Windows.Forms.DataGridView();
-            this.btnUpdateLoad = new System.Windows.Forms.Button();
             this.checkOption = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.comPort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobileNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.load = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUpdateLoad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dashGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,22 +55,6 @@
             this.dashGrid.Name = "dashGrid";
             this.dashGrid.Size = new System.Drawing.Size(694, 462);
             this.dashGrid.TabIndex = 0;
-            // 
-            // btnUpdateLoad
-            // 
-            this.btnUpdateLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.btnUpdateLoad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdateLoad.FlatAppearance.BorderSize = 0;
-            this.btnUpdateLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateLoad.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateLoad.Location = new System.Drawing.Point(8, 6);
-            this.btnUpdateLoad.Name = "btnUpdateLoad";
-            this.btnUpdateLoad.Size = new System.Drawing.Size(166, 33);
-            this.btnUpdateLoad.TabIndex = 1;
-            this.btnUpdateLoad.Text = "Update load balance";
-            this.btnUpdateLoad.UseVisualStyleBackColor = false;
-            this.btnUpdateLoad.Click += new System.EventHandler(this.btnUpdateLoad_Click);
             // 
             // checkOption
             // 
@@ -95,6 +79,23 @@
             this.load.HeaderText = "Load ";
             this.load.Name = "load";
             this.load.Width = 200;
+            // 
+            // btnUpdateLoad
+            // 
+            this.btnUpdateLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnUpdateLoad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateLoad.FlatAppearance.BorderSize = 0;
+            this.btnUpdateLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateLoad.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateLoad.Location = new System.Drawing.Point(8, 6);
+            this.btnUpdateLoad.Name = "btnUpdateLoad";
+            this.btnUpdateLoad.Size = new System.Drawing.Size(166, 33);
+            this.btnUpdateLoad.TabIndex = 1;
+            this.btnUpdateLoad.Text = "Update load balance";
+            this.btnUpdateLoad.UseVisualStyleBackColor = false;
+            this.btnUpdateLoad.Visible = false;
+            this.btnUpdateLoad.Click += new System.EventHandler(this.btnUpdateLoad_Click);
             // 
             // ucDashboard
             // 

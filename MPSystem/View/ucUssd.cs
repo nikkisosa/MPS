@@ -405,25 +405,9 @@ namespace MPSystem.View
 
         private void btnCloseUssdPanel_Click(object sender, EventArgs e)
         {
+            txtCommandBox.Clear();
             pnlUSD.Visible = false;
             pnlUSD.SendToBack();
-        }
-
-        private void lvList_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                pnlUSD.Visible = true;
-                pnlUSD.BringToFront();
-                cboPort.Items.Clear();
-                cboPort.DataSource = Model.MainFormModel.getListActivePorts();
-                lblDescription.Text = lvList.SelectedItems[0].SubItems[3].Text;
-                txtCommandBox.Text = lvList.SelectedItems[0].SubItems[2].Text;
-            }
-            catch (Exception)
-            {
-
-            }
         }
 
         private void btnSendUSSD_Click(object sender, EventArgs e)
@@ -523,6 +507,28 @@ namespace MPSystem.View
             MMS mainForm = new MMS();
             mainForm.bgTimer.Start();
             logs.log("Sending USSD Command OK");
+        }
+
+        private void lvList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                pnlUSD.Visible = true;
+                pnlUSD.BringToFront();
+                if(lvList.SelectedItems.Count > 0)
+                {
+                    ListViewItem item = lvList.SelectedItems[0];
+                    cboPort.DataSource = Model.MainFormModel.getListActivePorts();
+                    lblDescription.Text = item.SubItems[3].Text;
+                    txtCommandBox.Text = item.SubItems[2].Text;
+                }
+                
+                
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

@@ -1,0 +1,11 @@
+2018-04-08 11:43:44 [*****Program Started*****]
+2018-04-08 11:43:44 [Ports: COM3]
+2018-04-08 11:44:03 [Failed to add the active port: Cannot open database "C:\USERS\NIKS\DESKTOP\MPS\MPS\MPSYSTEM\DATA\MPS_DB.MDF" requested by the login. The login failed.
+Login failed for user 'DESKTOP-MI7HTKH\niks'.]
+2018-04-08 11:44:33 [*****Program Started*****]
+2018-04-08 11:44:33 [Ports: COM3]
+2018-04-08 11:44:39 [COM3 has been added to active ports list. Ports Detail (Mobile No: +639654166887,Network: Unknown Network]
+2018-04-08 11:44:51 [========COM3 Selected========]
+2018-04-08 11:44:51 [========Start Dumping Contacts========]
+2018-04-08 11:44:52 [========Dumping========]
+2018-04-08 11:44:52 [========Stop Dumping Contacts========]

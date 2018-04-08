@@ -141,6 +141,7 @@ namespace MPSystem.View
             try
             {
                 logs.log("========Start Dumping Contacts========");
+                btnDump.Enabled = false;
                 SerialPort _serial = new SerialPort();
                 _serial.BaudRate = 115200;
                 _serial.Parity = Parity.None;
@@ -161,17 +162,28 @@ namespace MPSystem.View
                 Regex regEx = new Regex(@"\+CPBR: (\d+),""(.+)"",(.+),""(.+)""\r\n");
                 foreach (Match match in regEx.Matches(_serial.ReadExisting()))
                 {
-                    logs.dumpContact(match.Groups[2].Value, "Unknown", lblNetwork.Text);
+                    string mobileNo = match.Groups[2].Value;
+                    
+                    string filteredNumber = mobileNo.Replace("+639", "09").Trim().Replace("639", "09").Trim();
+                    if(filteredNumber.Length > 10)
+                    {
+                        string mobilePrefix = Model.splashModel.getMobileNetwork(filteredNumber.Substring(1, 3));
+                        Entity.variables entity = new Entity.variables();
+                        entity.network = (mobilePrefix == "success" || mobilePrefix == "") ? "Unknown Network" : mobilePrefix;
+                        logs.dumpContact(filteredNumber, entity.network, lblNetwork.Text);
+                    }
+                    
                 }
 
                 logs.log("========Dumping========");
                 _serial.Close();
                 logs.log("========Stop Dumping Contacts========");
-                
+                btnDump.Enabled = true;
             }
             catch (Exception ex)
             {
                 logs.log(ex.Message);
+                btnDump.Enabled = true;
             }
         }
 

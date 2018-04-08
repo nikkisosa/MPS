@@ -221,7 +221,7 @@
             this.lvList.TabIndex = 13;
             this.lvList.UseCompatibleStateImageBehavior = false;
             this.lvList.View = System.Windows.Forms.View.Details;
-            this.lvList.DoubleClick += new System.EventHandler(this.lvList_DoubleClick);
+            this.lvList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvList_MouseDoubleClick);
             // 
             // ussdid
             // 
@@ -281,7 +281,7 @@
             this.flowLayoutPanel1.Controls.Add(this.lblDescription);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 117);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(268, 69);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
