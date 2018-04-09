@@ -43,6 +43,37 @@ namespace MPSystem
             return str;
         }
 
+        public static string ussdLog(string message)
+        {
+            try
+            {
+                directory = Application.StartupPath.ToString() + @"\USSD";
+                System.IO.Directory.CreateDirectory(directory); // create if exist and if exist ignore
+                path = System.IO.Path.GetFullPath(Application.StartupPath.ToString() + @"\USSD\ussd-" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
+                if (!File.Exists(path))
+                {
+                    File.Create(path).Close();
+                    File.AppendAllLines(path, new[] { DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "@" + message});
+                    str = "success";
+                }
+                else if (File.Exists(path))
+                {
+                    File.AppendAllLines(path, new[] { DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "@" + message});
+                    str = "success";
+                }
+            }
+            catch (IOException e)
+            {
+                str = e.Message;
+            }
+            finally
+            {
+
+            }
+
+            return str;
+        }
+
         public static string dumpContact(string number,string prefix,string sim)
         {
             try

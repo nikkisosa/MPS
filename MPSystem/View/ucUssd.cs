@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO.Ports;
-
+using System.Text.RegularExpressions;
 namespace MPSystem.View
 {
     public partial class ucUssd : UserControl
@@ -35,6 +35,12 @@ namespace MPSystem.View
         private static int itemOldId = 0;
         private static int totalCount = 0;
         private static int totalPage = 0;
+
+        private static int pageNumber2 = 1;
+        private static int itemNewId2 = 0;
+        private static int itemOldId2 = 0;
+        private static int totalCount2 = 0;
+        private static int totalPage2 = 0;
         public ucUssd()
         {
             InitializeComponent();
@@ -58,8 +64,8 @@ namespace MPSystem.View
             }
             else
             {
-
                 loadData();
+                loadDataFromUssdHistory();
             }
         }
 
@@ -137,6 +143,59 @@ namespace MPSystem.View
         }
 
         /**
+         * Load data from txtfile
+         */
+        public void loadDataFromUssdHistory()
+        {
+            str = Model.ussdHistoryModel.getUssdHistory(pageNumber2);
+            if (str == "success")
+            {
+
+                totalCount2 = config.records.Count;
+                if (totalCount > 0)
+                {
+                    try
+                    {
+                        lvHistory.Items.Clear();
+                        for (int count = 0; count < config.records.Count; count++)
+                        {
+                            ListViewItem items = new ListViewItem(config.records[count].reply.ToString());
+                            items.SubItems.Add(config.records[count].dateCreated.ToString());
+                            lvHistory.Items.Add(items);
+                            itemNewId = config.records[count].id;
+
+                        }
+
+                        Model.ussdHistoryModel.getTotalPage();
+                        Entity.variables variables = new Entity.variables();
+
+
+                        if (itemNewId2 == itemOldId2)
+                        {
+
+                        }
+                        else
+                        {
+                            itemOldId2 = itemNewId2;
+                            totalPage2 = ((config.records[0].totalpage / Entity.variables.pageSize) + 1);
+                            lblPages.Text = "Page " + pageNumber2 + " of " + ((config.records[0].totalpage / Entity.variables.pageSize) + 1).ToString();
+                        }
+                    }
+                    catch(Exception e)
+                    {
+                        logs.log(e.Message);
+                    }
+                    
+                }
+
+            }
+            else
+            {
+
+            }
+
+        }
+        /**
          * Enable or disable input/text fields
          */
         private void Fields()
@@ -198,6 +257,8 @@ namespace MPSystem.View
             backgroundworker.RunWorkerAsync();
             pnlUSD.Visible = false;
             pnlUSD.SendToBack();
+
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -361,9 +422,18 @@ namespace MPSystem.View
                 }
                 else
                 {
-                    pageNumber = pageNumber + 1;
-
-                    loadData();
+                    
+                    if(tabControl1.SelectedTab == tabPage1)
+                    {
+                        pageNumber = pageNumber + 1;
+                        loadData();
+                    }
+                    else
+                    {
+                        pageNumber2 = pageNumber2 + 1;
+                        loadDataFromUssdHistory();
+                    }
+                    
                 }
 
             }
@@ -375,7 +445,6 @@ namespace MPSystem.View
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-
             if (totalCount != 0)
             {
                 if (pageNumber == 1)
@@ -384,8 +453,16 @@ namespace MPSystem.View
                 }
                 else
                 {
-                    pageNumber = pageNumber - 1;
-                    loadData();
+                    if (tabControl1.SelectedTab == tabPage1)
+                    {
+                        pageNumber = pageNumber - 1;
+                        loadData();
+                    }
+                    else
+                    {
+                        pageNumber2 = pageNumber2 - 1;
+                        loadDataFromUssdHistory();
+                    }
                 }
 
             }
@@ -397,8 +474,16 @@ namespace MPSystem.View
                 }
                 else
                 {
-                    pageNumber = pageNumber - 1;
-                    loadData();
+                    if (tabControl1.SelectedTab == tabPage1)
+                    {
+                        pageNumber = pageNumber - 1;
+                        loadData();
+                    }
+                    else
+                    {
+                        pageNumber2 = pageNumber2 - 1;
+                        loadDataFromUssdHistory();
+                    }
                 }
             }
         }
@@ -474,10 +559,17 @@ namespace MPSystem.View
                         int trimLength = endingIndex - startingIndex;
                         string trimFinalOut = commandReponse.Substring(startingIndex, trimLength);
                         logs.log("USSD Command Reply :\r" + trimFinalOut + " \rOK");
+                        Regex regEx = new Regex(@"\+CUSD: 2,\""(.+)");
+                        Match match = regEx.Match(trimFinalOut);
+                        Entity.variables ent = new Entity.variables();
+                        ent.reply = match.Groups[1].Value;
+                        ent.dateCreated = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss tt");
+                        Model.ussdHistoryModel.addHistory(ent);
                         Task.Factory.StartNew(() =>
                         {
 
                             MessageBox.Show("USSD Command Reply :\r" + trimFinalOut + " \rOK");
+                            loadDataFromUssdHistory();
                         });
                         
                     }else
@@ -529,6 +621,33 @@ namespace MPSystem.View
             {
 
             }
+        }
+
+        private void lvHistory_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                pnlDialog.Visible = true;
+                pnlDialog.BringToFront();
+                if (lvHistory.SelectedItems.Count > 0)
+                {
+                    ListViewItem item = lvHistory.SelectedItems[0];
+                    lblUssdReply.Text = item.SubItems[0].Text;
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+            
+        }
+
+        private void btnCloseDialogMessage_Click(object sender, EventArgs e)
+        {
+            pnlDialog.Visible = false;
+            pnlDialog.SendToBack();
         }
     }
 }

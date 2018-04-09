@@ -104,7 +104,7 @@ namespace MPSystem.View
         {
             try
             {
-                logs.log("========" + cboPorts.Text + " Selected========");
+                logs.log("********" + cboPorts.Text + " Selected********");
                 SerialPort _serial = new SerialPort();
                 _serial.BaudRate = 115200;
                 _serial.Parity = Parity.None;
@@ -140,7 +140,7 @@ namespace MPSystem.View
         {
             try
             {
-                logs.log("========Start Dumping Contacts========");
+                logs.log("********Start Dumping Contacts********");
                 btnDump.Enabled = false;
                 SerialPort _serial = new SerialPort();
                 _serial.BaudRate = 115200;
@@ -175,9 +175,9 @@ namespace MPSystem.View
                     
                 }
 
-                logs.log("========Dumping========");
+                logs.log("********Dump started********");
                 _serial.Close();
-                logs.log("========Stop Dumping Contacts========");
+                logs.log("********Stop Dumping Contacts********");
                 btnDump.Enabled = true;
             }
             catch (Exception ex)
