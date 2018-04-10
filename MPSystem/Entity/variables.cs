@@ -8,7 +8,7 @@ namespace MPSystem.Entity
 {
     class variables
     {
-        public static int pageSize = 20;
+        public static int pageSize = 4;
         public int id {
             get;
             set;

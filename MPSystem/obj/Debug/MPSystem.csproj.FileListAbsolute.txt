@@ -189,3 +189,4 @@ D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucUssd.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.frmDumpContact.resources
 C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.View.frmDumpContact.resources
 C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.View.ucSettings.resources
+D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucSettings.resources

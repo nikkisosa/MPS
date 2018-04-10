@@ -36,11 +36,11 @@ namespace MPSystem.View
         private static int totalCount = 0;
         private static int totalPage = 0;
 
-        private static int pageNumber2 = 1;
-        private static int itemNewId2 = 0;
-        private static int itemOldId2 = 0;
-        private static int totalCount2 = 0;
-        private static int totalPage2 = 0;
+        private static int pageNumberHistory = 1;
+        private static int itemNewIdHistory = 0;
+        private static int itemOldIdHistory = 0;
+        private static int totalCountHistory = 0;
+        private static int totalPageHistory = 0;
         public ucUssd()
         {
             InitializeComponent();
@@ -65,7 +65,6 @@ namespace MPSystem.View
             else
             {
                 loadData();
-                loadDataFromUssdHistory();
             }
         }
 
@@ -147,11 +146,11 @@ namespace MPSystem.View
          */
         public void loadDataFromUssdHistory()
         {
-            str = Model.ussdHistoryModel.getUssdHistory(pageNumber2);
+            str = Model.ussdHistoryModel.getUssdHistory(pageNumberHistory);
             if (str == "success")
             {
 
-                totalCount2 = config.records.Count;
+                totalCountHistory = config.records.Count;
                 if (totalCount > 0)
                 {
                     try
@@ -162,7 +161,7 @@ namespace MPSystem.View
                             ListViewItem items = new ListViewItem(config.records[count].reply.ToString());
                             items.SubItems.Add(config.records[count].dateCreated.ToString());
                             lvHistory.Items.Add(items);
-                            itemNewId = config.records[count].id;
+                            itemNewIdHistory = config.records[count].id;
 
                         }
 
@@ -170,15 +169,15 @@ namespace MPSystem.View
                         Entity.variables variables = new Entity.variables();
 
 
-                        if (itemNewId2 == itemOldId2)
+                        if (itemNewIdHistory == itemOldIdHistory)
                         {
 
                         }
                         else
                         {
-                            itemOldId2 = itemNewId2;
-                            totalPage2 = ((config.records[0].totalpage / Entity.variables.pageSize) + 1);
-                            lblPages.Text = "Page " + pageNumber2 + " of " + ((config.records[0].totalpage / Entity.variables.pageSize) + 1).ToString();
+                            itemOldIdHistory = itemNewIdHistory;
+                            totalPageHistory = ((config.records[0].totalpage / Entity.variables.pageSize) + 1);
+                            lblPages.Text = "Page " + pageNumberHistory + " of " + ((config.records[0].totalpage / Entity.variables.pageSize) + 1).ToString();
                         }
                     }
                     catch(Exception e)
@@ -411,9 +410,8 @@ namespace MPSystem.View
             }
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void ussdCommandPagerNext()
         {
-
             if (totalCount > 0)
             {
                 if (totalPage == pageNumber)
@@ -422,18 +420,8 @@ namespace MPSystem.View
                 }
                 else
                 {
-                    
-                    if(tabControl1.SelectedTab == tabPage1)
-                    {
-                        pageNumber = pageNumber + 1;
-                        loadData();
-                    }
-                    else
-                    {
-                        pageNumber2 = pageNumber2 + 1;
-                        loadDataFromUssdHistory();
-                    }
-                    
+                    pageNumber = pageNumber + 1;
+                    loadData();
                 }
 
             }
@@ -443,48 +431,76 @@ namespace MPSystem.View
             }
         }
 
-        private void btnPrev_Click(object sender, EventArgs e)
+        private void ussdHistoryPagerNext()
         {
-            if (totalCount != 0)
+            if (totalCountHistory > 0)
             {
-                if (pageNumber == 1)
+                if (totalPageHistory == pageNumberHistory)
                 {
 
                 }
                 else
                 {
-                    if (tabControl1.SelectedTab == tabPage1)
-                    {
-                        pageNumber = pageNumber - 1;
-                        loadData();
-                    }
-                    else
-                    {
-                        pageNumber2 = pageNumber2 - 1;
-                        loadDataFromUssdHistory();
-                    }
+                    pageNumberHistory = pageNumberHistory + 1;
+                    loadDataFromUssdHistory();
                 }
 
             }
             else
             {
-                if (pageNumber == 1)
-                {
+                //leave empty
+            }
+        }
 
-                }
-                else
-                {
-                    if (tabControl1.SelectedTab == tabPage1)
-                    {
-                        pageNumber = pageNumber - 1;
-                        loadData();
-                    }
-                    else
-                    {
-                        pageNumber2 = pageNumber2 - 1;
-                        loadDataFromUssdHistory();
-                    }
-                }
+        private void ussdCommandPagerPrev()
+        {
+            if (pageNumber == 1)
+            {
+
+            }
+            else
+            {
+                pageNumber = pageNumber - 1;
+                loadData();
+            }
+        }
+
+        private void ussdHistoryPagerPrev()
+        {
+            if (pageNumberHistory == 1)
+            {
+
+            }
+            else
+            {
+                pageNumberHistory = pageNumberHistory - 1;
+                loadDataFromUssdHistory();
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                ussdCommandPagerNext();
+            }
+            else
+            {
+                ussdHistoryPagerNext();
+            }
+            
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                ussdCommandPagerPrev();
+            }
+            else
+            {
+                ussdHistoryPagerPrev();
             }
         }
 
@@ -648,6 +664,14 @@ namespace MPSystem.View
         {
             pnlDialog.Visible = false;
             pnlDialog.SendToBack();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedTab == tabPage2)
+            {
+                loadDataFromUssdHistory();
+            }
         }
     }
 }

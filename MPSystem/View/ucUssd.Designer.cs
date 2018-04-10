@@ -42,7 +42,6 @@
             this.backgroundworker = new System.ComponentModel.BackgroundWorker();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlUSD = new System.Windows.Forms.Panel();
             this.btnCloseUssdPanel = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -57,19 +56,20 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Command = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UssdDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lvHistory = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlDialog = new System.Windows.Forms.Panel();
             this.btnCloseDialogMessage = new System.Windows.Forms.Button();
             this.flpDialog = new System.Windows.Forms.FlowLayoutPanel();
             this.lblUssdReply = new System.Windows.Forms.Label();
+            this.lvHistory = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.pnlUSD.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.pnlDialog.SuspendLayout();
             this.flpDialog.SuspendLayout();
             this.SuspendLayout();
@@ -228,6 +228,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(658, 375);
             this.tabControl1.TabIndex = 17;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -240,18 +241,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "USSD Command";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.pnlDialog);
-            this.tabPage2.Controls.Add(this.lvHistory);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(650, 349);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "USSD History";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pnlUSD
             // 
@@ -397,33 +386,17 @@
             this.UssdDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UssdDescription.Width = 394;
             // 
-            // lvHistory
+            // tabPage2
             // 
-            this.lvHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader5});
-            this.lvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvHistory.FullRowSelect = true;
-            this.lvHistory.GridLines = true;
-            this.lvHistory.Location = new System.Drawing.Point(3, 3);
-            this.lvHistory.Name = "lvHistory";
-            this.lvHistory.Size = new System.Drawing.Size(644, 343);
-            this.lvHistory.TabIndex = 19;
-            this.lvHistory.UseCompatibleStateImageBehavior = false;
-            this.lvHistory.View = System.Windows.Forms.View.Details;
-            this.lvHistory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvHistory_MouseDoubleClick);
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Ussd Reply";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 416;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "System Receive DateTime";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 185;
+            this.tabPage2.Controls.Add(this.pnlDialog);
+            this.tabPage2.Controls.Add(this.lvHistory);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(650, 349);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "USSD History";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pnlDialog
             // 
@@ -470,6 +443,34 @@
             this.lblUssdReply.Size = new System.Drawing.Size(0, 13);
             this.lblUssdReply.TabIndex = 0;
             // 
+            // lvHistory
+            // 
+            this.lvHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvHistory.FullRowSelect = true;
+            this.lvHistory.GridLines = true;
+            this.lvHistory.Location = new System.Drawing.Point(3, 3);
+            this.lvHistory.Name = "lvHistory";
+            this.lvHistory.Size = new System.Drawing.Size(644, 343);
+            this.lvHistory.TabIndex = 19;
+            this.lvHistory.UseCompatibleStateImageBehavior = false;
+            this.lvHistory.View = System.Windows.Forms.View.Details;
+            this.lvHistory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvHistory_MouseDoubleClick);
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ussd Reply";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 416;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "System Receive DateTime";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 185;
+            // 
             // ucUssd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,11 +489,11 @@
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.pnlUSD.ResumeLayout(false);
             this.pnlUSD.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.pnlDialog.ResumeLayout(false);
             this.flpDialog.ResumeLayout(false);
             this.flpDialog.PerformLayout();
