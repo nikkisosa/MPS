@@ -32,7 +32,7 @@ namespace MPSystem
             bgWorker.RunWorkerCompleted += worker_RunWorkerCompleted;
             //bgWorker.RunWorkerAsync();
 
-            bgTimer = new System.Timers.Timer(1000 * 60 * 2); // Check Message Every 2 minutes
+            bgTimer = new System.Timers.Timer(1000 * 60 * 0.40); // Check Message Every 2 minutes
             bgTimer.Elapsed += bgTimer_Elapsed;
             bgTimer.Start();
 
@@ -246,6 +246,7 @@ namespace MPSystem
                                //MessageBox.Show(inboxID);
 
                                string filteredMobileNo = inboxSender.Replace("+63", "0").Trim();
+                               Entity.variables entity = new Entity.variables();
                                if (inboxData.Trim().Contains("YES"))
                                {
 
@@ -255,7 +256,7 @@ namespace MPSystem
                                    if (checkMobileNumber == "success")
                                    {
 
-                                       Entity.variables entity = new Entity.variables();
+                                       
                                        entity.promotionTitle = Model.MainFormModel.getLastPromo(filteredMobileNo);
                                        entity.mobile_no = inboxSender;
                                        entity.message = inboxData;
@@ -268,13 +269,25 @@ namespace MPSystem
                                    }
 
                                }
+                               else
+                               {
+                                   entity.promotionTitle = "N";
+                                   entity.mobile_no = inboxSender;
+                                   entity.message = inboxData;
+                                   string insertMessage = Model.MainFormModel.addMessages(entity);
+
+                                   if (insertMessage != "success")
+                                   {
+                                       logs.log("Saving Message Failed: " + insertMessage);
+                                   }
+                               }
 
                                string checkForAutoReplay = Model.MainFormModel.checkForAutoReplay(inboxData);
                                if (checkForAutoReplay != "false")
                                {
                                    
                                        sp.WriteLine("AT+CMGS=\"" + filteredMobileNo + "\"\r");
-                                       Thread.Sleep(500);
+                                       Thread.Sleep(1000);
                                        sp.WriteLine(checkForAutoReplay + "\x1a");
                                        Thread.Sleep(4000);
                                        logs.log("Auto Replay Done");

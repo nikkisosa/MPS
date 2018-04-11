@@ -10,9 +10,17 @@ namespace MPSystem.Model
     {
         private static string str = string.Empty;
 
-        public static string getMessage(int page){
+        public static string getMessage(int page,string search = ""){
             int pages = (Entity.variables.pageSize * (page - 1));
-            string query = "SELECT * FROM messages ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            string query = "";
+            if(search == "")
+            {
+                query = "SELECT * FROM messages ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            }
+            else
+            {
+                query = "SELECT * FROM messages WHERE mobile_no = @search OR message = @search OR lastPromoSent = @search ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            }
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
@@ -22,6 +30,14 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
+                if (search == "")
+                {
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@search", search);
+                }
+                
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

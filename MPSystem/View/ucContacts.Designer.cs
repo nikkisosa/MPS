@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cboFilter = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.lvContact = new System.Windows.Forms.ListView();
             this.dbID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,6 +39,7 @@
             this.Network = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Group = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGroup = new System.Windows.Forms.Button();
             this.cboNetwork = new System.Windows.Forms.ComboBox();
             this.cboGroup = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@
             this.btnGroupDelete = new System.Windows.Forms.Button();
             this.btnGroupEdit = new System.Windows.Forms.Button();
             this.btnGroupAdd = new System.Windows.Forms.Button();
-            this.btnGroup = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -79,46 +79,49 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Filter";
             // 
-            // comboBox1
+            // cboFilter
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFilter.FormattingEnabled = true;
+            this.cboFilter.Items.AddRange(new object[] {
+            "All",
+            "Mobile No",
             "Network",
             "Group"});
-            this.comboBox1.Location = new System.Drawing.Point(64, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cboFilter.Location = new System.Drawing.Point(64, 10);
+            this.cboFilter.Name = "cboFilter";
+            this.cboFilter.Size = new System.Drawing.Size(122, 21);
+            this.cboFilter.TabIndex = 1;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(196, 10);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
-            this.textBox1.MaximumSize = new System.Drawing.Size(288, 21);
-            this.textBox1.MinimumSize = new System.Drawing.Size(288, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtSearch.Location = new System.Drawing.Point(196, 10);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+            this.txtSearch.MaximumSize = new System.Drawing.Size(288, 21);
+            this.txtSearch.MinimumSize = new System.Drawing.Size(288, 21);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(288, 20);
+            this.txtSearch.TabIndex = 2;
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(491, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
-            this.button1.MaximumSize = new System.Drawing.Size(56, 21);
-            this.button1.MinimumSize = new System.Drawing.Size(56, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 21);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(491, 10);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnSearch.MaximumSize = new System.Drawing.Size(56, 21);
+            this.btnSearch.MinimumSize = new System.Drawing.Size(56, 21);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(56, 21);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lvContact
             // 
@@ -182,6 +185,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(658, 97);
             this.panel1.TabIndex = 5;
+            // 
+            // btnGroup
+            // 
+            this.btnGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnGroup.BackgroundImage = global::MPSystem.Properties.Resources.addbtn;
+            this.btnGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGroup.FlatAppearance.BorderSize = 0;
+            this.btnGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnGroup.ForeColor = System.Drawing.Color.White;
+            this.btnGroup.Location = new System.Drawing.Point(535, 63);
+            this.btnGroup.Name = "btnGroup";
+            this.btnGroup.Size = new System.Drawing.Size(21, 21);
+            this.btnGroup.TabIndex = 10;
+            this.btnGroup.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGroup.UseVisualStyleBackColor = false;
+            this.btnGroup.Click += new System.EventHandler(this.btnGroup_Click);
             // 
             // cboNetwork
             // 
@@ -461,23 +481,6 @@
             this.btnGroupAdd.UseVisualStyleBackColor = false;
             this.btnGroupAdd.Click += new System.EventHandler(this.btnGroupAdd_Click);
             // 
-            // btnGroup
-            // 
-            this.btnGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.btnGroup.BackgroundImage = global::MPSystem.Properties.Resources.addbtn;
-            this.btnGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGroup.FlatAppearance.BorderSize = 0;
-            this.btnGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnGroup.ForeColor = System.Drawing.Color.White;
-            this.btnGroup.Location = new System.Drawing.Point(535, 63);
-            this.btnGroup.Name = "btnGroup";
-            this.btnGroup.Size = new System.Drawing.Size(21, 21);
-            this.btnGroup.TabIndex = 10;
-            this.btnGroup.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGroup.UseVisualStyleBackColor = false;
-            this.btnGroup.Click += new System.EventHandler(this.btnGroup_Click);
-            // 
             // ucContacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,9 +491,9 @@
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvContact);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.cboFilter);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(711, 536);
             this.MinimumSize = new System.Drawing.Size(711, 536);
@@ -509,9 +512,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cboFilter;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListView lvContact;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAdd;

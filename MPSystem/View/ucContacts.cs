@@ -91,9 +91,9 @@ namespace MPSystem
         /**
          * Load data from database
          */
-        public void loadContact()
+        public void loadContact(string filter = "",string search = "All")
         {
-            str = Model.contactModel.getContacts(pageNumber);
+            str = Model.contactModel.getContacts(pageNumber,filter,search);
             if (str == "success")
             {
                 totalCount = config.records.Count;
@@ -130,7 +130,7 @@ namespace MPSystem
             }
             else
             {
-
+                logs.log(str);
             }
 
         }
@@ -670,6 +670,19 @@ namespace MPSystem
                 }
 
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(txtSearch.Text.Length < 1)
+            {
+                loadContact(cboFilter.Text, "All");
+            }
+            else
+            {
+                loadContact(cboFilter.Text, txtSearch.Text.Trim());
+            }
+            
         }
     }
 }

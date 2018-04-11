@@ -67,9 +67,25 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string getContacts(int page){
+        public static string getContacts(int page,string filter,string search = "All"){
             int pages = (Entity.variables.pageSize * (page - 1));
-            string query = "SELECT * FROM contact ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            string query = "";
+            if(search == "All")
+            {
+                query = "SELECT * FROM contact ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            }
+            else if (filter == "Mobile No")
+            {
+                query = "SELECT * FROM contact WHERE mobile_no = @search ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            }
+            else if (filter == "Network")
+            {
+                query = "SELECT * FROM contact WHERE network = @search  ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            }
+            else if (filter == "Group")
+            {
+                query = "SELECT * FROM contact WHERE [group] = @search  ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
+            }
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
@@ -79,6 +95,14 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
+                if(search == "All")
+                {
+
+                }
+                else if (search != "")
+                {
+                    cmd.Parameters.AddWithValue("@search", search);
+                }
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

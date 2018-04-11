@@ -83,12 +83,12 @@ namespace MPSystem.View
         /**
          * Load data from database
          */
-        public void loadData()
+        public void loadData(string search = "")
         {
-            str = Model.messageModel.getMessage(pageNumber);
+            
+            str = Model.messageModel.getMessage(pageNumber,search);
             if (str == "success")
             {
-                
                 totalCount = config.records.Count;
                 if (totalCount > 0)
                 {
@@ -123,7 +123,7 @@ namespace MPSystem.View
             }
             else
             {
-                
+                logs.log(str);
             }
 
         }
@@ -170,7 +170,7 @@ namespace MPSystem.View
                 else
                 {
                     pageNumber = pageNumber - 1;
-                    loadData();
+                    loadData(txtSearch.Text.Trim());
                 }
 
             }
@@ -183,7 +183,7 @@ namespace MPSystem.View
                 else
                 {
                     pageNumber = pageNumber - 1;
-                    loadData();
+                    loadData(txtSearch.Text.Trim());
                 }
             }
         }
@@ -191,6 +191,38 @@ namespace MPSystem.View
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             loadData();
+        }
+
+        private void btnCloseDialogMessage_Click(object sender, EventArgs e)
+        {
+            pnlDialog.Visible = false;
+            pnlDialog.SendToBack();
+        }
+
+        private void lvList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                pnlDialog.Visible = true;
+                pnlDialog.BringToFront();
+                if (lvList.SelectedItems.Count > 0)
+                {
+                    ListViewItem item = lvList.SelectedItems[0];
+                    lblFrom.Text = item.SubItems[1].Text;
+                    lblUssdReply.Text = item.SubItems[2].Text;
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            loadData(txtSearch.Text);
         }
     }
 }
