@@ -34,9 +34,9 @@
             this.Command = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Reply = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtReply = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtReply = new System.Windows.Forms.TextBox();
             this.txtCommand = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -45,7 +45,15 @@
             this.lblPages = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
+            this.pnlDialog = new System.Windows.Forms.Panel();
+            this.lblCommand = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCloseDialogMessage = new System.Windows.Forms.Button();
+            this.flpDialog = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblmessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.pnlDialog.SuspendLayout();
+            this.flpDialog.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvList
@@ -65,6 +73,7 @@
             this.lvList.TabIndex = 0;
             this.lvList.UseCompatibleStateImageBehavior = false;
             this.lvList.View = System.Windows.Forms.View.Details;
+            this.lvList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvList_MouseDoubleClick);
             // 
             // autoid
             // 
@@ -91,9 +100,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.panel1.Controls.Add(this.txtReply);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtReply);
             this.panel1.Controls.Add(this.txtCommand);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
@@ -102,6 +111,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(681, 91);
             this.panel1.TabIndex = 6;
+            // 
+            // txtReply
+            // 
+            this.txtReply.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReply.Location = new System.Drawing.Point(202, 53);
+            this.txtReply.MaxLength = 550;
+            this.txtReply.Name = "txtReply";
+            this.txtReply.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.txtReply.Size = new System.Drawing.Size(459, 29);
+            this.txtReply.TabIndex = 6;
+            this.txtReply.Text = "";
             // 
             // label3
             // 
@@ -123,16 +143,10 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Command";
             // 
-            // txtReply
-            // 
-            this.txtReply.Location = new System.Drawing.Point(202, 49);
-            this.txtReply.Name = "txtReply";
-            this.txtReply.Size = new System.Drawing.Size(459, 20);
-            this.txtReply.TabIndex = 5;
-            // 
             // txtCommand
             // 
             this.txtCommand.Location = new System.Drawing.Point(202, 22);
+            this.txtCommand.MaxLength = 160;
             this.txtCommand.Name = "txtCommand";
             this.txtCommand.Size = new System.Drawing.Size(459, 20);
             this.txtCommand.TabIndex = 4;
@@ -234,10 +248,80 @@
             this.btnPrev.UseVisualStyleBackColor = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
+            // pnlDialog
+            // 
+            this.pnlDialog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.pnlDialog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDialog.Controls.Add(this.lblCommand);
+            this.pnlDialog.Controls.Add(this.label1);
+            this.pnlDialog.Controls.Add(this.btnCloseDialogMessage);
+            this.pnlDialog.Controls.Add(this.flpDialog);
+            this.pnlDialog.Location = new System.Drawing.Point(197, 137);
+            this.pnlDialog.Name = "pnlDialog";
+            this.pnlDialog.Size = new System.Drawing.Size(316, 263);
+            this.pnlDialog.TabIndex = 25;
+            this.pnlDialog.Visible = false;
+            // 
+            // lblCommand
+            // 
+            this.lblCommand.AutoSize = true;
+            this.lblCommand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCommand.ForeColor = System.Drawing.Color.White;
+            this.lblCommand.Location = new System.Drawing.Point(78, 10);
+            this.lblCommand.Name = "lblCommand";
+            this.lblCommand.Size = new System.Drawing.Size(0, 13);
+            this.lblCommand.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(21, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Commad:";
+            // 
+            // btnCloseDialogMessage
+            // 
+            this.btnCloseDialogMessage.BackgroundImage = global::MPSystem.Properties.Resources.closeBlack;
+            this.btnCloseDialogMessage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCloseDialogMessage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseDialogMessage.FlatAppearance.BorderSize = 0;
+            this.btnCloseDialogMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseDialogMessage.Location = new System.Drawing.Point(265, 3);
+            this.btnCloseDialogMessage.Name = "btnCloseDialogMessage";
+            this.btnCloseDialogMessage.Size = new System.Drawing.Size(46, 20);
+            this.btnCloseDialogMessage.TabIndex = 5;
+            this.btnCloseDialogMessage.UseVisualStyleBackColor = true;
+            this.btnCloseDialogMessage.Click += new System.EventHandler(this.btnCloseDialogMessage_Click);
+            // 
+            // flpDialog
+            // 
+            this.flpDialog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpDialog.Controls.Add(this.lblmessage);
+            this.flpDialog.Location = new System.Drawing.Point(24, 29);
+            this.flpDialog.Name = "flpDialog";
+            this.flpDialog.Padding = new System.Windows.Forms.Padding(3);
+            this.flpDialog.Size = new System.Drawing.Size(268, 214);
+            this.flpDialog.TabIndex = 4;
+            // 
+            // lblmessage
+            // 
+            this.lblmessage.AutoSize = true;
+            this.lblmessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmessage.ForeColor = System.Drawing.Color.White;
+            this.lblmessage.Location = new System.Drawing.Point(6, 3);
+            this.lblmessage.Name = "lblmessage";
+            this.lblmessage.Size = new System.Drawing.Size(0, 13);
+            this.lblmessage.TabIndex = 0;
+            // 
             // ucAutoreply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pnlDialog);
             this.Controls.Add(this.lblPages);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
@@ -250,6 +334,10 @@
             this.Load += new System.EventHandler(this.Autoreply_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlDialog.ResumeLayout(false);
+            this.pnlDialog.PerformLayout();
+            this.flpDialog.ResumeLayout(false);
+            this.flpDialog.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,11 +356,17 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtReply;
         private System.ComponentModel.BackgroundWorker backgroundworker;
         private System.Windows.Forms.ColumnHeader autoid;
         private System.Windows.Forms.Label lblPages;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.RichTextBox txtReply;
+        private System.Windows.Forms.Panel pnlDialog;
+        private System.Windows.Forms.Label lblCommand;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCloseDialogMessage;
+        private System.Windows.Forms.FlowLayoutPanel flpDialog;
+        private System.Windows.Forms.Label lblmessage;
     }
 }

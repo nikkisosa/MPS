@@ -67,10 +67,11 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string getContacts(int page,string filter,string search = "All"){
+        public static string getContacts(int page, string filter = "All", string search = "All")
+        {
             int pages = (Entity.variables.pageSize * (page - 1));
             string query = "";
-            if(search == "All")
+            if (filter == "All")
             {
                 query = "SELECT * FROM contact ORDER BY id DESC OFFSET " + pages + " ROWS FETCH NEXT " + Entity.variables.pageSize + " ROWS ONLY";
             }
@@ -95,11 +96,11 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
-                if(search == "All")
+                if(filter == "All")
                 {
 
                 }
-                else if (search != "")
+                else if (filter != "All")
                 {
                     cmd.Parameters.AddWithValue("@search", search);
                 }

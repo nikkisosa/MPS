@@ -91,7 +91,7 @@ namespace MPSystem
         /**
          * Load data from database
          */
-        public void loadContact(string filter = "",string search = "All")
+        public void loadContact(string filter = "All",string search = "All")
         {
             str = Model.contactModel.getContacts(pageNumber,filter,search);
             if (str == "success")
@@ -676,7 +676,7 @@ namespace MPSystem
         {
             if(txtSearch.Text.Length < 1)
             {
-                loadContact(cboFilter.Text, "All");
+                loadContact("All", "All");
             }
             else
             {

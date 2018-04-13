@@ -32,7 +32,7 @@ namespace MPSystem
             bgWorker.RunWorkerCompleted += worker_RunWorkerCompleted;
             //bgWorker.RunWorkerAsync();
 
-            bgTimer = new System.Timers.Timer(1000 * 60 * 0.40); // Check Message Every 2 minutes
+            bgTimer = new System.Timers.Timer(1000 * 60 * 0.30); // Check Message Every 2 minutes
             bgTimer.Elapsed += bgTimer_Elapsed;
             bgTimer.Start();
 
@@ -66,7 +66,7 @@ namespace MPSystem
                     return;
                 }
                 checkForIncommingMessage();
-                Thread.Sleep(1000 * 60 * 2); // 5 minutes sleep
+                Thread.Sleep(1000 * 60 * (int)(1.30)); // 5 minutes sleep
 
                 //w.ReportProgress(/*percentage*/);
 

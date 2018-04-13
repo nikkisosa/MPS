@@ -403,5 +403,23 @@ namespace MPSystem.View
                 }
             }
         }
+
+        private void lvList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            pnlDialog.Visible = true;
+            pnlDialog.BringToFront();
+            if(lvList.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lvList.SelectedItems[0];
+                lblCommand.Text = item.SubItems[2].Text;
+                lblmessage.Text = item.SubItems[3].Text;
+            }
+        }
+
+        private void btnCloseDialogMessage_Click(object sender, EventArgs e)
+        {
+            pnlDialog.Visible = false;
+            pnlDialog.SendToBack();
+        }
     }
 }

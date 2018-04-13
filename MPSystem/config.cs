@@ -10,7 +10,7 @@ namespace MPSystem
     class config
     {
 
-        //private static string sqlCon = @"Data Source=(localdb)\V11.0;AttachDbFilename=D:\Share data\MPS\MPSystem\Data\MPS_DB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False";
+        //private static string sqlCon = @"Data Source=(localdb)\V11.0;AttachDbFilename="+System.IO.Path.GetFullPath(@"..\..\DATA\MPS_DB.MDF")+";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False";
         private static string sqlCon = @"Data Source=(localdb)\V11.0;AttachDbFilename="+System.IO.Path.GetFullPath(@"..\..\DATA\MPS_DB.MDF")+";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False";
         public static SqlConnection sqlconnection = new SqlConnection(sqlCon);
 

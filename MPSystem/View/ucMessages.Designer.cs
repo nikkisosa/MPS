@@ -44,11 +44,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.pnlDialog = new System.Windows.Forms.Panel();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCloseDialogMessage = new System.Windows.Forms.Button();
             this.flpDialog = new System.Windows.Forms.FlowLayoutPanel();
             this.lblUssdReply = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblFrom = new System.Windows.Forms.Label();
+            this.lblPromo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.pnlDialog.SuspendLayout();
             this.flpDialog.SuspendLayout();
             this.SuspendLayout();
@@ -206,6 +209,9 @@
             // 
             this.pnlDialog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.pnlDialog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDialog.Controls.Add(this.lblDate);
+            this.pnlDialog.Controls.Add(this.lblPromo);
+            this.pnlDialog.Controls.Add(this.label4);
             this.pnlDialog.Controls.Add(this.lblFrom);
             this.pnlDialog.Controls.Add(this.label1);
             this.pnlDialog.Controls.Add(this.btnCloseDialogMessage);
@@ -215,6 +221,27 @@
             this.pnlDialog.Size = new System.Drawing.Size(316, 263);
             this.pnlDialog.TabIndex = 24;
             this.pnlDialog.Visible = false;
+            // 
+            // lblFrom
+            // 
+            this.lblFrom.AutoSize = true;
+            this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrom.ForeColor = System.Drawing.Color.White;
+            this.lblFrom.Location = new System.Drawing.Point(60, 10);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(0, 13);
+            this.lblFrom.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(21, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "From:";
             // 
             // btnCloseDialogMessage
             // 
@@ -232,11 +259,12 @@
             // 
             // flpDialog
             // 
+            this.flpDialog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpDialog.Controls.Add(this.lblUssdReply);
-            this.flpDialog.Location = new System.Drawing.Point(24, 29);
+            this.flpDialog.Location = new System.Drawing.Point(24, 43);
             this.flpDialog.Name = "flpDialog";
             this.flpDialog.Padding = new System.Windows.Forms.Padding(3);
-            this.flpDialog.Size = new System.Drawing.Size(268, 214);
+            this.flpDialog.Size = new System.Drawing.Size(268, 189);
             this.flpDialog.TabIndex = 4;
             // 
             // lblUssdReply
@@ -249,26 +277,38 @@
             this.lblUssdReply.Size = new System.Drawing.Size(0, 13);
             this.lblUssdReply.TabIndex = 0;
             // 
-            // label1
+            // lblPromo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "From:";
+            this.lblPromo.AutoSize = true;
+            this.lblPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromo.ForeColor = System.Drawing.Color.White;
+            this.lblPromo.Location = new System.Drawing.Point(61, 27);
+            this.lblPromo.Name = "lblPromo";
+            this.lblPromo.Size = new System.Drawing.Size(0, 13);
+            this.lblPromo.TabIndex = 9;
             // 
-            // lblFrom
+            // label4
             // 
-            this.lblFrom.AutoSize = true;
-            this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrom.ForeColor = System.Drawing.Color.White;
-            this.lblFrom.Location = new System.Drawing.Point(60, 10);
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(0, 13);
-            this.lblFrom.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(21, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Promo:";
+            // 
+            // lblDate
+            // 
+            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(177, 235);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 13);
+            this.lblDate.TabIndex = 11;
             // 
             // ucMessages
             // 
@@ -319,5 +359,8 @@
         private System.Windows.Forms.Label lblUssdReply;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPromo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDate;
     }
 }

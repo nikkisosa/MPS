@@ -210,6 +210,8 @@ namespace MPSystem.View
                     ListViewItem item = lvList.SelectedItems[0];
                     lblFrom.Text = item.SubItems[1].Text;
                     lblUssdReply.Text = item.SubItems[2].Text;
+                    lblPromo.Text = item.SubItems[4].Text;
+                    lblDate.Text = item.SubItems[3].Text;
                 }
 
 

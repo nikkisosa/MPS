@@ -426,6 +426,7 @@
             // 
             // flpDialog
             // 
+            this.flpDialog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpDialog.Controls.Add(this.lblUssdReply);
             this.flpDialog.Location = new System.Drawing.Point(24, 29);
             this.flpDialog.Name = "flpDialog";
