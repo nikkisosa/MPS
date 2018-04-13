@@ -1,5 +1,0 @@
-2018-04-13 12:54:49 [*****Program Started*****]
-2018-04-13 12:54:49 [Ports: COM1,COM5,COM6]
-2018-04-13 12:54:53 [COM5 has been added to active ports list. Ports Detail (Mobile No: Unknown,Network: Unknown Network]
-2018-04-13 12:54:56 [COM6 has been added to active ports list. Ports Detail (Mobile No: +639654166887,Network: Unknown Network]
-2018-04-13 12:55:15 [Checking Message : COM5,COM6]

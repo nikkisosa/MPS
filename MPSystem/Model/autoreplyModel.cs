@@ -130,9 +130,18 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string deleteAutoReply(int id)
+        public static string deleteAutoReply(int id, bool all = false)
         {
-            string query = "DELETE FROM autoreply WHERE id = @id";
+            string query = string.Empty;
+            if(all == true)
+            {
+                 query = "DELETE FROM autoreply";
+            }
+            else if (all == false)
+            {
+                 query = "DELETE FROM autoreply WHERE id = @id";
+            }
+            
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             try
@@ -140,7 +149,15 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@id", id);
+                if (all == true)
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                }
+                else if (all == false)
+                {
+
+                }
+                
                 cmd.ExecuteReader();
                 str = "success";
             }

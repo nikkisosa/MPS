@@ -205,5 +205,41 @@ namespace MPSystem.View
         {
             Process.Start(Application.StartupPath.ToString() + @"\Logs");
         }
+
+        private void chkClearData_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkClearData.CheckState.ToString() == "Checked")
+            {
+                pnlClearData.Size = new Size(pnlClearData.Size.Width,111);
+            }
+            else
+            {
+                pnlClearData.Size = new Size(pnlClearData.Size.Width, 55);
+            }
+        }
+
+        private void btnClearData_Click(object sender, EventArgs e)
+        {
+            /*
+             Contact
+             Message
+             Promotion
+             Auto Reply
+             USSD Command
+             */
+            string str = string.Empty;
+            if(cboModule.Text == "Auto Reply")
+            {
+                str = Model.autoreplyModel.deleteAutoReply(0, true);
+                if(str == "success")
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
     }
 }
