@@ -581,6 +581,12 @@ namespace MPSystem.View
             loadGroup();
         }
 
+        private void btnRefreshRecord_Click(object sender, EventArgs e)
+        {
+            if (!backgroundworker.IsBusy)
+                backgroundworker.RunWorkerAsync();
+        }
+
  
 
         

@@ -98,9 +98,10 @@ namespace MPSystem.View
             {
 
                 totalCount = config.records.Count;
+                lvList.Items.Clear();
                 if (totalCount > 0)
                 {
-                    lvList.Items.Clear();
+                    
                     for (int count = 0; count < config.records.Count; count++)
                     {
                         ListViewItem item = new ListViewItem(config.records[count].id.ToString());
@@ -420,6 +421,12 @@ namespace MPSystem.View
         {
             pnlDialog.Visible = false;
             pnlDialog.SendToBack();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            if (!backgroundworker.IsBusy)
+                backgroundworker.RunWorkerAsync();
         }
     }
 }

@@ -64,6 +64,7 @@
             this.btnGroupDelete = new System.Windows.Forms.Button();
             this.btnGroupEdit = new System.Windows.Forms.Button();
             this.btnGroupAdd = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -481,15 +482,34 @@
             this.btnGroupAdd.UseVisualStyleBackColor = false;
             this.btnGroupAdd.Click += new System.EventHandler(this.btnGroupAdd_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnRefresh.BackgroundImage = global::MPSystem.Properties.Resources.Refresh_20px;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(542, 502);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(23, 23);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            // 
             // ucContacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblPages);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvContact);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -547,5 +567,6 @@
         private System.Windows.Forms.Button btnGroupDelete;
         private System.Windows.Forms.Button btnGroupEdit;
         private System.Windows.Forms.Button btnGroupAdd;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

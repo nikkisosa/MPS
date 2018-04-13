@@ -90,9 +90,10 @@ namespace MPSystem.View
             if (str == "success")
             {
                 totalCount = config.records.Count;
+                lvList.Items.Clear();
                 if (totalCount > 0)
                 {
-                    lvList.Items.Clear();
+                    
 
                     for (int count = 0; count < config.records.Count; count++)
                     {

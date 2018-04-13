@@ -129,9 +129,19 @@ namespace MPSystem.Model
             return str;
         }
 
-        public static string deleteUssdCommand(int id)
+        public static string deleteUssdCommand(int id,bool all = false)
         {
-            string query = "DELETE FROM ussdcommand WHERE id = @id";
+            string query = string.Empty;
+            if(all == true)
+            {
+                query = "DELETE FROM ussdcommand";
+            }
+            else if(all == false)
+            {
+                query = "DELETE FROM ussdcommand WHERE id = @id";
+            }
+
+             
             SqlConnection conn = config.sqlconnection;
             SqlCommand cmd = new SqlCommand();
             try
@@ -139,7 +149,15 @@ namespace MPSystem.Model
                 conn.Open();
                 cmd.CommandText = query;
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@id", id);
+                if (all == true)
+                {
+
+                }
+                else if (all == false)
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                }
+                
                 cmd.ExecuteReader();
                 str = "success";
             }

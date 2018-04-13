@@ -53,6 +53,7 @@
             this.btnPClose = new System.Windows.Forms.Button();
             this.btnPSend = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnRefreshRecord = new System.Windows.Forms.Button();
             this.flpPromotion.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -134,7 +135,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(18, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(200, 35);
+            this.btnAdd.Size = new System.Drawing.Size(160, 35);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "+ Add a Promo";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -352,14 +353,31 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnRefreshRecord
+            // 
+            this.btnRefreshRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnRefreshRecord.BackgroundImage = global::MPSystem.Properties.Resources.Refresh_20px;
+            this.btnRefreshRecord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefreshRecord.FlatAppearance.BorderSize = 0;
+            this.btnRefreshRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnRefreshRecord.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshRecord.Location = new System.Drawing.Point(180, 3);
+            this.btnRefreshRecord.Name = "btnRefreshRecord";
+            this.btnRefreshRecord.Size = new System.Drawing.Size(38, 35);
+            this.btnRefreshRecord.TabIndex = 20;
+            this.btnRefreshRecord.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefreshRecord.UseVisualStyleBackColor = false;
+            this.btnRefreshRecord.Click += new System.EventHandler(this.btnRefreshRecord_Click);
+            // 
             // ucPromotion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnRefreshRecord);
             this.Controls.Add(this.pnlPortsToSend);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.cboSendTo);
             this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.txtTitle);
@@ -368,6 +386,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.flpPromotion);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.MaximumSize = new System.Drawing.Size(711, 536);
             this.MinimumSize = new System.Drawing.Size(711, 536);
             this.Name = "ucPromotion";
@@ -410,5 +429,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkOption;
         private System.Windows.Forms.DataGridViewTextBoxColumn comPort;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnRefreshRecord;
     }
 }

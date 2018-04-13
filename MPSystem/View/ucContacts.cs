@@ -97,9 +97,10 @@ namespace MPSystem
             if (str == "success")
             {
                 totalCount = config.records.Count;
+                lvContact.Items.Clear();
                 if (totalCount > 0)
                 {
-                    lvContact.Items.Clear();
+                    
 
                     for (int count = 0; count < config.records.Count; count++)
                     {
@@ -683,6 +684,12 @@ namespace MPSystem
                 loadContact(cboFilter.Text, txtSearch.Text.Trim());
             }
             
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            if (!backgroundworker.IsBusy)
+                backgroundworker.RunWorkerAsync();
         }
     }
 }

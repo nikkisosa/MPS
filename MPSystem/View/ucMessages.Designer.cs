@@ -41,17 +41,16 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.backgroundworker = new System.ComponentModel.BackgroundWorker();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.pnlDialog = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblPromo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblFrom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCloseDialogMessage = new System.Windows.Forms.Button();
             this.flpDialog = new System.Windows.Forms.FlowLayoutPanel();
             this.lblUssdReply = new System.Windows.Forms.Label();
-            this.lblPromo = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
             this.pnlDialog.SuspendLayout();
             this.flpDialog.SuspendLayout();
             this.SuspendLayout();
@@ -178,16 +177,6 @@
             this.backgroundworker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundworker_ProgressChanged);
             this.backgroundworker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundworker_RunWorkerCompleted);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(621, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Refresh data";
-            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
@@ -197,9 +186,9 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(594, 33);
+            this.btnRefresh.Location = new System.Drawing.Point(565, 496);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(21, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(23, 23);
             this.btnRefresh.TabIndex = 22;
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -221,6 +210,39 @@
             this.pnlDialog.Size = new System.Drawing.Size(316, 263);
             this.pnlDialog.TabIndex = 24;
             this.pnlDialog.Visible = false;
+            // 
+            // lblDate
+            // 
+            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(177, 235);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 13);
+            this.lblDate.TabIndex = 11;
+            // 
+            // lblPromo
+            // 
+            this.lblPromo.AutoSize = true;
+            this.lblPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromo.ForeColor = System.Drawing.Color.White;
+            this.lblPromo.Location = new System.Drawing.Point(61, 27);
+            this.lblPromo.Name = "lblPromo";
+            this.lblPromo.Size = new System.Drawing.Size(0, 13);
+            this.lblPromo.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(21, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Promo:";
             // 
             // lblFrom
             // 
@@ -277,45 +299,11 @@
             this.lblUssdReply.Size = new System.Drawing.Size(0, 13);
             this.lblUssdReply.TabIndex = 0;
             // 
-            // lblPromo
-            // 
-            this.lblPromo.AutoSize = true;
-            this.lblPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromo.ForeColor = System.Drawing.Color.White;
-            this.lblPromo.Location = new System.Drawing.Point(61, 27);
-            this.lblPromo.Name = "lblPromo";
-            this.lblPromo.Size = new System.Drawing.Size(0, 13);
-            this.lblPromo.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(21, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Promo:";
-            // 
-            // lblDate
-            // 
-            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(177, 235);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 13);
-            this.lblDate.TabIndex = 11;
-            // 
             // ucMessages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlDialog);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -352,7 +340,6 @@
         private System.ComponentModel.BackgroundWorker backgroundworker;
         private System.Windows.Forms.ColumnHeader msgID;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlDialog;
         private System.Windows.Forms.Button btnCloseDialogMessage;
         private System.Windows.Forms.FlowLayoutPanel flpDialog;

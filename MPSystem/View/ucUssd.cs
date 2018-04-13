@@ -103,9 +103,10 @@ namespace MPSystem.View
             {
 
                 totalCount = config.records.Count;
+                lvList.Items.Clear();
                 if (totalCount > 0)
                 {
-                    lvList.Items.Clear();
+                    
                     for (int count = 0; count < config.records.Count; count++)
                     {
                         ListViewItem item = new ListViewItem(config.records[count].id.ToString());
@@ -151,11 +152,12 @@ namespace MPSystem.View
             {
 
                 totalCountHistory = config.records.Count;
+                lvHistory.Items.Clear();
                 if (totalCount > 0)
                 {
                     try
                     {
-                        lvHistory.Items.Clear();
+                        
                         for (int count = 0; count < config.records.Count; count++)
                         {
                             ListViewItem items = new ListViewItem(config.records[count].reply.ToString());
@@ -672,6 +674,12 @@ namespace MPSystem.View
             {
                 loadDataFromUssdHistory();
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            if (!backgroundworker.IsBusy)
+                backgroundworker.RunWorkerAsync();
         }
     }
 }

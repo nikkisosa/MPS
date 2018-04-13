@@ -220,26 +220,41 @@ namespace MPSystem.View
 
         private void btnClearData_Click(object sender, EventArgs e)
         {
-            /*
-             Contact
-             Message
-             Promotion
-             Auto Reply
-             USSD Command
-             */
             string str = string.Empty;
-            if(cboModule.Text == "Auto Reply")
+            string module = cboModule.Text.ToUpper();
+            logs.log("*******START DELETING RECORD FROM "+module+"*******");
+            switch (cboModule.Text)
             {
-                str = Model.autoreplyModel.deleteAutoReply(0, true);
-                if(str == "success")
-                {
-
-                }
-                else
-                {
-
-                }
+                case "Auto Reply":
+                    str = Model.autoreplyModel.deleteAutoReply(0, true);
+                    break;
+                case "Contact":
+                    str = Model.contactModel.deleteContact(0, true);
+                    break;
+                case "Message":
+                    str = Model.messageModel.deleteMessages(0, true);
+                    break;
+                case "USSD Command":
+                    str = Model.ussdModel.deleteUssdCommand(0, true);
+                    str += Model.ussdHistoryModel.deleteUssdHistory(0, true);
+                    break;
+                case "Promotion":
+                    str = Model.promotionModel.deletePromotion(0, true);
+                    break;
+                default:
+                    break;
             }
+
+            if (str == "success")
+            {
+                logs.log("*******SUCCESSFULLY DELETED FROM " + module + "*******");
+            }
+            else
+            {
+                logs.log("*******ERROR FROM " + module + "*******");
+                logs.log(str);
+            }
+
         }
     }
 }

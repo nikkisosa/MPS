@@ -51,6 +51,7 @@
             this.btnCloseDialogMessage = new System.Windows.Forms.Button();
             this.flpDialog = new System.Windows.Forms.FlowLayoutPanel();
             this.lblmessage = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlDialog.SuspendLayout();
             this.flpDialog.SuspendLayout();
@@ -317,10 +318,30 @@
             this.lblmessage.Size = new System.Drawing.Size(0, 13);
             this.lblmessage.TabIndex = 0;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnRefresh.BackgroundImage = global::MPSystem.Properties.Resources.Refresh_20px;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(214)))), ((int)(((byte)(151)))));
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(553, 494);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(23, 23);
+            this.btnRefresh.TabIndex = 26;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // ucAutoreply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.pnlDialog);
             this.Controls.Add(this.lblPages);
             this.Controls.Add(this.btnNext);
@@ -368,5 +389,6 @@
         private System.Windows.Forms.Button btnCloseDialogMessage;
         private System.Windows.Forms.FlowLayoutPanel flpDialog;
         private System.Windows.Forms.Label lblmessage;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

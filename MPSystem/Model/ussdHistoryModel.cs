@@ -99,5 +99,48 @@ namespace MPSystem.Model
             }
             return str;
         }
+
+        public static string deleteUssdHistory(int id, bool all = false)
+        {
+            string query = string.Empty;
+            if (all == true)
+            {
+                query = "DELETE FROM ussdhistory";
+            }
+            else if (all == false)
+            {
+                query = "DELETE FROM ussdhistory WHERE id = @id";
+            }
+
+
+            SqlConnection conn = config.sqlconnection;
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                if (all == true)
+                {
+
+                }
+                else if (all == false)
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                }
+
+                cmd.ExecuteReader();
+                str = "success";
+            }
+            catch (SqlException err)
+            {
+                str = err.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return str;
+        }
     }
 }

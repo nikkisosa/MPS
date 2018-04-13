@@ -151,11 +151,11 @@ namespace MPSystem.Model
                 cmd.Connection = conn;
                 if (all == true)
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    
                 }
                 else if (all == false)
                 {
-
+                    cmd.Parameters.AddWithValue("@id", id);
                 }
                 
                 cmd.ExecuteReader();

@@ -39,3 +39,4 @@ D:\Share data\MPS\MPSystem\obj\Release\MPSystem.csproj.GenerateResource.Cache
 D:\Share data\MPS\MPSystem\obj\Release\MPSystem.exe
 D:\Share data\MPS\MPSystem\obj\Release\MPSystem.pdb
 D:\Share data\MPS\MPSystem\obj\Release\MPSystem.csprojResolveAssemblyReference.cache
+C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Release\MPSystem.csprojResolveAssemblyReference.cache
