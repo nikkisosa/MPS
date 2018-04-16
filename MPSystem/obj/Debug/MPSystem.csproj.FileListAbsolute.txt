@@ -190,8 +190,3 @@ D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.frmDumpContact.resources
 C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.View.frmDumpContact.resources
 C:\Users\niks\Desktop\MPS\MPS\MPSystem\obj\Debug\MPSystem.View.ucSettings.resources
 D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.View.ucSettings.resources
-D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.exe.manifest
-D:\Share data\MPS\MPSystem\bin\Debug\MPSystem.application
-D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.TrustInfo.xml
-D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.exe.manifest
-D:\Share data\MPS\MPSystem\obj\Debug\MPSystem.application

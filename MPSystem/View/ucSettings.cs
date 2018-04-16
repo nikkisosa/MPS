@@ -193,11 +193,13 @@ namespace MPSystem.View
             {
                 pnlDump.Size = new Size(pnlDump.Size.Width,128);
                 panel1.Location = new Point(15, 170);
+                pnlClearData.Location = new Point(15, 231);
             }
             else
             {
                 pnlDump.Size = new Size(pnlDump.Size.Width, 55);
                 panel1.Location = new Point(15, 95);
+                pnlClearData.Location = new Point(15, 156);
             }
         }
 

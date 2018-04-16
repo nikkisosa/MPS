@@ -66,7 +66,15 @@ namespace MPSystem
                     return;
                 }
                 checkForIncommingMessage();
-                Thread.Sleep(1000 * 60 * (int)(1.30)); // 5 minutes sleep
+                try
+                {
+                    Thread.Sleep(1000 * 60 * (int)(1.30)); // 5 minutes sleep
+                }
+                catch(TimeoutException)
+                {
+
+                }
+                
 
                 //w.ReportProgress(/*percentage*/);
 

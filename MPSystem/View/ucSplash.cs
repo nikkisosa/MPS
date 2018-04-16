@@ -18,6 +18,7 @@ namespace MPSystem.View
         {
             InitializeComponent();
             logs.log("*****Program Started*****");
+            //FileMove.moveToAppData();
         }
 
         private void ucSplash_Load(object sender, EventArgs e)

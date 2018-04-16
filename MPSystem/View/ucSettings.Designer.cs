@@ -41,11 +41,11 @@
             this.btnView = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlClearData = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboModule = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.chkClearData = new System.Windows.Forms.CheckBox();
             this.btnClearData = new System.Windows.Forms.Button();
+            this.chkClearData = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboModule = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlDump.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlClearData.SuspendLayout();
@@ -199,15 +199,43 @@
             this.pnlClearData.Size = new System.Drawing.Size(676, 55);
             this.pnlClearData.TabIndex = 3;
             // 
-            // label3
+            // btnClearData
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(17, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Clear Data";
+            this.btnClearData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.btnClearData.FlatAppearance.BorderSize = 0;
+            this.btnClearData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearData.ForeColor = System.Drawing.Color.White;
+            this.btnClearData.Location = new System.Drawing.Point(296, 74);
+            this.btnClearData.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+            this.btnClearData.Name = "btnClearData";
+            this.btnClearData.Size = new System.Drawing.Size(82, 21);
+            this.btnClearData.TabIndex = 6;
+            this.btnClearData.Text = "Clear Data";
+            this.btnClearData.UseVisualStyleBackColor = false;
+            this.btnClearData.Click += new System.EventHandler(this.btnClearData_Click);
+            // 
+            // chkClearData
+            // 
+            this.chkClearData.AutoSize = true;
+            this.chkClearData.FlatAppearance.BorderSize = 0;
+            this.chkClearData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkClearData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
+            this.chkClearData.Location = new System.Drawing.Point(80, 23);
+            this.chkClearData.Name = "chkClearData";
+            this.chkClearData.Size = new System.Drawing.Size(12, 11);
+            this.chkClearData.TabIndex = 13;
+            this.chkClearData.UseVisualStyleBackColor = true;
+            this.chkClearData.CheckedChanged += new System.EventHandler(this.chkClearData_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(55, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Choose Module";
             // 
             // cboModule
             // 
@@ -224,43 +252,15 @@
             this.cboModule.Size = new System.Drawing.Size(235, 21);
             this.cboModule.TabIndex = 5;
             // 
-            // label6
+            // label3
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(55, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Choose Module";
-            // 
-            // chkClearData
-            // 
-            this.chkClearData.AutoSize = true;
-            this.chkClearData.FlatAppearance.BorderSize = 0;
-            this.chkClearData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkClearData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.chkClearData.Location = new System.Drawing.Point(80, 23);
-            this.chkClearData.Name = "chkClearData";
-            this.chkClearData.Size = new System.Drawing.Size(12, 11);
-            this.chkClearData.TabIndex = 13;
-            this.chkClearData.UseVisualStyleBackColor = true;
-            this.chkClearData.CheckedChanged += new System.EventHandler(this.chkClearData_CheckedChanged);
-            // 
-            // btnClearData
-            // 
-            this.btnClearData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(144)))));
-            this.btnClearData.FlatAppearance.BorderSize = 0;
-            this.btnClearData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearData.ForeColor = System.Drawing.Color.White;
-            this.btnClearData.Location = new System.Drawing.Point(296, 74);
-            this.btnClearData.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
-            this.btnClearData.Name = "btnClearData";
-            this.btnClearData.Size = new System.Drawing.Size(82, 21);
-            this.btnClearData.TabIndex = 6;
-            this.btnClearData.Text = "Clear Data";
-            this.btnClearData.UseVisualStyleBackColor = false;
-            this.btnClearData.Click += new System.EventHandler(this.btnClearData_Click);
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(17, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Clear Data";
             // 
             // ucSettings
             // 

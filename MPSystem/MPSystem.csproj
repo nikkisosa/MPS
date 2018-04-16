@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="config.cs" />
     <Compile Include="Entity\variables.cs" />
+    <Compile Include="FileMove.cs" />
     <Compile Include="logs.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
