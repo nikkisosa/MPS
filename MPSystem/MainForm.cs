@@ -70,7 +70,7 @@ namespace MPSystem
                 {
                     Thread.Sleep(1000 * 60 * (int)(1.30)); // 5 minutes sleep
                 }
-                catch(TimeoutException)
+                catch(ThreadStateException)
                 {
 
                 }

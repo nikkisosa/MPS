@@ -13,31 +13,27 @@ namespace MPSystem
 
         public static string moveToAppData()
         {
-            string path = Application.StartupPath.ToString() + @"\DATA";
-            string appData = Environment.ExpandEnvironmentVariables(@"%AppData%\MPS\Data");
+            string path = Application.StartupPath.ToString() + @"\DATA\";
+            string appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"\\MPS\\";
+            string fileName = "MPS_DB.MDF";
             if (!Directory.Exists(appData))
             {
                 System.IO.Directory.CreateDirectory(appData);
                 //File.Move(path, appData);
                 //File.Move(path2, appData);
-                DirectoryInfo dirInfo = new DirectoryInfo(path);
-                FileInfo[] copy = dirInfo.GetFiles();
-                foreach (FileInfo fi in copy)
+                try
                 {
-                    try
-                    {
-                        File.Copy(fi.FullName, appData + fi.Name);
-                        str = "success";
-                    }
-                    catch (IOException io)
-                    {
-                        str = io.Message;
-                        logs.log(io.Message);
-                    }
-                    finally
-                    {
+                    File.Copy(path + fileName, appData + fileName, false);
+                    str = "success";
+                }
+                catch (IOException io)
+                {
+                    str = io.Message;
+                    logs.log(io.Message);
+                }
+                finally
+                {
 
-                    }
                 }
 
             }

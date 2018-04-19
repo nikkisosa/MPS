@@ -250,11 +250,13 @@ namespace MPSystem.View
             if (str == "success")
             {
                 logs.log("*******SUCCESSFULLY DELETED FROM " + module + "*******");
+                MessageBox.Show("Successfully delete.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 logs.log("*******ERROR FROM " + module + "*******");
                 logs.log(str);
+                MessageBox.Show(str, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
