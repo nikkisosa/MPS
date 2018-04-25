@@ -494,7 +494,7 @@ namespace MPSystem.View
                        ArrayList row = new ArrayList();
                        row.Add(false);
                        row.Add(config.records[i].port);
-
+                       row.Add(config.records[i].network);
                        lstGrid.Rows.Add(row.ToArray());
 
 

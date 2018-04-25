@@ -48,6 +48,7 @@ namespace MPSystem.View
                         row.Add(config.records[i].port);
                         row.Add(config.records[i].mobile_no);
                         row.Add(config.records[i].balance);
+                        row.Add(config.records[i].network);
                         dashGrid.Rows.Add(row.ToArray());
 
                         

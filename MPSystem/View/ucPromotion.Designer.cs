@@ -48,12 +48,13 @@
             this.backgroundworker = new System.ComponentModel.BackgroundWorker();
             this.pnlPortsToSend = new System.Windows.Forms.Panel();
             this.lstGrid = new System.Windows.Forms.DataGridView();
-            this.checkOption = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.comPort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPClose = new System.Windows.Forms.Button();
             this.btnPSend = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnRefreshRecord = new System.Windows.Forms.Button();
+            this.checkOption = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.comPort = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Network = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flpPromotion.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -289,23 +290,12 @@
             this.lstGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lstGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.checkOption,
-            this.comPort});
+            this.comPort,
+            this.Network});
             this.lstGrid.Location = new System.Drawing.Point(8, 45);
             this.lstGrid.Name = "lstGrid";
             this.lstGrid.Size = new System.Drawing.Size(333, 151);
             this.lstGrid.TabIndex = 7;
-            // 
-            // checkOption
-            // 
-            this.checkOption.HeaderText = "";
-            this.checkOption.Name = "checkOption";
-            this.checkOption.Width = 90;
-            // 
-            // comPort
-            // 
-            this.comPort.HeaderText = "COMPORT";
-            this.comPort.Name = "comPort";
-            this.comPort.Width = 200;
             // 
             // btnPClose
             // 
@@ -370,6 +360,23 @@
             this.btnRefreshRecord.UseVisualStyleBackColor = false;
             this.btnRefreshRecord.Click += new System.EventHandler(this.btnRefreshRecord_Click);
             // 
+            // checkOption
+            // 
+            this.checkOption.HeaderText = "";
+            this.checkOption.Name = "checkOption";
+            this.checkOption.Width = 90;
+            // 
+            // comPort
+            // 
+            this.comPort.HeaderText = "COMPORT";
+            this.comPort.Name = "comPort";
+            // 
+            // Network
+            // 
+            this.Network.HeaderText = "Network";
+            this.Network.Name = "Network";
+            this.Network.ReadOnly = true;
+            // 
             // ucPromotion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,9 +433,10 @@
         private System.Windows.Forms.Button btnPClose;
         private System.Windows.Forms.Button btnPSend;
         private System.Windows.Forms.DataGridView lstGrid;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn checkOption;
-        private System.Windows.Forms.DataGridViewTextBoxColumn comPort;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnRefreshRecord;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkOption;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comPort;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Network;
     }
 }

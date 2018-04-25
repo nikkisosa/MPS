@@ -21,6 +21,33 @@ namespace MPSystem.View
 
         private void btnDump_Click(object sender, EventArgs e)
         {
+            MMS mainForm = new MMS();
+            mainForm.bgTimer.Stop();
+            mainForm.bgWorker.CancelAsync();
+            Task task = Task.Factory.StartNew(() =>
+            {
+                dump();
+            });
+        }
+
+        private void frmDumpContact_Load(object sender, EventArgs e)
+        {
+            string[] ports = SerialPort.GetPortNames();
+            for (int i = 0; i < ports.Length; i++)
+            {
+                try
+                {
+                    cboPorts.Items.Add(ports[i]);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void dump()
+        {
             try
             {
                 logs.log("========Start Dumping Contacts========");
@@ -42,11 +69,11 @@ namespace MPSystem.View
                 Thread.Sleep(100);
 
                 Regex regEx = new Regex(@"\+CPBR: (\d+),""(.+)"",(.+),""(.+)""\r\n");
-                foreach(Match match in regEx.Matches(_serial.ReadExisting()))
+                foreach (Match match in regEx.Matches(_serial.ReadExisting()))
                 {
                     logs.dumpContact("Mobile Number: (" + match.Groups[2].Value + ") ", "Prefix: ", lblNetwork.Text);
                 }
-                
+
 
                 _serial.Close();
                 logs.log("========Stop Dumping Contacts========");
@@ -54,22 +81,6 @@ namespace MPSystem.View
             catch (Exception ex)
             {
                 logs.log(ex.Message);
-            }
-        }
-
-        private void frmDumpContact_Load(object sender, EventArgs e)
-        {
-            string[] ports = SerialPort.GetPortNames();
-            for (int i = 0; i < ports.Length; i++)
-            {
-                try
-                {
-                    cboPorts.Items.Add(ports[i]);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
             }
         }
 

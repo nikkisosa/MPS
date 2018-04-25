@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace MPSystem.View
 {
@@ -78,11 +79,21 @@ namespace MPSystem.View
                                 string[] strCNUM = lineResult[2].Split(',');
                                 string mobileNo = (strCNUM.Length > 1 ) ? strCNUM[1].Replace('"', ' ').Trim().ToString() : "Unknown";
                                 string mobilePrefix = Model.splashModel.getMobileNetwork(mobileNo.Substring(3,3));
-                    
+                                //=======================ADDED NETWORK===================//
+                                sp.WriteLine("AT+COPS=3,0\r");
+                                Thread.Sleep(100);
+                                sp.WriteLine("AT+COPS?\r");
+                                Thread.Sleep(100);
+                                sp.Write(new byte[] { 26 }, 0, 1);
+                                Thread.Sleep(100);
+
+                                Regex regEx = new Regex(@"\+COPS: (\d+),(.+),""(.+)""\r\n");
+                                Match match = regEx.Match(sp.ReadExisting());
+                                //================================================//
                                 Entity.variables entity = new Entity.variables();
                                 entity.port = sp.PortName;
                                 entity.mobile_no = mobileNo;
-                                entity.network = (mobilePrefix == "success" || mobilePrefix == "") ? "Unknown Network" : mobilePrefix;
+                                entity.network = match.Groups[3].Value;//(mobilePrefix == "success" || mobilePrefix == "") ? "Unknown Network" : mobilePrefix;
                                 entity.balance = 0;
 
                                 //Add all the active ports in [activePorts] table.
